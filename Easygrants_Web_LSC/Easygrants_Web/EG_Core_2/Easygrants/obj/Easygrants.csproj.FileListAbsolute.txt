@@ -1,0 +1,7 @@
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\bin\Debug\Easygrants.dll
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\bin\Debug\Easygrants.pdb
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\bin\Debug\Core.dll
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\bin\Debug\Core.pdb
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\obj\Debug\ResolveAssemblyReference.cache
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\obj\Debug\Easygrants.dll
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Easygrants\obj\Debug\Easygrants.pdb

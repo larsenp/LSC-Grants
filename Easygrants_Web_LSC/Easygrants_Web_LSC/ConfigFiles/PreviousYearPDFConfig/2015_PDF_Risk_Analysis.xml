@@ -1,0 +1,227 @@
+﻿<!--Risk Analysis PDF-->
+<Section Key='RiskAnalysis' Type='WordTemplate' TemplateFileName='PDF_Risk_Analysis.dotx'>
+
+	<SectionDataObjectList Key='vLSCCompWftaOrgServareaYear' DataObjectDefinitionKey='vLSCCompWftaOrgServareaYear'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+	</SectionDataObjectList>
+
+	<DataObject Key='vLSCCompWftaOrgServareaYear' DataObjectDefinitionKey='vLSCCompWftaOrgServareaYear'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtYear'>
+				<DisplayProperty PropertyKey='WFTAYear'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgram'  >
+				<DisplayProperty PropertyKey='Organization.OrganizationName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecipientID'  >
+				<DisplayProperty PropertyKey='RecipientID'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtLastOPPVisitComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.LastOPPVisitComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSigProgIssues'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.SigProgIssues'  Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSigProgIssuesComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.SigProgIssuesComment'/>
+			</DisplayProperty>
+
+			<!--<DisplayProperty DestKey='txtComplianceIssues'>
+									<DisplayProperty PropertyKey='LscRiskFactorAnalysis.' Format='YesNoNull'/>
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtComplianceIssuesComment'  >
+									<DisplayProperty PropertyKey='LscRiskFactorAnalysis.'/>
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtAuditIssues'>
+									<DisplayProperty PropertyKey='LscRiskFactorAnalysis.' Format='YesNoNull'/>
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtAuditIssuesComment'  >
+									<DisplayProperty PropertyKey='LscRiskFactorAnalysis.'/>
+								</DisplayProperty>-->
+
+			<DisplayProperty DestKey='txtIssuesLscContacts'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesLscContacts' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesLscContactsComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesLscContactsComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtTIGIssues'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.TigPerformanceIssues' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTIGIssuesComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.TigPerformanceIssuesComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesBoardComp'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesBoardComposition' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesBoardCompComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesBoardCompositionComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIssuesOPPGrantEval'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOPPGrantEval' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesOPPGrantEvalComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOPPGrantEvalComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtSigComplaints'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.SigComplaints' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSigComplaintsComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.SigComplaintsComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtOPPAreasInterest'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.OPPAreasInterest' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOPPAreasInterestComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.OPPAreasInterestComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtProgramSizeIssues'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.ProgramSizeIssues' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramSizeIssuesComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.ProgramSizeIssuesComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIssuesOPPReqRptg'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOPPReqRptg' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesOPPReqRptgComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOPPReqRptgComment'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIssuesOtherFunders'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOtherFunders' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIssuesOtherFundersComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.IssuesOtherFundersComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLeadershipTransition'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.LeadershipTransition' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLeadershipTransitionComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.LeadershipTransitionComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFinancialReviews'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.FinancialReviews' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFinancialReviewsComment'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.FinancialReviewsComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOIGIssues'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.OIGIssues' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOIGIssuesComment'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.OIGIssuesComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.Other' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherComment'>
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.OtherComment'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaffReader'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.StaffReaderPerson.FirstNameLastName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtReviewDate'  >
+				<DisplayProperty PropertyKey='LscRiskFactorAnalysis.ReviewDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='OCEDirReviewWfTAComplianceIssues' DataObjectDefinitionKey='WfTaskAssignment' >
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID' >
+				<RelatedProperty PropertyKey='vLSCCompWftaOrgServareaYear' />
+			</Argument>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID' >
+				<RelatedProperty PropertyKey='vLSCCompWftaOrgServareaYear' />
+			</Argument>
+			<Argument Group='(' Bool='And' />
+			<Argument Type='Data' PropertyKey='WfTaskID'  Value='74'  Bool=''/>
+			<Argument Type='Data' PropertyKey='WfTaskID'  Value='75' Bool='Or'/>
+			<Argument Group=')' Bool='' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblComplianceIssues' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='vLSCCompWftaOrgServareaYear.ServiceArea'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscOceDirReviewAuditCompliance.ComplianceIssues' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscOceDirReviewAuditCompliance.ComplianceIssuesComment'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='OCEDirReviewWfTAAuditIssues' DataObjectDefinitionKey='WfTaskAssignment' >
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID' >
+				<RelatedProperty PropertyKey='vLSCCompWftaOrgServareaYear' />
+			</Argument>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID' >
+				<RelatedProperty PropertyKey='vLSCCompWftaOrgServareaYear' />
+			</Argument>
+			<Argument Group='(' Bool='And' />
+			<Argument Type='Data' PropertyKey='WfTaskID'  Value='74'  Bool=''/>
+			<Argument Type='Data' PropertyKey='WfTaskID'  Value='75' Bool='Or'/>
+			<Argument Group=')' Bool='' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblAuditIssues' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='vLSCCompWftaOrgServareaYear.ServiceArea'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscOceDirReviewAuditCompliance.AuditIssues' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscOceDirReviewAuditCompliance.AuditIssuesComment'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscMostRecentOPPQualityVisit' DataObjectDefinitionKey='LscMostRecentOPPVisitByType'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='vLSCCompWftaOrgServareaYear' SectionDataObjectPropertyKey='OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Group='('/>
+			<Argument Type='Data' PropertyKey="Purpose" Value="Program Quality" Bool=''/>
+			<Argument Type='Data' PropertyKey="Purpose" Value="Capability Assessment Visit" Bool='Or'/>
+			<Argument Group=')' Bool=''/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='VisitDate' Direction='Descending'/>
+		</Sort>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtLastQualityVisit' PropertyKey='VisitDate' Format='M/d/yyyy' >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscMostRecentOPPEngagementVisit' DataObjectDefinitionKey='LscMostRecentOPPVisitByType'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='vLSCCompWftaOrgServareaYear' SectionDataObjectPropertyKey='OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Type='Data' PropertyKey="Purpose" Value="Program Engagement" />
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='VisitDate' Direction='Descending'/>
+		</Sort>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtLastEngageVisit' PropertyKey='VisitDate' Format='M/d/yyyy' >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+</Section>

@@ -1,0 +1,1 @@
+alter table LSC_PBIF_APP add apply_for_tig bit null

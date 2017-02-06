@@ -1,0 +1,120 @@
+
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='PaiRelated' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"PAI Related?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='StateSupportAct' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"State Support Activities?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscSubgrantContractTypeID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select any one Type of Contract.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscSubgrantContractTypeID' Value='4' />
+			<Argument PropertyKey='OtherContractTypes' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You selected "Other" as a Type of Contract. You must provide an explanation in the box marked "If Other, please explain?"'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscSubgrantContractTypeID' Value='4' Operator='NotEqual' />
+			<Argument PropertyKey='OtherContractTypes' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You did not select "Other" as a Type of Contract, but you provided an answer to the question "If other, please explain?”'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantServByType'/>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select at least one Type of Service.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateSubgrantTypesOfServices'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message=''
+			NoOtherServicesAnswerMessage='You selected "Other" as a service type. You must specify what other services will be provided.'
+			RemoveOtherServicesAnswerMessage='You did not select "Other" as a service type, but you provided an answer to the question "If Other, what services will be provided?"'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantTargetedGroup'/>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select at least one Target Group.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateSubgrantTargetedGroups'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message=''
+			NoOtherGroupsAnswerMessage='You selected "Other" as a targeted group. You must specify what other groups will be targeted.'
+			RemoveOtherGroupsAnswerMessage='You did not select "Other" as a targeted group, but you provided an answer to the question "if other, what target group is anticipated?”'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+
+
+
+
+

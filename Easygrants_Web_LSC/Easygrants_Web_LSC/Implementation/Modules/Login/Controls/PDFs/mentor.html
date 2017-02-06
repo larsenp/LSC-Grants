@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+
+<TITLE>Applicant ID for Mentor</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+
+      function stripSpaces (InString)  {
+	OutString="";
+	for (Count=0; Count < InString.length; Count++)  {
+		TempChar=InString.substring (Count, Count+1);
+		if (TempChar!=" ")
+			OutString=OutString+TempChar;
+	}
+	return (OutString);
+      }
+
+      function spaceTrim(InString) {
+	var LoopCtrl=true;
+	while (LoopCtrl) {
+		if (InString.indexOf("  ") != -1) {
+			Temp = InString.substring(0, InString.indexOf("  "))
+			InString = Temp + InString.substring(InString.indexOf("  ")+1, 
+				InString.length)
+		} else
+			LoopCtrl = false;
+	}
+	if (InString.substring(0, 1) == " ")
+		InString = InString.substring(1, InString.length)
+	if (InString.substring (InString.length-1) == " ")
+		InString = InString.substring(0, InString.length-1)
+	return (InString)
+      }
+
+       function exitform(){
+               document.userform.action ="/nicmenu.html";
+               //document.userform.method = "post";
+              // document.userform.submit();
+          }
+
+          function submitform()
+          { var theorgid =  document.userform.orgid.value;
+            var thepwd =  document.userform.password.value;
+              if (stripSpaces(theorgid) == " ")
+              {alert("Please enter a valid Applicant ID in order to proceed.");
+              }else
+              {
+              if (stripSpaces(thepwd) == " ") document.userform.password.value = "0000000"
+              document.userform.method = "post";
+              //document.userform.action = "/Scripts/LSC/nic/formh0.idc";
+              //document.userform.action = "/Scripts/LSC/nic/nicmenu.idc";
+              //document.userform.action = "/Scripts/LSC/nic/formh0.asp";
+              //document.userform.action = "/Scripts/LSC/nic1/formh0.asp";
+              document.userform.action = "/Scripts/LSC/Protege/Mentor0new.asp";
+              document.userform.submit();
+              }
+          }
+
+
+          function CrLogin(){
+              //document.userform.method = "post";
+              document.userform.method = "get";
+              document.userform.action = "/crnewlogin2.htm";
+              document.userform.submit();
+          }
+          function exit(){
+              document.location.href ="http://www.rin.lsc.gov/default.htm";
+      } 
+
+ </SCRIPT>
+
+<meta name="Microsoft Theme" content="copy-of-blends-ain 011, default">
+</HEAD>
+<BODY background="/scripts/lsc/subgrant/adver5.jpg" bgcolor="#ffffff" text="#000000" link="#666633" vlink="#333366" alink="#990000"><!--mstheme--><font face="Times New Roman">
+<center>
+<H1><FONT color=darkblue><I>LSC Leadership Mentoring Pilot Program</I><BR>
+ Questions 
+for&nbsp;Mentor Applicants</FONT>
+   
+</H1>
+<FORM NAME="userform"><!--TABLE BORDER=0 WIDTH="275" FRAME=NONE RULES="all" ALIGN="center"-->
+<TABLE BORDER=0>
+<TR>
+<TD WIDTH="100"><B>Applicant ID:</B></TD>
+<TD><INPUT NAME="orgid" maxlength=6 SIZE="6" >
+<font size=-1><B>(6 Numbers)</B></font></TD>
+</TR>
+<TR>
+<TD><B>Password:</B></TD>
+<TD><INPUT TYPE="password" NAME="password" maxlength=7 SIZE="7" >
+<font size=-1><B>(7 Characters)</B></font></TD>
+</TR>
+</TABLE>
+<center><!--H3><FONT style="BACKGROUND-COLOR: lime">CLOSED</FONT></H3-->
+
+<BR><BR>
+<INPUT TYPE="submit" NAME="button2" VALUE="  OK  " onClick="submitform()">
+<BR><BR>
+<INPUT TYPE="submit" NAME="button1" VALUE="Create a New ID Click Here" onClick="CrLogin()"> 
+<BR><BR>
+<INPUT TYPE="button" NAME="button3" VALUE="  EXIT  " onClick="exit()"><BR>
+<BR><BR><!--center>
+<table BORDER="0" CELLSPACING="1" CELLPADDING="1" WIDTH=575>
+<tr>
+<td bgcolor="#e6e6fa" valign="top" width=75><B>NOTE 1.</B></td>
+<td bgcolor="#ffdab9">Current recipients of Legal Services Corporation funds must use their LSC
+ recipient number as their Applicant ID.  New applicants should click on the Create 
+ New ID button for an Applicant.   
+</td></tr>
+<tr>
+<td bgcolor="#e6e6fa" valign="top"><B>NOTE 2.</B></td>
+<td bgcolor="#e6e6fa">If you are a former recipient of LSC funds, but not a current
+recipient, please contact LSC, Office of Information Management (meyerj@lsc.gov, 
+woldem@lsc.gov or navanits@lsc.gov) for specific technical instructions prior to
+starting the application process.
+</td></tr>
+<tr>
+<td bgcolor="#e6e6fa" valign="top"><B>NOTE 3.</B></td>
+<td bgcolor="#e6e6fa">The start date for filing the NIC 
+      is&nbsp;<b><u><FONT 
+      color=darkgreen>Friday April 22, 2005, </FONT></b></U><BR>
+and the due date is <font color=red><b><u>Monday May 23, 2005, 5:00 p.m., ET,</font></B></U>
+</td></tr>
+</table-->
+</FORM>
+
+<script LANGUAGE="JavaScript">
+  document.userform.orgid.focus();
+</script>
+<!--center><A href="/../default.htm"><IMG height=50 src="home.gif" width=50 border=0></A></center-->
+<CENTER><STRONG><FONT size=5><FONT color=red>Due Date:</FONT> <FONT color=blue>Monday September 19, 
+2005</FONT></FONT></STRONG></CENTER></center>
+<CENTER></CENTER></font>
+<H3></H3></CENTER></FONT>
+</BODY>
+</HTML>

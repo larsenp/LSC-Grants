@@ -1,0 +1,53 @@
+<ValidationItem>
+    <Requirement PropertyKey='LscTigApp'>
+        <Filters>
+            <Argument PropertyKey='ConflictsExist' Value='' Operator='NotEqual'/>
+        </Filters>
+    </Requirement>
+    <Results>
+        <Result
+            ResultCode='3'
+            Message='"Indicate whether any actual or potential conflicts exist for this proposed project." is required.'
+            MaxCount='0'/>
+    </Results>
+</ValidationItem>
+<ValidationItem>
+    <Requirement PropertyKey='LscTigApp'>
+        <Filters>
+            <Argument PropertyKey='ConflictsExist' Value='True' Operator='Equal'/>
+            <Argument PropertyKey='AddressConflicts' Value='' Operator='Equal'/>
+        </Filters>
+    </Requirement>
+    <Results>
+        <Result
+            ResultCode='3'
+            Message='"If there are potential conflicts, discuss how your program will address them if awarded funding." is required as you answered Yes above.'
+            MinCount='1'/>
+    </Results>
+</ValidationItem>
+<ValidationItem>
+    <Requirement PropertyKey='LscTigApp'>
+        <Filters>
+            <Argument PropertyKey='CapacityProtectConflicts' Value='' Operator='Equal'/>
+        </Filters>
+    </Requirement>
+    <Results>
+        <Result
+            ResultCode='3'
+            Message='"Describe your program’s capacity to protect against any conflicts that may arise during the grant." is required.'
+            MinCount='1'/>
+    </Results>
+</ValidationItem>
+<ValidationItem>
+    <Requirement PropertyKey='LscTigApp'>
+        <Filters>
+            <Argument PropertyKey='ComplyConflictsPolicy' Value='True' Operator='Equal'/>
+        </Filters>
+    </Requirement>
+    <Results>
+        <Result
+            ResultCode='3'
+            Message='You must check the box related to the Disclosure of Interests for Determination of Conflicts Policy '
+            MaxCount='0'/>
+    </Results>
+</ValidationItem>

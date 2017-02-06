@@ -1,0 +1,63 @@
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidatePBIFBudgetContracts'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='As Budget contract value enetered, you must provide Contract upload.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidatePBIFBudgetSubGrants'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='As Budget Subgrants value enetered, you must provide Subgrants upload.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidatePBIFBudgetTotal'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Total Project Budget and Budget Total must be equal.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidatePBIFBudgetColumnATotal'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Amount Requested Budget and Pro Bono Innovation Fund Share Total must be equal.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidatePBIFBudgetTotalGreaterThanZero'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Please enter budget data.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

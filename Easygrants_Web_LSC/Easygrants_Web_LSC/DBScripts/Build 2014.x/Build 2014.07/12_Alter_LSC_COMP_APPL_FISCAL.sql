@@ -1,0 +1,2 @@
+ALTER TABLE LSC_COMP_APPL_FISCAL
+	ALTER COLUMN net_asset_fund_balance  INT

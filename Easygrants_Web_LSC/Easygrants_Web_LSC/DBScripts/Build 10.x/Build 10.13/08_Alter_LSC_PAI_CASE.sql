@@ -1,0 +1,17 @@
+ALTER TABLE LSC_PAI_CASE
+	ADD CoCounsel_PB_CR INT NULL,
+		CoCounsel_PB_CC INT NULL,
+		CoCounsel_PB_AAR INT NULL,
+		CoCounsel_PB_AAP INT NULL,
+		CoCounsel_Comp_CR INT NULL,
+		CoCounsel_Comp_CC INT NULL,
+		CoCounsel_Comp_AAR INT NULL,
+		CoCounsel_Comp_AAP INT NULL,
+		Other_PB_CR INT NULL,
+		Other_PB_CC INT NULL,
+		Other_PB_AAR INT NULL,
+		Other_PB_AAP INT NULL,
+		Other_Comp_CR INT NULL,
+		Other_Comp_CC INT NULL,
+		Other_Comp_AAR INT NULL,
+		Other_Comp_AAP INT NULL

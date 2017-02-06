@@ -1,0 +1,2 @@
+ALTER TABLE LSC_TIG_BUDGET_ITEM
+	ADD budget_category_id INT

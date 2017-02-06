@@ -1,0 +1,9 @@
+<ValidationItem>
+	<Requirement PropertyKey='GranteeProject'>
+		<Filters>
+			<Argument PropertyKey='GranteeProjectID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+	</Results>
+</ValidationItem>

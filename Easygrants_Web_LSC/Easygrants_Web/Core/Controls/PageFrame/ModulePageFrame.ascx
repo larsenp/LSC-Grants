@@ -1,0 +1,1 @@
+<%@ Control Language="vb" AutoEventWireup="true" Codebehind="ModulePageFrame.ascx.vb" Inherits="Core_Web.Controls.PageFrame.cModulePageFrame" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>

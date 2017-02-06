@@ -1,0 +1,141 @@
+﻿
+
+
+<!-- GAR Form - J-1 - Actual PAI - format of Older than 2012 cycle year end -->
+<Section Key='GARFormJ1' Type='WordTemplate' TemplateFileName='GAR\PDF_GAR_Actual_PAI_FormJ1.dotx'>
+
+	<DataObject Key='vLSCCompWftaOrgServareaYear' DataObjectDefinitionKey='vLSCCompWftaOrgServareaYear'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='RecipientID' DestKey='txtRecipientID'/>
+			<DisplayProperty PropertyKey='WFTAYear' DestKey='txtYear'/>
+			<DisplayProperty PropertyKey='ServiceArea' DestKey='txtServArea' />
+			<DisplayProperty PropertyKey='Organization.OrganizationName' DestKey='txtOrgName'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscPaiCase' DataObjectDefinitionKey='LscPaiCase'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtProBonoCR'  >
+				<DisplayProperty PropertyKey='ProBonoCR' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProBonoCC'>
+				<DisplayProperty PropertyKey='ProBonoCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProBonoAAR'>
+				<DisplayProperty PropertyKey='ProBonoAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProBonoAAP'>
+				<DisplayProperty PropertyKey='ProBonoAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSubgrantCR'>
+				<DisplayProperty PropertyKey='ProBonoSubgrantCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSubgrantCC'>
+				<DisplayProperty PropertyKey='ProBonoSubgrantCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSubgrantAAR'>
+				<DisplayProperty PropertyKey='ProBonoSubgrantAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSubgrantAAP'>
+				<DisplayProperty PropertyKey='ProBonoSubgrantAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtJudicareCR'>
+				<DisplayProperty PropertyKey='JudicareCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtJudicareCC'>
+				<DisplayProperty PropertyKey='JudicareCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtJudicareAAR'>
+				<DisplayProperty PropertyKey='JudicareAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtJudicareAAP'>
+				<DisplayProperty PropertyKey='JudicareAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConVolCR'>
+				<DisplayProperty PropertyKey='ContractVolCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConVolCC'>
+				<DisplayProperty PropertyKey='ContractVolCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConVolAAR'>
+				<DisplayProperty PropertyKey='ContractVolAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConVolAAP'>
+				<DisplayProperty PropertyKey='ContractVolAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConIndvCR'>
+				<DisplayProperty PropertyKey='ContractIndvCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConIndvCC'>
+				<DisplayProperty PropertyKey='ContractIndvCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConIndvAAR'>
+				<DisplayProperty PropertyKey='ContractIndvAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConIndvAAP'>
+				<DisplayProperty PropertyKey='ContractIndvAAP'/>
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtCoCouslCR'>
+				<DisplayProperty PropertyKey='CoCounselCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCoCouslCC'>
+				<DisplayProperty PropertyKey='CoCounselCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCoCouslAAR'>
+				<DisplayProperty PropertyKey='CoCounselAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCoCouslAAP'>
+				<DisplayProperty PropertyKey='CoCounselAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLRServCR'>
+				<DisplayProperty PropertyKey='LRS_CR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLRServCC'>
+				<DisplayProperty PropertyKey='LRS_CC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLRServAAR'>
+				<DisplayProperty PropertyKey='LRS_AAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLRServAAP'>
+				<DisplayProperty PropertyKey='LRS_AAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherCR'>
+				<DisplayProperty PropertyKey='OtherCR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherCC'>
+				<DisplayProperty PropertyKey='OtherCC'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAAR'>
+				<DisplayProperty PropertyKey='OtherAAR'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAAP'>
+				<DisplayProperty PropertyKey='OtherAAP'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTotalCR'>
+				<DisplayProperty PropertyKey='LscPaiCaseTotal.CRTotal'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTotalCC'>
+				<DisplayProperty PropertyKey='LscPaiCaseTotal.CCTotal'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTotalAAR'>
+				<DisplayProperty PropertyKey='LscPaiCaseTotal.AARTotal'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTotalAAP'>
+				<DisplayProperty PropertyKey='LscPaiCaseTotal.AAPTotal'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+</Section>
+
+
+
+
+

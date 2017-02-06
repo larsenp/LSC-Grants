@@ -1,0 +1,11 @@
+drop table dbo.LSC_a_REVIEW_TOPIC
+
+drop table dbo.LSC_a_REVIEW_AREA_OF_INQUIRY
+
+drop table dbo.LSC_REVIEW_ASSIGNMENT_AREA_OF_INQUIRY
+
+drop table dbo.LSC_a_REVIEW_ELEMENT
+
+drop table dbo.LSC_REVIEW_ASSIGNMENT_ELEMENT
+
+drop table dbo.LSC_c_REVIEW_AREA_OF_INQUIRY_SCORE

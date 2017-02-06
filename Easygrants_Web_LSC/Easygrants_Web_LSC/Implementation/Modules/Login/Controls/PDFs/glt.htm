@@ -1,0 +1,57 @@
+<html>
+<head>
+
+<title>Applicant ID</title>
+<script LANGUAGE="JavaScript">
+       function exitform(){
+               document.location.href ="cgamenu.html";
+               //document.userform.method = "post";
+              // document.userform.submit();
+          }
+
+       function submitform(){
+              document.userform.method = "post";
+              document.userform.action = "/Scripts/LSC/GAP/GLTRmenu.asp";
+              //document.userform.action = "/Scripts/LSC/comp/gafmenu3.idc";
+              document.userform.submit();
+          }
+
+            
+	      //document.userform.action = "/IBCFilecom/setsession.asp";
+            
+ </script>
+</head>
+<BODY background="/scripts/lsc/subgrant/adver5.jpg" bgcolor="#ffffff" text="#000000" link="#666633" vlink="#333366" alink="#990000"><!--mstheme--><font face="Times New Roman">
+<BR><BR>
+<center><h2>Grant Letter Login</h2></center>
+<form NAME="userform">
+<!--ul><ul><ul><ul><ul><ul><ul><ul><ul-->
+<center>
+<table WIDTH="300">
+<tr>
+<td WIDTH="100"><b>Recipient ID:</b></td>
+<td><input NAME="orgid" SIZE="6" Maxlength="6" ></td>
+</tr><tr>
+<td><b>Password:</b></td>
+<td><input TYPE="password" NAME="password" SIZE="7" Maxlength="7"></td>
+</tr>
+</table></ul></ul></ul></ul></ul></ul></ul></ul></ul>
+<BR>
+<center>
+<!--
+<H2>Closed</H2>
+-->
+<!--input TYPE="submit" NAME="button2" VALUE="    OK   " onClick="submitform()"-->
+<input type=image src="/scripts/Lsc/subgrant/button_login.gif" width=100 height=30 border=0 alt="Log In"
+onClick="submitform()"></font></B></CENTER>
+<!--input TYPE="button" NAME="button3" VALUE=" EXIT " onClick="exitform()"-->
+</form>
+
+<script LANGUAGE="JavaScript">
+  document.userform.orgid.focus();
+</script>
+
+<center><A href="/../default.htm"><IMG height=50 src="home.gif" width=50 border=0></a></center></font>
+
+</BODY>
+</html>

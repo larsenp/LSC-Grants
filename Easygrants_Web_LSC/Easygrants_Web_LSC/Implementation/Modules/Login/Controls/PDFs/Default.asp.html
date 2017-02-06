@@ -1,0 +1,142 @@
+
+
+<script language="javascript">
+function CreatePopUp(url, windowName, width, height, scrollbars, resizable) 
+{
+
+    if (!windowName)
+    {
+        windowName = "popup";
+    }
+    
+    if (!width) 
+    {
+        width = "500";
+    }
+    
+    if (!height) {
+        height = "400";
+    }
+    
+    if (!scrollbars) {
+        scrollbars = "yes";
+    }
+    
+    if (!resizable) {
+        resizable = "yes";
+    }
+
+    var popupwindow;
+    var left = (window.screen.availWidth / 2) - (width / 2);
+    var top = (window.screen.availHeight / 2) - (height / 2);
+	
+	popupwindow = window.open(url, windowName , "status=Phase,width=" + width + ",resizable=" + resizable + ",scrollbars=" + scrollbars + ",height=" + height + ",left=" + left + ",top=" + top + ",toolbars=no,menubar=no");		
+    popupwindow.focus();
+}
+function PrintReport()
+{
+    opener.focus();
+    window.print();
+    //alert("The report requested is being printed.  Please press OK when printing is completed to close the window.");
+    //window.close();
+}
+function SubmitReport(reportID,actionID,YearID,ID,ServiceAreaID,ServiceAreaTypeID,SATypeID)
+{
+    var frm = document.frmSubmission;
+	var agree;
+    
+    frm.ReportID.value = reportID;
+    frm.ActionID.value = actionID;
+    frm.YearID.value = YearID;
+	frm.ID.value = ID;
+	frm.SATypeID.value = SATypeID;	
+	frm.ServiceAreaID.value = ServiceAreaID;	
+	frm.ServiceAreaTypeID.value = ServiceAreaTypeID;		
+	    
+	if (actionID==1) 
+    	agree = confirm("Please save your data before submitting reports.\nOnce the data has been submitted you will no longer\nbe able to edit or add data.\n\nPress OK if you wish to submit this report.");
+	else
+		agree = confirm("Unsubmitting reports allow users to edit the report chosen.\n\nPress OK if you wish to unsubmit this report.");		
+	
+    
+    if (agree)
+        frm.submit();
+}
+function LogOff()
+{
+    var agree = confirm("Are you sure you want to log off the GAR system?");
+    
+    if (agree)
+        top.location = "/Default.asp";
+}
+function SelectSA()
+{
+    var frm = document.frmSA;
+    
+    if (frm.ServiceArea.selectedIndex != 0)
+        frm.submit();
+}
+</script>
+<html>
+<head>
+	<title>Legal Services Corporation</title>
+	<link rel="STYLESHEET" type="text/css" href="/_library/style/default.css">
+<meta name="Microsoft Theme" content="copy-of-rice-paper-2- 011, default">
+</head>
+
+<body>
+<br><br><br><br>
+
+<form name="frmLogin" method="post" action="process_login.asp">
+<table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" align="Center">
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff">
+				<tr>
+					<td><img src="/_library/images/mainlogo.gif" border="0"></td>
+				</tr>
+				<tr>
+					<td align="center" class="Header">Recipient Information Network</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td align="center">
+						<table cellspacing="0" cellpadding="5" border="0">
+							
+							<tr>
+								<td class="Default">Recipient ID:</td>
+								<td><input type="text" name="LoginID"  size="15" maxlength="6"></td>
+							</tr>
+							<tr>
+								<td class="Default">Password:</td>
+								<td><input type="Password" name="Password"  size="15" maxlength="7"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr><td align="center" ><input type="submit" value="Log In" class="Default"></td></tr>
+				<tr><td>&nbsp;</td></tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<BR>
+<!--Center>
+<Table width=600>
+<tr><td>
+
+<P><FONT color=red><STRONG><U>NOTE:</U> </STRONG> </FONT></P>
+<P><FONT color=red><STRONG>
+The RIN server upgrade has been postponed. 
+There will be no interruption of GAR availability on Friday, March 5.
+<On Friday, 
+March 5, LSC will upgrade the RIN server. Thus GAR will be UNAVAILABLE Friday 
+morning. Please be sure to save everything you are working on before you log out 
+Thursday. We expect the GAR to be fully functional by noon Eastern Standard Time 
+Friday.> </STRONG></FONT></P></td></tr>
+</table-->		
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+<%@ Control Language="vb" AutoEventWireup="true" Codebehind="PrintableViewLink.ascx.vb" Inherits="Core_Web.Controls.Base.cPrintableViewLink1" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+<a id='ancPrintableViewLink' runat='server'><img src='../../../Easygrants/Images/icon_print.jpg' alt='Printer-friendly view' title='Printer-friendly view' border='0'></a>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlMessage" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types" xmlns:s3="http://AGDEVWEB2/EG2WS/sws" xmlns:s2="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlResultStream" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://AGDEVWEB2/EG2WS/sws" name="sws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:simpleType name="nonNegativeInteger">
+        <s:restriction base="s:int">
+          <s:minInclusive value="0" />
+        </s:restriction>
+      </s:simpleType>
+      <s:attribute name="IsNested" type="s:boolean" />
+      <s:complexType name="SqlRowSet">
+        <s:sequence>
+          <s:element ref="s:schema" />
+          <s:any />
+        </s:sequence>
+        <s:attribute ref="s0:IsNested" />
+      </s:complexType>
+      <s:complexType name="SqlXml" mixed="true">
+        <s:sequence>
+          <s:any />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SqlResultCode">
+        <s:restriction base="s:int">
+          <s:minInclusive value="0" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlMessage">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types" />
+      <s:complexType name="SqlMessage">
+        <s:sequence minOccurs="1" maxOccurs="1">
+          <s:element name="Class" type="s0:nonNegativeInteger" />
+          <s:element name="LineNumber" type="s0:nonNegativeInteger" />
+          <s:element name="Message" type="s:string" />
+          <s:element name="Number" type="s0:nonNegativeInteger" />
+          <s:element name="Procedure" type="s:string" />
+          <s:element name="Server" type="s:string" />
+          <s:element name="Source" type="s:string" />
+          <s:element name="State" type="s0:nonNegativeInteger" />
+        </s:sequence>
+        <s:attribute ref="s0:IsNested" />
+      </s:complexType>
+    </s:schema>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlResultStream">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlMessage" />
+      <s:complexType name="SqlResultStream">
+        <s:choice minOccurs="1" maxOccurs="unbounded">
+          <s:element name="SqlRowSet" type="s0:SqlRowSet" />
+          <s:element name="SqlXml" type="s0:SqlXml" />
+          <s:element name="SqlMessage" type="s1:SqlMessage" />
+          <s:element name="SqlResultCode" type="s0:SqlResultCode" />
+        </s:choice>
+      </s:complexType>
+    </s:schema>
+    <s:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://AGDEVWEB2/EG2WS/sws">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlMessage" />
+      <s:import namespace="http://schemas.microsoft.com/SQLServer/2001/12/SOAP/types/SqlResultStream" />
+      <s:element name="wsTest1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="param1" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="param2" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="wsTest1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="wsTest1Result" type="s2:SqlResultStream" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="wsTest1In">
+    <part name="parameters" element="s3:wsTest1" />
+  </message>
+  <message name="wsTest1Out">
+    <part name="parameters" element="s3:wsTest1Response" />
+  </message>
+  <portType name="SXSPort">
+    <operation name="wsTest1">
+      <input message="s3:wsTest1In" />
+      <output message="s3:wsTest1Out" />
+    </operation>
+  </portType>
+  <binding name="SXSBinding" type="s3:SXSPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="wsTest1">
+      <soap:operation soapAction="http://AGDEVWEB2/EG2WS/sws/wsTest1" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="sws">
+    <port name="SXSPort" binding="s3:SXSBinding">
+      <soap:address location="http://AGDEVWEB2/EG2WS/sws" />
+    </port>
+  </service>
+</definitions>

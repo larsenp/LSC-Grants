@@ -1,0 +1,485 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='IsNew' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a request type.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='MeetsRegReqs' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must indicate whether the proposed agreement meets LSC regulatory requirements.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='' Operator='NotEqual'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a recommendation.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='137'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='MeetsRegReqs' Value='False' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='140' Operator='NotEqual'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have indicated that the proposed agreement does not meet LSC regulatory requirements. You must recommend for denial.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='138'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for full approval. You must indicate whether reporting requirements are recommended.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='ReportInfo' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate which information is to be submitted.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='ReportIntervalMonths' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the reporting interval.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='ReportDueDate' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the due date of the first report.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='False'/>
+			<Argument PropertyKey='ReportInfo' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified information to be submitted. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='False' Bool=''/>
+			<Argument PropertyKey='ReportIntervalMonths' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified a reporting interval. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='RecommendReportingReqs' Value='False' />
+			<Argument PropertyKey='ReportDueDate' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified a report due date. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='False' />
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='False' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial/provisional approval. You must recommend partial approval, provisional approval, or both.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must indicate whether you recommend partial approval.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='True' />
+			<Argument PropertyKey='PartialApprovalConcerns' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must specify the concerns that led to this recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='True' />
+			<Argument PropertyKey='RevisedStartDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised start date for the subgrant.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='True' />
+			<Argument PropertyKey='RevisedEndDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised end date for the subgrant.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateRevisedStartDateEndDate'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The revised end date must fall after the revised start date.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='True' />
+			<Argument PropertyKey='RevisedSubgrantAmount' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised subgrant amount.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='False' />
+			<Argument PropertyKey='PartialApprovalConcerns' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended partial approval, but you have specified the concerns leading to this recommendation. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='False' />
+			<Argument PropertyKey='RevisedStartDate' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended partial approval, but you have designated a revised start date for the subgrant. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='False' />
+			<Argument PropertyKey='RevisedEndDate' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended partial approval, but you have designated a revised end date for the subgrant. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendPartialApproval' Value='False' />
+			<Argument PropertyKey='RevisedSubgrantAmount' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended partial approval, but you have designated a revised subgrant amount. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must indicate whether you recommend provisional approval.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='True' />
+			<Argument PropertyKey='ProvisionalApprovalPendingItem' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended provisional approval. You must provide a rationale for provisional approval and a list of necessary documents.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='True' />
+			<Argument PropertyKey='ProvisionalDueDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended provisional approval. You must provide a due date for submission of required materials.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='False' />
+			<Argument PropertyKey='ProvisionalApprovalPendingItem' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended provisional approval, but you have designated items to be received for full approval. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='139'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='RecommendProvisionalApproval' Value='False' />
+			<Argument PropertyKey='ProvisionalDueDate' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have not recommended provisional approval, but you have designated a due date for submission of required materials. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='140'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='DenialReason' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for denial. You must provide a Reason for Denial Recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateRevisedStartDateInFuture'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The revised start date must be a future date.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateReportDueDateInFuture'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The report due date must be a future date.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateProvisionalDueDateInFuture'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The provisional due date must be a future date.'/>
+	</Results>
+</ValidationItem>

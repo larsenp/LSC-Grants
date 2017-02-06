@@ -1,0 +1,1 @@
+DELETE FROM a_WF_PROJECT_TASK WHERE wf_task_id = 84

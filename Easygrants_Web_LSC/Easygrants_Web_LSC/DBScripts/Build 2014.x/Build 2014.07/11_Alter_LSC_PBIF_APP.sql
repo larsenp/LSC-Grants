@@ -1,0 +1,2 @@
+ALTER TABLE LSC_PBIF_APP
+	ADD grant_term_months INT

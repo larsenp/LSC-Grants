@@ -1,0 +1,102 @@
+CREATE VIEW vLSC_PAI_CASE_TOTAL
+
+AS
+
+SELECT lsc_pai_case_id,
+      ISNULL(Pro_Bono_CR, 0)
+		  + ISNULL(Pro_Bono_CC, 0)
+		  + ISNULL(Pro_Bono_AAR, 0)
+		  + ISNULL(Pro_Bono_AAP, 0) pro_bono_total,
+      ISNULL(Pro_Bono_S_CR, 0)
+	      + ISNULL(Pro_Bono_S_CC, 0)
+	      + ISNULL(Pro_Bono_S_AAR, 0)
+	      + ISNULL(Pro_Bono_S_AAP, 0) pro_bono_s_total,
+	  ISNULL(Judicare_CR, 0)
+	      + ISNULL(Judicare_CC, 0)
+	      + ISNULL(Judicare_AAR, 0)
+		  + ISNULL(Judicare_AAP, 0) judicare_total,
+	  ISNULL(Contr_Vol_CR, 0)
+		  + ISNULL(Contr_Vol_CC, 0)
+		  + ISNULL(Contr_Vol_AAR, 0)
+		  + ISNULL(Contr_Vol_AAP, 0) contr_vol_total,
+	  ISNULL(Contr_Indv_CR, 0)
+		  + ISNULL(Contr_Indv_CC, 0)
+		  + ISNULL(Contr_Indv_AAR, 0)
+		  + ISNULL(Contr_Indv_AAP, 0) contr_indv_total,
+	  ISNULL(Co_Council_CR, 0)
+		  + ISNULL(Co_Council_CC, 0)
+		  + ISNULL(Co_Council_AAR, 0)
+		  + ISNULL(Co_Council_AAP, 0) co_counsel_total,
+	  ISNULL(LRS_CR, 0)
+		  + ISNULL(LRS_CC, 0)
+		  + ISNULL(LRS_AAR, 0)
+		  + ISNULL(LRS_AAP, 0) lrs_total,
+	  ISNULL(Other_CR, 0)
+		  + ISNULL(Other_CC, 0)
+		  + ISNULL(Other_AAR, 0)
+		  + ISNULL(Other_AAP, 0) other_total,
+     ISNULL(Pro_Bono_CR, 0)
+		  + ISNULL(Pro_Bono_S_CR, 0)
+		  + ISNULL(Judicare_CR, 0)
+		  + ISNULL(Contr_Vol_CR, 0)
+		  + ISNULL(Contr_Indv_CR, 0)
+		  + ISNULL(Co_Council_CR, 0)
+		  + ISNULL(LRS_CR, 0)
+		  + ISNULL(Other_CR, 0) cr_total,
+	  ISNULL(Pro_Bono_CC, 0)
+		  + ISNULL(Pro_Bono_S_CC, 0)
+		  + ISNULL(Judicare_CC, 0)
+		  + ISNULL(Contr_Vol_CC, 0)
+		  + ISNULL(Contr_Indv_CC, 0)
+		  + ISNULL(Co_Council_CC, 0)
+		  + ISNULL(LRS_CC, 0)
+		  + ISNULL(Other_CC, 0) cc_total,
+	  ISNULL(Pro_Bono_AAR, 0)
+		  + ISNULL(Pro_Bono_S_AAR, 0)
+		  + ISNULL(Judicare_AAR, 0)
+		  + ISNULL(Contr_Vol_AAR, 0)
+		  + ISNULL(Contr_Indv_AAR, 0)
+		  + ISNULL(Co_Council_AAR, 0)
+		  + ISNULL(LRS_AAR, 0)
+		  + ISNULL(Other_AAR, 0) aar_total,
+	  ISNULL(Pro_Bono_AAP, 0)
+		  + ISNULL(Pro_Bono_S_AAP, 0)
+		  + ISNULL(Judicare_AAP, 0)
+		  + ISNULL(Contr_Vol_AAP, 0)
+		  + ISNULL(Contr_Indv_AAP, 0)
+		  + ISNULL(Co_Council_AAP, 0)
+		  + ISNULL(LRS_AAP, 0)
+		  + ISNULL(Other_AAP, 0) aap_total,
+     ISNULL(Pro_Bono_CR, 0)
+		  + ISNULL(Pro_Bono_S_CR, 0)
+		  + ISNULL(Judicare_CR, 0)
+		  + ISNULL(Contr_Vol_CR, 0)
+		  + ISNULL(Contr_Indv_CR, 0)
+		  + ISNULL(Co_Council_CR, 0)
+		  + ISNULL(LRS_CR, 0)
+		  + ISNULL(Other_CR, 0)
+		  + ISNULL(Pro_Bono_CC, 0)
+		  + ISNULL(Pro_Bono_S_CC, 0)
+		  + ISNULL(Judicare_CC, 0)
+		  + ISNULL(Contr_Vol_CC, 0)
+		  + ISNULL(Contr_Indv_CC, 0)
+		  + ISNULL(Co_Council_CC, 0)
+		  + ISNULL(LRS_CC, 0)
+		  + ISNULL(Other_CC, 0)
+		  + ISNULL(Pro_Bono_AAR, 0)
+		  + ISNULL(Pro_Bono_S_AAR, 0)
+		  + ISNULL(Judicare_AAR, 0)
+		  + ISNULL(Contr_Vol_AAR, 0)
+		  + ISNULL(Contr_Indv_AAR, 0)
+		  + ISNULL(Co_Council_AAR, 0)
+		  + ISNULL(LRS_AAR, 0)
+		  + ISNULL(Other_AAR, 0)
+		  + ISNULL(Pro_Bono_AAP, 0)
+		  + ISNULL(Pro_Bono_S_AAP, 0)
+		  + ISNULL(Judicare_AAP, 0)
+		  + ISNULL(Contr_Vol_AAP, 0)
+		  + ISNULL(Contr_Indv_AAP, 0)
+		  + ISNULL(Co_Council_AAP, 0)
+		  + ISNULL(LRS_AAP, 0)
+		  + ISNULL(Other_AAP, 0) total
+  FROM Easygrants_Migration.dbo.LSC_PAI_CASE

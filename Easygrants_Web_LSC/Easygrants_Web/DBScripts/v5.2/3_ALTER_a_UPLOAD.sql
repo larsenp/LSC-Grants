@@ -1,0 +1,1 @@
+alter table a_UPLOAD add file_name_prefix varchar(50);

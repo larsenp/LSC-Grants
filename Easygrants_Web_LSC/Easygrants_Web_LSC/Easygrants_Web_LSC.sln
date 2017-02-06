@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Easygrants_Web_LSC", "Easygrants_Web_LSC.vbproj", "{230D4618-00E7-4E18-AC11-2A1C5C9939AC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394} = {C2D23B78-F083-45B3-9DE2-0CDE33514394}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Easygrants_Web", "..\Easygrants_Web\Easygrants_Web.vbproj", "{C2D23B78-F083-45B3-9DE2-0CDE33514394}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\EasyGrants_Web\EG_Core_2\Core\Core.csproj", "{814A0545-75D0-4F25-8EE0-D16676B2DD5D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easygrants", "..\EasyGrants_Web\EG_Core_2\Easygrants\Easygrants.csproj", "{8D7BDF88-F840-468A-8D8D-435975958813}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Stage|Any CPU.ActiveCfg = Release|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Stage|Any CPU.Build.0 = Release|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{230D4618-00E7-4E18-AC11-2A1C5C9939AC}.Test|Any CPU.Build.0 = Release|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{C2D23B78-F083-45B3-9DE2-0CDE33514394}.Test|Any CPU.Build.0 = Test|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{814A0545-75D0-4F25-8EE0-D16676B2DD5D}.Test|Any CPU.Build.0 = Test|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{8D7BDF88-F840-468A-8D8D-435975958813}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

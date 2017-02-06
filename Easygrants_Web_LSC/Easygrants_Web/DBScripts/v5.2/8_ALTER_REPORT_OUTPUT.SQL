@@ -1,0 +1,1 @@
+ALTER TABLE REPORT_OUTPUT ADD sharepoint_conversion_status int  default ((0));

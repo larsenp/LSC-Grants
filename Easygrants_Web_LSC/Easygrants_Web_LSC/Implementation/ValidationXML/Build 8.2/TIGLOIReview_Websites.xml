@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGOPPScoresAndComments'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' BaseMessage='Comments must be provided for all questions.' Message=''/>
+	</Results>
+</ValidationItem>

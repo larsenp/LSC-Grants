@@ -1,0 +1,6 @@
+ALTER TABLE LSC_RPT_STANDARD_RENEWAL_STAFF_REVIEW
+	ADD pa1_response VARCHAR(MAX)
+		,pa2_response VARCHAR(MAX)
+		,pa3_response VARCHAR(MAX)
+		,pa4_response VARCHAR(MAX)
+		,serv_area VARCHAR(10)

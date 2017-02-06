@@ -1,0 +1,1 @@
+ALTER TABLE s_ID_GEN ADD lookup_table_type_id int

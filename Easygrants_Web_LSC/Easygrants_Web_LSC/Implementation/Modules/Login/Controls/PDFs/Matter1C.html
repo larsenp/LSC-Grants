@@ -1,0 +1,123 @@
+<HTML>
+ <HEAD>
+  <TITLE>Matters 1 C</TITLE>
+
+   <SCRIPT LANGUAGE="JavaScript">
+
+	function save(){
+		setValues(document.OA2form);
+		document.OA2form.action ="/Scripts/LSC/matters/Matter1C.asp";
+		document.OA2form.method = "post";
+		document.OA2form.submit();
+      }
+
+	function exit(){
+		document.OA2form.action ="/Scripts/LSC/matters/MattersMenu1.asp";
+		//document.OA2form.action ="/Scripts/LSC/Subgrant/
+		document.OA2form.method = "post";
+		document.OA2form.submit();
+      }
+    function menu(){
+       document.location.href ="http://www.rin.lsc.gov/matters.html";             
+          } 
+	function setfocus() {
+		document.OA2form.IC1.focus();
+	}
+
+  </SCRIPT>
+
+ </HEAD>
+
+<BODY background="/scripts/lsc/subgrant/adver.jpg" bgcolor="#ffffff" text="#000000" link="#666633" vlink="#333366" alink="#990000"><font face="Times New Roman">
+<FORM NAME="OA2form">
+<CENTER>
+    <Font style="BACKGROUND-COLOR: #99ff99" color=Blue>
+    <B><I>MATTERS</I> SERVICE REPORT<BR>
+    <Font color=Brown>
+    I -- Community Legal Education C<BR>
+    <font style="BACKGROUND-COLOR: #bbfff" color=black>YEAR: </font></font>
+<font style="BACKGROUND-COLOR: #ffffff">
+</CENTER>
+<Blockquote>
+<TABLE WIDTH="620" BORDER="0" CELLSPACING="1" CELLPADDING="1">
+<TR>
+<TD WIDTH="20%" BGCOLOR=#ffff99><B>Grantee Number</B></TD>
+<TD><B></B></TD>
+</TR>
+<TR>
+<TD BGCOLOR=#ffff99><B>Grantee Name</B></TD>
+<TD COLSPAN="4"><B></B></TD>
+</TR>
+</table>
+
+<center><BR>
+<TABLE BORDER=1 FRAME=NONE RULES=ALL WIDTH=520 CELLPADDING=1 CELLSPACING=1 COLS=3>
+<TR><TH COLSPAN=2 VALIGN=BOTTOM BGCOLOR=#99cccc>
+Models Used
+<TH VALIGN=TOP BGCOLOR=#e0ffff>
+Number of Media Items<BR>Measured</TH></TR>
+<TR><TH BGCOLOR=#FFCCcc VALIGN="TOP">1</TH>
+<TD BGCOLOR=#CCffcc ALIGN=LEFT><B>Newspaper Items</b><BR>
+please list the number of legal education articles or 					
+other items that appeared in newspapers or magazines					
+during the year (including repeats or reprints)..				
+</TD>
+<TH Align="CENTER">
+<INPUT NAME="IC1" Align="center" size=7 maxlength=7 VALUE=""></TH></TR>
+
+<TR><TH BGCOLOR=#FFCCcc VALIGN="TOP">2</TH>
+<TD BGCOLOR=#CCffcc ALIGN=LEFT><B>Radio Spots/PSA's</b><BR>
+please list the number of legal education spots or announcements aired on 
+radio during the year.  Each airing	counts as one Matter, even if it is a 
+re-airing of the same spot			
+</TD>
+<TH Align="CENTER">
+<INPUT NAME="IC2" Align=center size=7 maxlength=7 VALUE=""></TH></TR>
+
+<TR><TH BGCOLOR=#FFCCcc VALIGN="TOP">3</TH>
+<TD BGCOLOR=#CCffcc ALIGN=LEFT><B>Video Spots/PSA's</b><BR>
+please list the number of legal education spots or announcements aired 
+during the year.  Each airing counts as one Matter, even if it is a 
+re-airing of the same spot.
+</TD>
+<TH Align="CENTER">
+<INPUT NAME="IC3" Align=center size=7 maxlength=7 VALUE=""></TH></TR>
+<TR><TH COLSPAN=2 BGCOLOR=#FFFF99 ALIGN=LEFT>
+Total number of media community legal education media items</TH>
+<TD ALIGN="CENTER"><B></TD></TR>
+</Table><font style="BACKGROUND-COLOR: #ffffff"><BR>
+<!--<TABLE BORDER=0 FRAME=NONE RULES=ALL WIDTH=600 CELLPADDING=0 CELLSPACING=0 COLS=3>
+<TR><TD WIDTH=450><TD WIDTH=50>Note:<TD>
+<TD ALIGN="Left"><font size=2>
+</TD></TR>
+</Table>-->
+
+   <TABLE WIDTH="600" BORDER="1">
+   <TR>
+   <TD WIDTH="10" VALIGN="TOP" BGCOLOR="#006633"> <FONT COLOR="#ffffff"><B>Note:</TD>
+   <TD BGCOLOR="#ffff66"><!--<font face="Arial" size="-2">--><B>
+this form is different from other numeric forms in that it does not measure
+number of persons served, but only the number of times a community legal 
+education item appeared in media that reach residents of the program's service area
+</TD>
+   </TABLE>
+<FONT color=red size=3><STRONG>
+<br>
+To avoid losing data, Make sure to Click SAVE first before clicking other buttons.
+</STRONG></FONT><BR>
+<CENTER>
+<FONT color=red size=3><STRONG>
+</font></font></font></font>
+<BR>
+      
+<CENTER>
+ <INPUT TYPE=submit VALUE="SAVE" ONCLICK="save()">
+ <INPUT TYPE=submit VALUE="EXIT" ONCLICK="exit()">
+ 
+</CENTER>
+
+
+ 
+  </FORM></B>
+ </BODY>
+</HTML>

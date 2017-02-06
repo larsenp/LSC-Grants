@@ -1,0 +1,78 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='ProjectTitle' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Project Title is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='AmountRequested' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Amount Requested is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='TotalBudget' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Total Project Budget is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='ParrallelTig' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Are you also requesting funding for this project through LSC’s TIG program? is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='ApplyForTIG' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Are you applying for a TIG that complements this grant?  is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscPbifApp'>
+		<Filters>
+			<Argument PropertyKey='ExecSummary' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Executive Summary is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

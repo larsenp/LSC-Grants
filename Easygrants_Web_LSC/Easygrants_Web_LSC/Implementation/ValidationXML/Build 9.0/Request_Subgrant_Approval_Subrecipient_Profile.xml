@@ -1,0 +1,416 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteeName' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Subrecipient Name is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteeAddr1' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Mailing address line 1 is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteeCity' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Mailing address city is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteeStateProvID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Mailing address state is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteeZip' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Mailing address zip code is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteePDFirst' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Program Director first name is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteePDLast' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Program Director last name is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteePDEmail' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Program Director e-mail address is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgranteePDPhone' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Program Director phone number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='Counties' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='List of counties is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgrantAmount' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Subgrant amount is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='SubgrantPurpose' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Subgrant purpose is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='IsGrantee' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Is Subrecipient also an LSC grantee?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscSubgrantGrantTypeID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Type of LSC grant is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscFundBalanceID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Has this subrecipient&apos;s most recent LSC fund balance been included in the Recipient&apos;s most recent fund balance?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscFundBalanceID' Value='2' />
+			<Argument PropertyKey='LscFundBalanceOmitted' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that the subrecipient&apos;s most recent LSC fund balance had not been included in the recipient&apos;s most recent fund balance. You must provide the amount of the fund balance omitted.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscFundBalanceID' Value='4' />
+			<Argument PropertyKey='LscFundBalanceNotApplicable' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that the question regarding LSC fund balances was not applicable. You must provide an explanation in the box marked "If not applicable, why?"'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='LscFundBalanceID' Value='2' Operator='NotEqual'/>
+			<Argument PropertyKey='LscFundBalanceOmitted' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You provided an amount for LSC fund balance omitted, but you indicated that the subrecipient&apos;s most recent LSC fund balance had been included in the recipient&apos;s most recent fund balance'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='TransferFundsAudit' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Transferred funds will be audited by" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Will funds from this subgrant be used for the provision of case services?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='MostRecent4QFrom' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services. You must provide the start date of the most recent four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='MostRecent4QTo' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services. You must provide the end date of the most recent four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='MostRecentLsc' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services. You must provide the number of LSC-funded cases in the most recent four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='MostRecentNonLsc' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services. You must provide the number of non-LSC-funded cases in the most recent four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='IsRenewal' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Is this a renewal request?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='IsRenewal' Value='True'/>
+			<Argument PropertyKey='PrecedingLsc' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services and that this is a renewal request. You must provide the number of LSC-funded cases in the preceding four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='IsRenewal' Value='True'/>
+			<Argument PropertyKey='PrecedingNonLsc' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services and that this is a renewal request. You must provide the number of non-LSC-funded cases in the preceding four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='IsRenewal' Value='True'/>
+			<Argument PropertyKey='RenewalMostRecent4QFrom' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services and that this is a renewal request. You must provide the start date of the preceding four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant'>
+		<Filters>
+			<Argument PropertyKey='FundCaseServices' Value='True' />
+			<Argument PropertyKey='IsRenewal' Value='True'/>
+			<Argument PropertyKey='RenewalMostRecent4QTo' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated that subgrant funds will be used to provide case services and that this is a renewal request. You must provide the end date of the preceding four quarters.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant.LscWfTASubgrantMonitoringProcedures'/>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select at least one item from the list of monitoring procedures.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTASubgrant.LscWfTASubgrantMonitoringProcedureOther'>
+		<Filters>
+			<Argument PropertyKey='MonitoringProcedureOther' Value=''>
+				<RelatedProperty PropertyKey='WfTaskAssignment.LscWfTASubgrant'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You selected "Other" in the list of monitoring procedures. You must specify in the text box provided.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>

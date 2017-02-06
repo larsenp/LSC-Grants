@@ -1,0 +1,105 @@
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW [dbo].[vLSC_INTERIM_EXPENSES]
+
+AS
+
+select ielp.wf_task_assignment_id,
+	o.legacy_organization_id recipient_id,
+	wcy.wfta_year,
+	c.abbr serv_area,
+	sat.abbr serv_area_type,
+	ielp.[6_8] Lawyers,
+	ielp.[6_9] Paralegals,
+	ielp.[6_10] Other_Staff,
+	ielp.[6_11] Empl_Benefits,
+	ielp.[6_8] + ielp.[6_9] + ielp.[6_10] + ielp.[6_11] Personnel_LSC,
+	ielp.[7_1] Space_Rent,
+	ielp.[7_2] Space_Mortgage,
+	ielp.[7_3] Space_Other,
+	ielp.[7_4] Equip_Rental,
+	ielp.[7_5] Off_Supplies,
+	ielp.[7_6] Telephone,
+	ielp.[7_7] Travel_Board,
+	ielp.[7_8] Travel_Staff,
+	ielp.[7_9] Traing_Board,
+	ielp.[7_10] Traing_Staff,
+	ielp.[7_11] Library,
+	ielp.[7_12] Insurance,
+	ielp.[7_13] Dues,
+	ielp.[7_14] Audit,
+	ielp.[7_15] Litigation,
+	ielp.[7_16] Property_Acqu,
+	ielp.[7_17] Purch_Payments,
+	ielp.[7_18] Contr_Serv_Clt,
+	ielp.[7_19] Contr_Serv_Rec,
+	ielp.[7_20] Other,
+	ielp.[7_1] + ielp.[7_2] + ielp.[7_3] + ielp.[7_4] + ielp.[7_5] + ielp.[7_6] + ielp.[7_7] + ielp.[7_8] + ielp.[7_9] + ielp.[7_10] + ielp.[7_11] + ielp.[7_12] + ielp.[7_13] + ielp.[7_14] + ielp.[7_15] + ielp.[7_16] + ielp.[7_17] + ielp.[7_18] + ielp.[7_19] + ielp.[7_20] Non_Personnel_LSC,
+	ielp.[6_8] + ielp.[6_9] + ielp.[6_10] + ielp.[6_11] + ielp.[7_1] + ielp.[7_2] + ielp.[7_3] + ielp.[7_4] + ielp.[7_5] + ielp.[7_6] + ielp.[7_7] + ielp.[7_8] + ielp.[7_9] + ielp.[7_10] + ielp.[7_11] + ielp.[7_12] + ielp.[7_13] + ielp.[7_14] + ielp.[7_15] + ielp.[7_16] + ielp.[7_17] + ielp.[7_18] + ielp.[7_19] + ielp.[7_20] LSC_Total,
+	ienp.[6_8] Lawyers_NLSC,
+	ienp.[6_9] Paralgls_NLSC,
+	ienp.[6_10] Ot_Stf_NLSC,
+	ienp.[6_11] Empl_Bnfs_NLSC,
+	ienp.[6_8] + ienp.[6_9] + ienp.[6_10] + ienp.[6_11] Personnel_Non_LSC,
+	ienp.[7_1] Sp_Rent_NLSC,
+	ienp.[7_2] Sp_Mortg_NLSC,
+	ienp.[7_3] Sp_Other_NLSC,
+	ienp.[7_4] Equp_Rent_NLSC,
+	ienp.[7_5] Off_Suppl_NLSC,
+	ienp.[7_6] Tel_NLSC,
+	ienp.[7_7] Trvl_Brd_NLSC,
+	ienp.[7_8] Trvl_Stf_NLSC,
+	ienp.[7_9] Trng_Brd_NLSC,
+	ienp.[7_10] Trng_Stf_NLSC,
+	ienp.[7_11] Library_NLSC,
+	ienp.[7_12] Insr_NLSC,
+	ienp.[7_13] Dues_NLSC,
+	ienp.[7_14] Audit_NLSC,
+	ienp.[7_15] Litig_NLSC,
+	ienp.[7_16] Prop_Acqu_NLSC,
+	ienp.[7_17] Purch_Pay_NLSC,
+	ienp.[7_18] Ct_Srv_Cl_NLSC,
+	ienp.[7_19] Ct_Srv_Rp_NLSC,
+	ienp.[7_20] Other_NLSC,
+	ienp.[7_1] + ienp.[7_2] + ienp.[7_3] + ienp.[7_4] + ienp.[7_5] + ienp.[7_6] + ienp.[7_7] + ienp.[7_8] + ienp.[7_9] + ienp.[7_10] + ienp.[7_11] + ienp.[7_12] + ienp.[7_13] + ienp.[7_14] + ienp.[7_15] + ienp.[7_16] + ienp.[7_17] + ienp.[7_18] + ienp.[7_19] + ienp.[7_20] Non_Personnel_Non_LSC,
+	ienp.[6_8] + ienp.[6_9] + ienp.[6_10] + ienp.[6_11] + ienp.[7_1] + ienp.[7_2] + ienp.[7_3] + ienp.[7_4] + ienp.[7_5] + ienp.[7_6] + ienp.[7_7] + ienp.[7_8] + ienp.[7_9] + ienp.[7_10] + ienp.[7_11] + ienp.[7_12] + ienp.[7_13] + ienp.[7_14] + ienp.[7_15] + ienp.[7_16] + ienp.[7_17] + ienp.[7_18] + ienp.[7_19] + ienp.[7_20] Non_LSC_Total,
+	ietp.[6_8] Lawyers_Total,
+	ietp.[6_9] Paralegals_Total,
+	ietp.[6_10] Other_Staff_Total,
+	ietp.[6_11] Empl_Benefits_Total,
+	ietp.[6_8] + ietp.[6_9] + ietp.[6_10] + ietp.[6_11] Personnel_Total,
+	ietp.[7_1] Space_Rent_Total,
+	ietp.[7_2] Space_Mortgage_Total,
+	ietp.[7_3] Space_Other_Total,
+	ietp.[7_4] Equip_Rental_Total,
+	ietp.[7_5] Off_Supplies_Total,
+	ietp.[7_6] Telephone_Total,
+	ietp.[7_7] Travel_Board_Total,
+	ietp.[7_8] Travel_Staff_Total,
+	ietp.[7_9] Traing_Board_Total,
+	ietp.[7_10] Traing_Staff_Total,
+	ietp.[7_11] Library_Total,
+	ietp.[7_12] Insurance_Total,
+	ietp.[7_13] Dues_Total,
+	ietp.[7_14] Audit_Total,
+	ietp.[7_15] Litigation_Total,
+	ietp.[7_16] Property_Acqu_Total,
+	ietp.[7_17] Purch_Payments_Total,
+	ietp.[7_18] Contr_Serv_Clt_Total,
+	ietp.[7_19] Contr_Serv_Rec_Total,
+	ietp.[7_20] Other_Total,
+	ietp.[7_1] + ietp.[7_2] + ietp.[7_3] + ietp.[7_4] + ietp.[7_5] + ietp.[7_6] + ietp.[7_7] + ietp.[7_8] + ietp.[7_9] + ietp.[7_10] + ietp.[7_11] + ietp.[7_12] + ietp.[7_13] + ietp.[7_14] + ietp.[7_15] + ietp.[7_16] + ietp.[7_17] + ietp.[7_18] + ietp.[7_19] + ietp.[7_20] Non_Personnel_Total,
+	ietp.[6_8] + ietp.[6_9] + ietp.[6_10] + ietp.[6_11] + ietp.[7_1] + ietp.[7_2] + ietp.[7_3] + ietp.[7_4] + ietp.[7_5] + ietp.[7_6] + ietp.[7_7] + ietp.[7_8] + ietp.[7_9] + ietp.[7_10] + ietp.[7_11] + ietp.[7_12] + ietp.[7_13] + ietp.[7_14] + ietp.[7_15] + ietp.[7_16] + ietp.[7_17] + ietp.[7_18] + ietp.[7_19] + ietp.[7_20] Grand_Total
+	from vLSC_INTERIM_EXPENSES_LSC_PIVOT ielp
+		join vLSC_INTERIM_EXPENSES_NON_LSC_PIVOT ienp on ielp.wf_task_assignment_id = ienp.wf_task_assignment_id
+		join vLSC_INTERIM_EXPENSES_TOTAL_PIVOT ietp on ielp.wf_task_assignment_id = ietp.wf_task_assignment_id
+		join wf_task_assignment wfta on ielp.wf_task_assignment_id = wfta.wf_task_assignment_id
+		join grantee_project gp on wfta.grantee_project_id = gp.grantee_project_id
+		join organization o on gp.primary_organization_id = o.organization_id
+		join vwfta_competition_year wcy on wfta.wf_task_assignment_id = wcy.wf_task_assignment_id
+		join a_wf_project wfp on gp.wf_project_id = wfp.id
+		join a_competition c on wfp.competition_id = c.id
+		join lsc_a_service_area sa on c.id = sa.competition_id
+		join lsc_c_service_area_type sat on sa.service_area_type_id = sat.id

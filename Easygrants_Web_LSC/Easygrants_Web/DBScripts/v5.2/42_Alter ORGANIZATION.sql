@@ -1,0 +1,1 @@
+ALTER TABLE ORGANIZATION ADD vendor_id int null

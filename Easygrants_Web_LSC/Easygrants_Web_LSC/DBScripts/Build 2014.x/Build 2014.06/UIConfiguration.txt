@@ -1,0 +1,13 @@
+Following UI configuration needs to be done.
+1) Project Task Uploads configuration: Associate the three new upload definitions with PBIF 2014 Application
+    a. Budget Narrative
+	 b. Resumes of Key Staff
+	 c. Appendices and Supporting Documentation
+
+2) Post Submission Event configuration.
+  Add Processing item "PBIF Application post-submission processing" to 2014 PBIF application in Workflow Builder
+3) PDF Template configuration.
+	Associate new PDF Template "Submit PBIF Application" for the project task "Submit PBIF Application" in Workflow Builder Project Task Editor Page.
+4) Configure new upload forms.
+	a. Associate new forms "LSC - PBIF Application - Contracts" and  "LSC - PBIF Application - Subgrants" for the task "Submit PBIF Application" in Task Builder.
+	b. Associate uploads "Contracts" and "Subgrants" with 2014 PBIF application in the "Upload - Task" tab of the Uploads configuration tool.

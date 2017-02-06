@@ -1,0 +1,1 @@
+ALTER TABLE a_UPLOAD_TEMPLATE ALTER COLUMN source_MIME_type varchar(150) null

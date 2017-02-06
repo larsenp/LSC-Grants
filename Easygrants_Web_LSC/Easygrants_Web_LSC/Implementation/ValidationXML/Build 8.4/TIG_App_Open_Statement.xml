@@ -1,0 +1,13 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='StmtAdditionalFunds' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Statement of Additional Funds is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

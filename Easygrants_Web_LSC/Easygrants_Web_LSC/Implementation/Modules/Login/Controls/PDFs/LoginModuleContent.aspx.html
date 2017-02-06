@@ -1,0 +1,696 @@
+<SCRIPT><!--
+
+function SetTimer(){
+	var AppTime = setTimeout("TimeIsAlmostUp()",1200000);
+}// function SetTimer() 
+ 
+function showAlert(TimeOut){
+	var aAlert = alert(TimeOut + " minutes from " + warnTime(0) + " your session on the server will timeout.  \n" + 
+	"To prevent the session timeout and loss of unsaved data (if any) before " + warnTime(TimeOut) + ", \n" + 
+	"you must save your data or refresh the page.")  
+	//If you read this message after your session has timed out, you will need to log in again on the Log In page."
+}// function showAlert()
+
+function TimeIsAlmostUp(){
+	alert("Ten minutes from " + warnTime(0) + " your session on the server will timeout.  \n" + 
+	"To prevent the session timeout and loss of unsaved data (if any) before " + warnTime(10) + ", \n" + 
+	"you must save your data or refresh the page.")  
+	//If you read this message after your session has timed out, you will need to log in again on the Log In page."
+}// function TimeIsAlmostUp()
+
+function warnTime(offset){
+	var AMPM
+	var warnDate = new Date()
+	var warnHour = warnDate.getHours()
+	if(warnHour>12){
+		warnHour = warnHour - 12
+		AMPM = " pm"
+	} else {
+		if (warnHour!=12){
+			AMPM = " am"
+		} else {
+			AMPM = " pm"
+		}		
+	}
+	if(warnHour==0){
+		warnHour=12
+	}
+	var warnMin = warnDate.getMinutes() + offset
+	if(warnMin==60){
+		warnHour=warnHour+1
+		warnMin=0
+	}
+	if(warnMin<10){
+		warnMin = "0" + warnMin
+	}
+	if(warnMin>60){
+		warnHour=warnHour+1
+		warnMin=warnMin-60
+		if(warnMin<10){
+			warnMin = "0" + warnMin
+		}
+	}
+	if(warnHour>12){
+		warnHour = warnHour - 12
+	}
+	return warnHour + ":" + warnMin + AMPM
+}
+ 
+--></SCRIPT>
+
+<html>
+<head>
+	<title>LSC Applicant Information System Bulletin Board</title>
+	<script type="text/javascript">
+	function MainCalled()
+	{
+		if(document.frmMain.elements[3])
+		{
+			if(document.frmMain.elements[3].type=="text")
+			{
+				document.frmMain.elements[3].focus();
+			}
+		}
+		
+	}
+		
+	</script >
+
+</head>
+<body  onload="MainCalled()">
+<form name="frmMain" method="post" action="LoginModuleContent.aspx?Config=LoginModuleConfig&amp;Page=LSCApplicantBulletinBoard" id="frmMain">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDU3NzYzMjcPZBYCAgEPZBYCAgEPZBYCAgIPZBYCAgEPZBYCZg9kFgICAQ9kFgICBA9kFgJmD2QWAgIBD2QWAgIBD2QWAgIGD2QWAmYPZBYCAgEPZBYCZg8WAh4JaW5uZXJodG1sBTFFYXN5R3JhbnRzX1dlYl9MU0MgLSA8Yj5yMS4yMDA3MTAyMi5BPC9iPiAoRGVidWcpZGSdJoDmP/dtL2eCz+iNJAGYDK7GCQ==" />
+
+<script type="text/javascript">
+<!--
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+// -->
+</script>
+
+
+<script language='JavaScript1.2' src='/EasyGrants_Web_LSC/Core/Includes/CSSButton.js'></script>
+
+<div id="mPageFrameCtl_tdCompetitionStyle">
+<style>
+<!--
+	body, td {
+		FONT-SIZE: 9pt;
+		FONT-FAMILY: arial,helvetica,sans-serif;
+	}
+
+	body, td A{
+		text-decoration: none
+	}
+
+	A:hover {
+		text-decoration: underline;
+	}
+	h1 {
+		FONT-SIZE: 18px;
+		FONT-FAMILY: arial, helvetica, sans-serif;
+		font-weight: bold;
+	}
+
+	.CSSButtonStyle{
+        background-color: #EEEEEE;
+        border: 2px #EEEEEE outset;
+        padding: 1px 5px;
+        color: black;
+        height: 22px;
+        vertical-align: middle;
+        text-decoration: none;
+        font: bold 100% arial,helvetica,sans-serif;
+    }
+
+    .CSSButtonStyle:visited{
+        color: black;
+    }
+
+    .CSSButtonStyle:hover{
+        border-style: inset;
+        background-color: #B0C4DE;
+        text-decoration: none;
+        font: bold 100% arial,helvetica,sans-serif;
+        padding: 1px 5px; /*shift text 1px to the right and down*/
+    }
+
+    .CSSButtonStyle:active{
+        color: black;
+    }
+
+   	.MyEasygrantsTable {
+		border: 0px solid #ffffff; 
+		background-color: #ffffff; 
+	}
+	
+	.MyEasygrantsRow1 {
+		height: 24px;
+	}
+
+	.MyEasygrantsTabSelected {
+		width: 150px;
+		background-color: "#A2B5CD";
+		border-right: 1px solid #a0a0a0;
+		border-top: 1px solid #a0a0a0;
+		border-left: 1px solid #a0a0a0;
+		text-align: center;
+		FONT-WEIGHT: bolder;
+		FONT-SIZE: 10pt;
+		padding: 1px;
+		FONT-FAMILY: arial,helvetica,sans-serif;
+	}
+
+	.MyEasygrantsTabBorder {
+		border-bottom: 5px solid #A2B5CD;
+	}
+
+	.MyEasygrantsTabSpace {
+		width: 10px;
+		background-color: "#ffffff";
+		border-bottom: 1px solid #a0a0a0;
+	}
+
+	.MyEasygrantsTabSpaceLong {
+		width: 120px;
+		background-color: "#ffffff";
+		border-bottom: 1px solid #a0a0a0;
+	}
+
+	.MyEasygrantsTabNotSelected {
+		width: 150px;
+		background-color: "#ebf2fa";
+		text-align: center;
+		border-right: 1px solid #a0a0a0;
+		border-top: 1px solid #a0a0a0;
+		border-left: 1px solid #a0a0a0;	
+		border-bottom: 0px solid #a0a0a0;
+		FONT-SIZE: 10pt;
+		padding: 1px;
+		FONT-FAMILY: arial,helvetica,sans-serif;
+	}
+	
+	.CompetitionHdg {
+		FONT-SIZE: 28pt;
+		FONT-FAMILY: Garamond,Times;
+		color: #000077;
+		background-color: #ffffff;
+	}
+	
+	.CompetitionHdgSmall {
+		FONT-SIZE: 18pt;
+		FONT-FAMILY: Garamond,Times;
+		color: #000077;
+		background-color: #ffffff;
+	}
+
+	.ModuleHdg {
+		color: black;
+		background-color: #A2B5CD;
+	}
+
+	.SeparatorHdg {
+	color: #000000;
+	FONT-WEIGHT: bolder;
+	background-color: #A2B5CD;
+	padding: 3px 3px 3px 6px;
+	}
+	.MinorSeparatorHdg {
+		color: black;
+		FONT-WEIGHT: bolder;
+		background-color: #EEEEEE;
+	}
+
+
+	.CompetitionFooter {
+		FONT-FAMILY: MS Sans Serif, Verdana, Arial, Helvetica;
+		FONT-SIZE: 7pt;
+		color: #336699;
+	}
+
+	.HelpNote {
+		color: #39739c;
+	}
+	
+	.AlertMessage {
+		color: #0000ff;
+		FONT-WEIGHT: bolder;
+	}
+
+	.NavigationStd {
+	FONT-SIZE: 9pt;
+	color: #666699;
+	background-color: #A2B5CD;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	}
+	.NavigationStd A {
+		color: #000000;
+		text-decoration: none;
+	}
+	.NavigationStd A:hover {
+		color: #000000;
+		text-decoration: underline;
+		/*  disabled by Alex 3/12/08 FONT-WEIGHT: bolder */
+	}
+	
+	.NavigationSel {
+		FONT-SIZE: 9pt;
+		color: #ffffff;
+		background-color: #333367;
+		FONT-WEIGHT: bolder
+	}
+	
+	.NavigationSel A {
+		FONT-SIZE: 9pt;
+		color: #ffffff;
+		background-color: #333367;
+		/*disabled by Alex 3/12/08 FONT-WEIGHT: bolder */
+	}
+	
+	.NavigationSel A:hover {
+		FONT-SIZE: 9pt;
+		color: #ffffff;
+		background-color: #333367;
+		text-decoration: underline;
+		FONT-WEIGHT: bolder
+	}
+
+	.NavigationDisabled {
+		FONT-SIZE: 9pt;
+		color: #CCCCCC;
+		background-color: #eeeeee
+		FONT-WEIGHT: bolder;
+	}
+	
+	.ValidationSummary {
+		background-color: #ffffff
+	}
+	
+	.ValidationSummaryHeader {
+		color: #ff0000;
+		FONT-WEIGHT: bolder;
+	}
+	.FieldLabel {
+		FONT-SIZE: 8pt;
+		FONT-FAMILY: arial,helvetica,sans-serif;
+	}
+	
+	.DebugText {
+		FONT-SIZE: 8pt;
+		FONT-FAMILY: Verdana,Tahoma, Arial;
+	}	
+	
+	/*  styles for Message Box begins */
+
+	.MessageBoxCssTitle {
+		FONT-SIZE: 9pt;
+		FONT-FAMILY: Arial;
+		FONT-WEIGHT: bolder;
+		color: #FFFFFF;
+		background-color: #333367;
+		cursor: Hand;
+	}
+			
+	.MessageBoxCssMessage {
+		FONT-SIZE: 8pt;
+		FONT-FAMILY: Arial;
+		FONT-WEIGHT: bolder;
+		color: #000000;
+		background-color: #eeeeee;
+		border-color: #000000;	
+		text-align: center;
+	}
+	
+	/*  styles for Message Box ends */	
+	
+	
+	/* styles for the datetextbox begins
+	
+	/* Default attributes of table container for entire calendar */
+.table-style {
+	font-family: arial;
+	border-width: 1; 
+	border-style: solid; 
+	border-color: #a0a0a0; 
+	background-color: #ffffff;
+	font-family: arial; 
+	font-size: 11px;
+}
+
+/* Default attributes of DIV containing table container for entire calendar.
+ * You probably don't want to alter this style.
+ */
+.div-style {
+	z-index: 999;
+	position: absolute;
+	visibility: hidden;
+}
+
+/* Default attributes used in calendar title (month and year columns).*/
+.title-style {
+	padding: 2px;
+	font-family: arial; 
+	font-size: 11px;
+	color: #ffffff;
+}
+
+/* Default attributes used in calendar title background.*/
+.title-background-style {
+	/*background-color: #cee3ef;*/
+	background-color: #9f9fff
+}
+
+/* Normal appearance of controls in calendar title. */
+/* Note: The right, left and down icons are images, which must be edited if you need to change them. */
+.title-control-normal-style {
+	border-style: none;
+/*	border-width: 1;
+	border-color: black; */
+	cursor: pointer;
+}
+
+/* Moused-over (selected) appearance of controls in calendar title. */
+.title-control-select-style {
+	/*border-style: solid;
+	border-width: 1;
+	border-color: #3a6ea5; */
+	cursor: pointer;
+}
+
+/* Default attributes of drop down lists (month and year). */
+.dropdown-style {
+	font-family: arial; 
+	font-size: 11px; 
+	border-width: 1; 
+	border-style: solid; 
+	/*border-color: #a0a0a0;
+	background-color: #cee3ef;*/
+	background-color: #0066cc;
+	border-color: #cccccc;
+	color: White;
+	cursor: default;
+}
+
+/* Default attributes selected (mouse-over) item in drop down lists (month and year). */
+.dropdown-select-style {
+	background-color: #3a6ea5;
+	cursor: hand;
+}
+
+/* Default attributes unselected (mouse-off) item in drop down lists (month and year). */
+.dropdown-normal-style {
+	background-color: #0;
+}
+
+/* Default attributes of calendar body (weekday titles and numbers). */
+.body-style {
+	padding: 5px;
+	/*background-color: #cee3ef;*/
+	background-color: white;
+	font-family: verdana; 
+	font-size: 10px;
+}
+
+/* Attributes of current day in calendar body. */
+.current-day-style {
+	/*color: red;*/
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Attributes of end-of-week days (Sundays) in calendar body. */
+.end-of-weekday-style {
+	color: #909090;
+	text-decoration: none;
+}
+
+/* Attributes of all other days in calendar body. */
+.normal-day-style {
+	color: black;
+	text-decoration: none;
+}
+
+/* Attributes of border around selected day in calendar body. */
+.selected-day-style {
+	border-style: solid;
+	border-width: 1px; 
+	border-color: #a0a0a0;
+	color: #0066cc;
+	font-weight: bold;
+}
+
+/* Default attributes of designated holidays. */
+.holiday-style {
+	background-color: #FFDDDD;
+}
+
+/* Attributes of today display at bottom on calendar */
+.today-style {
+	padding: 0px;
+	color: white;
+	/*background-color: #cee3ef;*/
+	background-color: #9f9fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* Attributes of week number division (divider.gif) */
+.weeknumber-div-style {
+	background-color: #d0d0d0; 
+	padding: 0px;
+}
+
+/* styles for the datetextbox ends
+-->	
+
+</style></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td id="mPageFrameCtl_tdHeader" colspan="2" class="CompetitionHdg"><span id="mPageFrameCtl_tdCompetitionHeader">
+
+<table width='100%' border="0" cellpadding="0" cellspacing="0"> <!-- competition header table -->
+	<tr>
+		<td bgcolor="#ffffff" width='10'><img src='/EasyGrants_Web_LSC/Easygrants/Images/Transparent_Filler.gif' width='10' border='0'></td>
+		<td bgcolor="#bbbbbb" width='140' align="Left"><img SRC="/EasyGrants_Web_LSC/Easygrants/Images/Header01.jpg" border='0' ></td>
+		<td bgcolor="#ffffff" width='100%'><img src='/EasyGrants_Web_LSC/Easygrants/Images/Transparent_Filler.gif' width='10' border='0'></td>
+	</tr>
+	<tr>
+		<td bgcolor="white" align="left"></td>
+	</tr>
+	<!--
+	<tr>
+		<td bgcolor="#ffffff" width='10'><img src='/EasyGrants_Web_LSC/Easygrants/Images/Transparent_Filler.gif' width='10' border='0'></td>
+		<td bgcolor="black" width='100%' colspan='3' height='19' align="left"><img src='/EasyGrants_Web_LSC/Easygrants/Images/Transparent_Filler.gif' width='10' border='0'></td>
+	</tr>
+	-->
+</table>
+</span></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFFFFF">
+			<tr>
+				<td bgcolor="white" width="5">&nbsp;</td>
+				<td width="140" class="NavigationStd">&nbsp;</td>
+				<td id="mPageFrameCtl_tdModuleHeader" class="ModuleHdg" align="center">
+						<!--Module Header -->
+					
+
+<b>LSC Applicant Information System Bulletin Board</b> 
+</td>
+			</tr>
+			<tr>
+				<td width="5" rowspan="3" class="NavigationSel"><img src='/EasyGrants_Web_LSC/Easygrants/Images/Transparent_Filler.gif' width='5' border='0'></td>
+				<td width="140" valign="top" class="NavigationStd" rowspan="3">
+						<table id="mPageFrameCtl_ctlNavigation_tblNavMain" width="151" cellspacing="0" cellpadding="2">
+					<tr align="Left">
+						<td class="NavigationSel" width="147">Login</td>
+					</tr>
+					<tr align="Left">
+						<td class="NavigationStd" width="147"><span></span><a SourceFile="">&nbsp;</a></td>
+					</tr>
+					<tr align="Left">
+						<td class="NavigationStd" width="147"><span></span><a href="../LOI/Help/index.html?logging_in.htm" target="_blank" SourceFile="http://www.wtgrantfoundation.org">Help</a></td>
+					</tr>
+					<tr align="Left">
+						<td class="NavigationStd" width="147"><span></span><a SourceFile="">&nbsp;</a></td>
+					</tr>
+				</table>
+				 <!-- Navigation table -->
+
+					</td>
+				<td width="100%" valign="top"> <!-- Page Content -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td>&nbsp;&nbsp;</td>
+						<td id="mPageFrameCtl_tdPageContent" width="100%" valign="top">
+										<!-- Page Content -->
+								
+
+  
+  <!-- USER MODIFIABLE CONTENT AREA -->
+  	<table width="600" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><h1>LSC Applicant Information System Bulletin Board</h1></td>
+      </tr>
+      <tr>
+        <td><p> Welcome to the LSC Applicant Information Network Bulletin Board. This Bulletin Board contains information of use and interest to applicants for Legal Services Corporation funds. Please email questions and comments to: <a href="mailto:competition@lsc.gov">competition@lsc.gov</a>. </p>
+            <p><strong>Announcements:</strong></p>
+            <ul>
+              <li><a href="http://www.lsc.gov/pdfs/2009keycompetitionactivitiesanddates.pdf">Key Competition and Grant Renewal Dates for 2009 Funding February 29, 2008</a>&nbsp;(<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;31k)</li>
+              <li><a href="http://www.lsc.gov/pdfs/VA20AS1NICList.pdf">Listing of Applicants who Filed a Notice of Intent to Compete for 2008 LSC Funding for Service Areas AS-1 and VA-20</a>&nbsp;(<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;56k)</li>
+              <li><a href="http://www.lsc.gov/pdfs/2008VA-20AS-1AINnotice.pdf">Recompetition Notice 2008 VA-20 and AS-1</a> (<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;16k)</li>
+              <li><a href="http://www.lsc.gov/pdfs/RecompetitionNoticeVA-20.pdf">Recompetition Notice for VA-20</a> (<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;21k)</li>
+              <li><a href="http://www.lsc.gov/pdfs/RecompetitionNoticeAS-1.pdf">Recompetition Notice for AS-1</a> (<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;23k)<br>
+              </li>
+            </ul>
+            <p><strong>Reference Materials:</strong></p>
+            <ul>
+              <li><a href="http://www.lsc.gov/pdfs/1996-04-011634FinalRule.pdf">Competitive Bidding for Grants and Contracts regulation - Preamble (45 C.F.R. Part 1634)</a><a href="http://www.lsc.gov/pdfs/2008RFP.pdf"></a> (<img class="image-noformatting" alt="PDF icon" src="http://www.lsc.gov/images/pdf-small.gif" align="top" height="12" width="12">&nbsp;854k)</li>
+              <li><a href="http://www.lsc.gov/laws/">LSC Act and Regulations</a></li>
+              <li><a href="http://www.lsc.gov/laws/appropriations.php">LSC Appropriations</a></li>
+            </ul>
+            <p><strong><span id="mPageFrameCtl_ctlPageContent_spnArchivedFiles"><a id="mPageFrameCtl_ctlPageContent_ctlArchivedFiles_ancLink" href="javascript:__doPostBack('mPageFrameCtl$ctlPageContent$ctlArchivedFiles$ancLink','')">LSC Grants Archived Files</a>
+</span></strong> </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="center"><span id="mPageFrameCtl_ctlPageContent_spnClose"><a id="mPageFrameCtl_ctlPageContent_btnClose_ancButton" style="vertical-align:top" class="CSSButtonStyle" onclick="return OnClick('mPageFrameCtl_ctlPageContent_btnClose', '');" href="javascript:__doPostBack('mPageFrameCtl$ctlPageContent$btnClose$ancButton','')">Close</a><a id="mPageFrameCtl_ctlPageContent_btnClose_inProcButton" class="CSSButtonStyle" style="display:none;vertical-align:top">Close</a>
+			
+		
+ 
+<script language="JavaScript">
+//function OnClick(buttonID, confirmation) {
+//   if (confirmation != "")
+//	{
+//	
+//	if (!confirm(confirmation))
+//		{
+//			return false
+//		}
+//	}
+//	
+//	if (buttonID != "")
+//	{
+//	document.getElementById(buttonID + "_ancButton").style.display = "none";
+//	document.getElementById(buttonID + "_inProcButton").style.display = "";
+//	document.getElementById(buttonID + "_inProcButton").style.cursor = "default";
+//	}
+
+//}
+
+if("False" == "True" || "False" == "True")
+{
+document.body.onkeypress = enterKey;
+}
+
+function enterKey(evt) { 
+  var evt = (evt) ? evt : event 
+  var charCode = (evt.which) ? evt.which : evt.keyCode 
+  if (charCode == 13) { 
+    
+    document.getElementById("mPageFrameCtl_ctlPageContent_btnClose" + "_ancButton").click()
+  } 
+  }
+
+</script>
+</span></div></td>
+      </tr>
+    </table>
+  
+      <!-- Embedded XML Page Functionality - please do not edit -->
+    </td>
+					</tr>
+				</table>
+				
+					</td>
+			</tr>
+			<tr>
+				<td id="mPageFrameCtl_tdModuleFooter" align="center">
+						<!--Module Footer -->
+					
+
+<!-- Embedded XML Page Functionality - please do not edit -->
+
+
+</td>
+			</tr>
+			<tr>
+				<td id="mPageFrameCtl_tdCompetitionFooter" align="center">
+					
+
+<!-- USER MODIFIABLE CONTENT AREA -->
+<br>
+
+<!-- Page Content - Top Of Page -->
+<!-- Page Content - Controls -->
+<table border="0" cellspacing="0" cellpadding="2" width="100%">
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="middle">
+	    <a href="#top" style="vertical-align:top" id="topButton" class="CSSButtonStyle" visible="true" >Top</a>
+
+    </td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="middle" class="CompetitionFooter">
+		For technical assistance, please contact <a href="mailto:techsupport@lsc.gov">techsupport@lsc.gov</a><!-- <span id="mPageFrameCtl_mCompetitionFooter_spnAncTech"></span> -->.
+    	</td>
+					</tr>
+					<tr>
+						<td align="middle" class="CompetitionFooter">
+		<a target='_blank' href='../../PDF/Terms of Use Document Hold Page.pdf'>Terms of Use</a>
+	</td>
+					</tr>
+					<tr>
+						<td align="middle" class="CompetitionFooter">
+		Powered by <a target='_blank' href='http://www.altum.com'>Easygrants&reg;</a>
+	</td>
+					</tr>
+					<tr>
+						<td align="middle" class="CompetitionFooter">
+		<span id="mPageFrameCtl_mCompetitionFooter_ctlReleaseBuildDisplay_lblDisplay" class="DebugText">EasyGrants_Web_LSC - <b>r1.20071022.A</b> (Debug)</span>
+	</td>
+					</tr>
+				</table>
+				
+<!-- END USER MODIFIABLE CONTENT AREA -->
+
+<!-- Embedded XML Page Functionality - please do not edit -->
+
+</td>
+			</tr>
+		</table>
+		
+		</td>
+	</tr>
+</table>
+
+
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAwKe2b3eDQLyn5DTBgKZ/rKIAQr7Rmi+Fboywl7gtvcU1DgbZmr2" /></form>
+</body>
+</html>

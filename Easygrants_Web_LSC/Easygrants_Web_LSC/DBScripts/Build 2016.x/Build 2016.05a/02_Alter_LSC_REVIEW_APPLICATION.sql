@@ -1,0 +1,2 @@
+ALTER TABLE LSC_REVIEW_APPLICATION
+	ADD case_staff_fund_dec_desc VARCHAR(MAX)

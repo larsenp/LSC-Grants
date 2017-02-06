@@ -1,0 +1,14 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='PaymentScheduleAgree' Value='True' Operator='Boolean'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must indicate that you accept the Payment Schedule.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+

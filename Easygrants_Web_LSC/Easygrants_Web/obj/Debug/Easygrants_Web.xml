@@ -1,0 +1,426 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Easygrants_Web
+</name>
+</assembly>
+<members>
+<member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cpgImportViewHtml.Form1">
+	<summary>
+Form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cpgImportViewHtml.spnPaymentImportViewHtml">
+	<summary>
+spnPaymentImportViewHtml control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cpgImportViewHtml.ctlPaymentImportViewHtml">
+	<summary>
+ctlPaymentImportViewHtml control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cpgImportViewHtml">
+	<summary>
+cpgImportViewHtml class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.Table1">
+	<summary>
+Table1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnFileName">
+	<summary>
+spnFileName control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnSubmitDate">
+	<summary>
+spnSubmitDate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnImportResult">
+	<summary>
+spnImportResult control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnDataList">
+	<summary>
+spnDataList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.tblCloseWindow">
+	<summary>
+tblCloseWindow control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnClose">
+	<summary>
+spnClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml.spnCloseControl">
+	<summary>
+spnCloseControl control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:Easygrants_Web.Modules.Staff.Controls.Page.Administration.cPaymentImportViewHtml">
+	<summary>
+cPaymentImportViewHtml class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member><member name="M:DWS.Dws.#ctor">
+	<remarks/>
+</member><member name="E:DWS.Dws.CreateDwsCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.DeleteDwsCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.GetDwsMetaDataCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.GetDwsDataCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.UpdateDwsDataCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.RemoveDwsUserCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.RenameDwsCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.FindDwsDocCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.CanCreateDwsUrlCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.CreateFolderCompleted">
+	<remarks/>
+</member><member name="E:DWS.Dws.DeleteFolderCompleted">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateDws(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginCreateDws(System.String,System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndCreateDws(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateDwsAsync(System.String,System.String,System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateDwsAsync(System.String,System.String,System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteDws">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginDeleteDws(System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndDeleteDws(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteDwsAsync">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteDwsAsync(System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsMetaData(System.String,System.String,System.Boolean)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginGetDwsMetaData(System.String,System.String,System.Boolean,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndGetDwsMetaData(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsMetaDataAsync(System.String,System.String,System.Boolean)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsMetaDataAsync(System.String,System.String,System.Boolean,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsData(System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginGetDwsData(System.String,System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndGetDwsData(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsDataAsync(System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.GetDwsDataAsync(System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.UpdateDwsData(System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginUpdateDwsData(System.String,System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndUpdateDwsData(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.UpdateDwsDataAsync(System.String,System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.UpdateDwsDataAsync(System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RemoveDwsUser(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginRemoveDwsUser(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndRemoveDwsUser(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RemoveDwsUserAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RemoveDwsUserAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RenameDws(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginRenameDws(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndRenameDws(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RenameDwsAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.RenameDwsAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.FindDwsDoc(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginFindDwsDoc(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndFindDwsDoc(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.FindDwsDocAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.FindDwsDocAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CanCreateDwsUrl(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginCanCreateDwsUrl(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndCanCreateDwsUrl(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CanCreateDwsUrlAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CanCreateDwsUrlAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateFolder(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginCreateFolder(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndCreateFolder(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateFolderAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CreateFolderAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteFolder(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.BeginDeleteFolder(System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.EndDeleteFolder(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteFolderAsync(System.String)">
+	<remarks/>
+</member><member name="M:DWS.Dws.DeleteFolderAsync(System.String,System.Object)">
+	<remarks/>
+</member><member name="M:DWS.Dws.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:DWS.Dws">
+	<remarks/>
+</member><member name="T:DWS.CreateDwsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.CreateDwsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.CreateDwsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.DeleteDwsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.DeleteDwsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.DeleteDwsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.GetDwsMetaDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.GetDwsMetaDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.GetDwsMetaDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.GetDwsDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.GetDwsDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.GetDwsDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.UpdateDwsDataCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.UpdateDwsDataCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.UpdateDwsDataCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.RemoveDwsUserCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.RemoveDwsUserCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.RemoveDwsUserCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.RenameDwsCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.RenameDwsCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.RenameDwsCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.FindDwsDocCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.FindDwsDocCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.FindDwsDocCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.CanCreateDwsUrlCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.CanCreateDwsUrlCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.CanCreateDwsUrlCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.CreateFolderCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.CreateFolderCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.CreateFolderCompletedEventArgs">
+	<remarks/>
+</member><member name="T:DWS.DeleteFolderCompletedEventHandler">
+	<remarks/>
+</member><member name="P:DWS.DeleteFolderCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:DWS.DeleteFolderCompletedEventArgs">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.#ctor">
+	<remarks/>
+</member><member name="E:EgSharepointService.EasygrantsSharepointService.RenameCompleted">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.Rename(System.String,System.String)">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.BeginRename(System.String,System.String,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.EndRename(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.RenameAsync(System.String,System.String)">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.RenameAsync(System.String,System.String,System.Object)">
+	<remarks/>
+</member><member name="M:EgSharepointService.EasygrantsSharepointService.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:EgSharepointService.EasygrantsSharepointService">
+	<remarks/>
+</member><member name="T:EgSharepointService.RenameCompletedEventHandler">
+	<remarks/>
+</member><member name="P:EgSharepointService.RenameCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:EgSharepointService.RenameCompletedEventArgs">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.#ctor">
+	<remarks/>
+</member><member name="E:agdevweb2.sws.wsTest1Completed">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.wsTest1(System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Boolean)">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.BeginwsTest1(System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Boolean,System.AsyncCallback,System.Object)">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.EndwsTest1(System.IAsyncResult)">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.wsTest1Async(System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Boolean)">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.wsTest1Async(System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Object)">
+	<remarks/>
+</member><member name="M:agdevweb2.sws.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:agdevweb2.sws">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Class">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.LineNumber">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Message">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Number">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Procedure">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Server">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.Source">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.State">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.IsNested">
+	<remarks/>
+</member><member name="P:agdevweb2.SqlMessage.IsNestedSpecified">
+	<remarks/>
+</member><member name="T:agdevweb2.SqlMessage">
+	<remarks/>
+</member><member name="T:agdevweb2.wsTest1CompletedEventHandler">
+	<remarks/>
+</member><member name="P:agdevweb2.wsTest1CompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:agdevweb2.wsTest1CompletedEventArgs">
+	<remarks/>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.PageSection.cHistoricalImportRequests.ctlCrumbTrail">
+	<summary>
+ctlCrumbTrail control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.PageSection.cHistoricalImportRequests.Table1">
+	<summary>
+Table1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.PageSection.cHistoricalImportRequests.spnDataList">
+	<summary>
+spnDataList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:Easygrants_Web.Modules.Staff.Controls.PageSection.cHistoricalImportRequests.spnClose">
+	<summary>
+spnClose control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:Easygrants_Web.Modules.Staff.Controls.PageSection.cHistoricalImportRequests">
+	<summary>
+cHistoricalImportRequests class.
+</summary>
+	<remarks>
+Auto-generated class.
+</remarks>
+</member>
+</members>
+</doc>

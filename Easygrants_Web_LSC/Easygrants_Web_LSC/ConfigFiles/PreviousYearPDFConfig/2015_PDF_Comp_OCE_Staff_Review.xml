@@ -1,0 +1,236 @@
+﻿<!-- Competition App - OCE Staff Review -->
+<Section Key='CompApp_OCEStaffReview' Type='WordTemplate' TemplateFileName='PDF_Comp_OCE_Staff_Review.dot'>
+
+	<DataObject Key='GranteeProject' DataObjectDefinitionKey='GranteeProject'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtOrganization'  >
+				<DisplayProperty PropertyKey='PrimaryOrganization.OrganizationName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecipientID'>
+				<DisplayProperty PropertyKey='PrimaryOrganization.LegacyOrganizationID'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtServiceArea'>
+				<DisplayProperty PropertyKey='WfProject.WfCompetition.CompetitionDisplayName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtYear'>
+				<DisplayProperty PropertyKey='WfProject.TimePeriod.Description'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='WfTaskAssignment' DataObjectDefinitionKey='WfTaskAssignment'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtReviewer'  >
+				<DisplayProperty PropertyKey='Person.FirstNameLastName' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<SectionDataObjectList Key='LscCompApplFiscal' DataObjectDefinitionKey='LscCompApplFiscal'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+	</SectionDataObjectList>
+
+	<DataObject Key='LscCompApplFiscalDisplay' DataObjectDefinitionKey='LscCompApplFiscal'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BODFinanceCommittee' DestKey='txtBODFinanceCommittee' Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODFinanceCharterYesNoNA.Description' DestKey='txtBODFinanceCharter'/>
+			<DisplayProperty PropertyKey='BODAuditCommittee' DestKey='txtBODAuditCommittee'  Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODAuditCharterYesNoNA.Description' DestKey='txtBODAuditCharter'/>
+			<DisplayProperty PropertyKey='FinanceReviseBudget' DestKey='txtFinanceReviseBudget' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FinanceReviewReport' DestKey='txtFinanceReviewReport' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FinanceReviewAccountingPolicy' DestKey='txtFinanceReviewAccountingPolicy' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FinanceReviewFinancialStmtsYesNo.Description' DestKey='txtFinanceReviewFinancialStmts' />
+			<DisplayProperty PropertyKey='FinanceReviewInvestmentPolicy' DestKey='txtFinanceReviewInvestmentPolicy' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FinanceBoardFinancialTraining' DestKey='txtFinanceBoardFinancialTraining' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditBODHireAuditor' DestKey='txtAuditBODHireAuditor' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditBODAuditorComp' DestKey='txtAuditBODAuditorComp' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditBODOverseeAuditor' DestKey='txtAuditBODOverseeAuditor' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditReviewFinancialStmtsYesNoNA.Description' DestKey='txtAuditReviewFinancialStmts'/>
+			<DisplayProperty PropertyKey='AuditBODComplaintRule' DestKey='txtAuditBODComplaintRule' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditBODReview990' DestKey='txtAuditBODReview990' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AuditBODEnsureEthics' DestKey='txtAuditBODEnsureEthics' Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODGAAP' DestKey='txtBODGAAP' Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODGAAPStatements' DestKey='txtBODGAAPStatements' Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODControls' DestKey='txtBODControls' Format='YesNo'/>
+			<DisplayProperty PropertyKey='BODRuleInterp' DestKey='txtBODRuleInterp' Format='YesNo'/>
+			<DisplayProperty PropertyKey='CashFlowMonthly' DestKey='txtCashFlowMonthly' Format='YesNo'/>
+			<DisplayProperty PropertyKey='PrepareFinRpts' DestKey='txtPrepareFinRpts' Format='YesNo'/>
+			<DisplayProperty PropertyKey='LscFinancialReportfreqLKP.Description' DestKey='txtFinancialReportFrequency'/>
+			<DisplayProperty PropertyKey='BudgetCtrlMthly' DestKey='txtBudgetCtrlMthly' Format='YesNo'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVar' DestKey='txtExplainBudgetVar' Format='YesNo'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarMngt' DestKey='txtExplainBudgetVarMngt' Format='YesNo'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarBOD' DestKey='txtExplainBudgetVarBOD' Format='YesNo'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarIPA' DestKey='txtExplainBudgetVarIPA' Format='YesNo'/>
+			<DisplayProperty PropertyKey='LscFiscalRoleLKP.Description' DestKey='txtFRPTitleID'/>
+			<DisplayProperty PropertyKey='FRPTitleOther' DestKey='txtFRPTitleOther'/>
+			<DisplayProperty PropertyKey='FRPQualificationOther' DestKey='txtFRPQualificationOther' />
+			<DisplayProperty PropertyKey='LscACCTGExpLKP.Description' DestKey='txtFRPAcctgExperience'/>
+			<DisplayProperty PropertyKey='LscFinancialTrngIntLKP.Description' DestKey='txtFRPMostRecentLscTrng'/>
+			<DisplayProperty PropertyKey='FRPBackgroundCheck' DestKey='txtFRPBackgroundCheck' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FRPFinancialIssuesYesNoNA.Description' DestKey='txtFRPFinancialIssues' />
+			<DisplayProperty PropertyKey='PolicyFiveDaysVacation' DestKey='txtPolicyFiveDaysVacation' Format='YesNo'/>
+			<DisplayProperty PropertyKey='VacationOtherEmployee' DestKey='txtVacationOtherEmployee' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AccountingManualRevisedYesNoNA.Description' DestKey='txtAccountingManualRevised' />
+			<DisplayProperty PropertyKey='PriorApprovalPolicy' DestKey='txtPriorApprovalPolicy' Format='YesNo'/>
+			<DisplayProperty PropertyKey='HasSubgrants' DestKey='txtHasSubgrants' Format='YesNo'/>
+			<DisplayProperty PropertyKey='SubgrantUsageFundingSourceYesNoNA.Description' DestKey='txtSubgrantUsageFundingSource'/>
+			<DisplayProperty PropertyKey='SubgranteeSiteVisitsYesNoNA.Description' DestKey='txtSubgranteeSiteVisits'/>
+			<DisplayProperty PropertyKey='PAIAllocationMeth' DestKey='txtPAIAllocationMeth' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FunderRecentSiteVisit' DestKey='txtFunderRecentSiteVisit' Format='YesNo'/>
+			<DisplayProperty PropertyKey='CorrectiveActionsIdentifiedYesNoNA.Description' DestKey='txtCorrectiveActionsIdentified' />
+			<DisplayProperty PropertyKey='CorrectiveActions' DestKey='txtCorrectiveActions'/>
+			<DisplayProperty PropertyKey='OtherFunderSGCYesNoNA.Description' DestKey='txtOtherFunderSGC' />
+			<DisplayProperty PropertyKey='UnresolvedSGCYesNoNA.Description' DestKey='txtUnresolvedSGC'/>
+			<DisplayProperty PropertyKey='RecentFraud' DestKey='txtRecentFraud' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FraudReportedOIGYesNoNA.Description' DestKey='txtFraudReportedOIG'/>
+			<DisplayProperty PropertyKey='FraudRecoveredFundsYesNoNA.Description' DestKey='txtFraudRecoveredFunds'/>
+			<DisplayProperty PropertyKey='FraudRecoveredReallocatedYesNoNA.Description' DestKey='txtFraudRecoveredReallocated'/>
+			<DisplayProperty PropertyKey='AccountingSW' DestKey='txtAccountingSW' />
+			<DisplayProperty PropertyKey='SWTrackFundSource' DestKey='txtSWTrackFundSource' Format='YesNo'/>
+			<DisplayProperty PropertyKey='SWGeneralLedger' DestKey='txtSWGeneralLedger' Format='YesNo'/>
+			<DisplayProperty PropertyKey='LscFiscalSWNumUsersLKP.Description' DestKey='txtSWNumUsers' />
+			<DisplayProperty PropertyKey='SWOwnPassword' DestKey='txtSWOwnPassword' Format='YesNo'/>
+			<DisplayProperty PropertyKey='SWProhibitSharingPwds' DestKey='txtSWProhibitSharingPwds' Format='YesNo'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscFiscalIntCtlsInstituted' DataObjectDefinitionKey='LscFiscalIntCtlsInstituted'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblFiscalIntCtlsInstituted'>
+			<DisplayProperty PropertyKey='LscFiscalInternalCtlAreaLKP.Description'/>
+			<DisplayProperty PropertyKey='IsInstituted' Format='YesNo'/>
+			<DisplayProperty PropertyKey='DateLastUpdated' Format='M/d/yyyy'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscFRPFiscalQualification' DataObjectDefinitionKey='LscFRPFiscalQualification'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblLscFRPFiscalQualification'>
+			<DisplayProperty PropertyKey='LscFiscalQualificationLKP.Description'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscFiscalSWModulesInstalled' DataObjectDefinitionKey='LscFiscalSWModulesInstalled'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblLscFiscalSWModulesInstalled'>
+			<DisplayProperty PropertyKey='LscFiscalSWModuleLKP.Description'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscCompAppFiscalScore' DataObjectDefinitionKey='LscCompAppFiscalScore'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BODFinanceCommittee' DestKey='txtBODFinanceCommitteeScore'/>
+			<DisplayProperty PropertyKey='BODFinanceCharter' DestKey='txtBODFinanceCharterScore'/>
+			<DisplayProperty PropertyKey='BODAuditCommittee' DestKey='txtBODAuditCommitteeScore'/>
+			<DisplayProperty PropertyKey='BODAuditCharter' DestKey='txtBODAuditCharterScore'/>
+			<DisplayProperty PropertyKey='FinanceReviseBudget' DestKey='txtFinanceReviseBudgetScore'/>
+			<DisplayProperty PropertyKey='FinanceReviewReport' DestKey='txtFinanceReviewReportScore'/>
+			<DisplayProperty PropertyKey='FinanceReviewAccountingPolicy' DestKey='txtFinanceReviewAccountingPolicyScore'/>
+			<DisplayProperty PropertyKey='FinanceReviewFinancialStmts' DestKey='txtFinanceReviewFinancialStmtsScore'/>
+			<DisplayProperty PropertyKey='FinanceReviewInvestmentPolicy' DestKey='txtFinanceReviewInvestmentPolicyScore'/>
+			<DisplayProperty PropertyKey='FinanceBoardFinancialTraining' DestKey='txtFinanceBoardFinancialTrainingScore'/>
+			<DisplayProperty PropertyKey='AuditBODHireAuditor' DestKey='txtAuditBODHireAuditorScore'/>
+			<DisplayProperty PropertyKey='AuditBODAuditorComp' DestKey='txtAuditBODAuditorCompScore'/>
+			<DisplayProperty PropertyKey='AuditBODOverseeAuditor' DestKey='txtAuditBODOverseeAuditorScore'/>
+			<DisplayProperty PropertyKey='AuditReviewFinancialStmts' DestKey='txtAuditReviewFinancialStmtsScore'/>
+			<DisplayProperty PropertyKey='AuditBODComplaintRule' DestKey='txtAuditBODComplaintRuleScore'/>
+			<DisplayProperty PropertyKey='AuditBODReview990' DestKey='txtAuditBODReview990Score'/>
+			<DisplayProperty PropertyKey='AuditBODEnsureEthics' DestKey='txtAuditBODEnsureEthicsScore'/>
+			<DisplayProperty PropertyKey='BODGAAP' DestKey='txtBODGAAPScore'/>
+			<DisplayProperty PropertyKey='BODGAAPStatements' DestKey='txtBODGAAPStatementsScore'/>
+			<DisplayProperty PropertyKey='BODControls' DestKey='txtBODControlsScore'/>
+			<DisplayProperty PropertyKey='BODRuleInterp' DestKey='txtBODRuleInterpScore'/>
+			<DisplayProperty PropertyKey='CashFlowMonthly' DestKey='txtCashFlowMonthlyScore'/>
+			<DisplayProperty PropertyKey='PrepareFinRpts' DestKey='txtPrepareFinRptsScore'/>
+			<DisplayProperty PropertyKey='FinancialReportFrequency' DestKey='txtFinancialReportFrequencyScore'/>
+			<DisplayProperty PropertyKey='BudgetCtrlMthly' DestKey='txtBudgetCtrlMthlyScore'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarMngt' DestKey='txtExplainBudgetVarMngtScore'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarBOD' DestKey='txtExplainBudgetVarBODScore'/>
+			<DisplayProperty PropertyKey='ExplainBudgetVarIPA' DestKey='txtExplainBudgetVarIPAScore'/>
+			<DisplayProperty PropertyKey='FRPFiscalQualifications' DestKey='txtFRPFiscalQualificationsScore'/>
+			<DisplayProperty PropertyKey='FRPAcctgExperience' DestKey='txtFRPAcctgExperienceScore'/>
+			<DisplayProperty PropertyKey='FRPMostRecentLscTrng' DestKey='txtFRPMostRecentLscTrngScore'/>
+			<DisplayProperty PropertyKey='FRPBackgroundCheck' DestKey='txtFRPBackgroundCheckScore'/>
+			<DisplayProperty PropertyKey='PolicyFiveDaysVacation' DestKey='txtPolicyFiveDaysVacationScore'/>
+			<DisplayProperty PropertyKey='VacationOtherEmployee' DestKey='txtVacationOtherEmployeeScore'/>
+			<DisplayProperty PropertyKey='AccountingManualRevised' DestKey='txtAccountingManualRevisedScore'/>
+			<DisplayProperty PropertyKey='PriorApprovalPolicy' DestKey='txtPriorApprovalPolicyScore'/>
+			<DisplayProperty PropertyKey='SubgrantUsageFundingSource' DestKey='txtSubgrantUsageFundingSourceScore'/>
+			<DisplayProperty PropertyKey='SubgranteeSiteVisits' DestKey='txtSubgranteeSiteVisitsScore'/>
+			<DisplayProperty PropertyKey='PAIAllocationMeth' DestKey='txtPAIAllocationMethScore'/>
+			<DisplayProperty PropertyKey='FunderRecentSiteVisit' DestKey='txtFunderRecentSiteVisitScore'/>
+			<DisplayProperty PropertyKey='CorrectiveActionsIdentified' DestKey='txtCorrectiveActionsIdentifiedScore'/>
+			<DisplayProperty PropertyKey='OtherFunderSGC' DestKey='txtOtherFunderSGCScore'/>
+			<DisplayProperty PropertyKey='RecentFraud' DestKey='txtRecentFraudScore'/>
+			<DisplayProperty PropertyKey='SWTrackFundSource' DestKey='txtSWTrackFundSourceScore'/>
+			<DisplayProperty PropertyKey='SWGeneralLedger' DestKey='txtSWGeneralLedgerScore'/>
+			<DisplayProperty PropertyKey='swownpassword' DestKey='txtswownpasswordScore'/>
+			<DisplayProperty PropertyKey='SWProhibitSharingPwds' DestKey='txtSWProhibitSharingPwdsScore'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscCompAppFiscalScoreByPart' DataObjectDefinitionKey='LscCompAppFiscalScoreByPart'>
+		<Filters>
+			<Argument Type='SectionDataObject' TypeKey='LscCompApplFiscal' SectionDataObjectPropertyKey='LscCompApplFiscalID' PropertyKey='LscCompApplFiscalID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='SubtotalPartI' DestKey='txtSubtotalPartI'/>
+			<DisplayProperty PropertyKey='SubtotalPartII' DestKey='txtSubtotalPartII'/>
+			<DisplayProperty PropertyKey='SubtotalPartIII' DestKey='txtSubtotalPartIII'/>
+			<DisplayProperty PropertyKey='SubtotalPartIV' DestKey='txtSubtotalPartIV'/>
+			<DisplayProperty PropertyKey='SubtotalPartV' DestKey='txtSubtotalPartV'/>
+			<DisplayProperty PropertyKey='SubtotalPartVI' DestKey='txtSubtotalPartVI'/>
+			<DisplayProperty PropertyKey='SubtotalPartVII' DestKey='txtSubtotalPartVII'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscCompAppFiscalScoreTotal' DataObjectDefinitionKey='LscCompAppFiscalScoreTotal'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='ResponseSubtotal' DestKey='txtResponseSubtotal'/>
+			<DisplayProperty PropertyKey='TotalScore' DestKey='txtTotalScore'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscReviewCompApplOCEStaff' DataObjectDefinitionKey='LscReviewCompApplOCEStaff'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='ScoreComment' DestKey='txtScoreComment'/>
+			<DisplayProperty PropertyKey='Score' DestKey='txtScore'/>
+			<DisplayProperty PropertyKey='OverallComment' DestKey='txtOverallComment'/>
+			<DisplayProperty PropertyKey='SubjectFiscalSGC' DestKey='txtSubjectFiscalSGC' Format='YesNo'/>
+			<DisplayProperty PropertyKey='FiscalSGCCompleted' DestKey='txtFiscalSGCCompleted' Format='YesNo'/>
+			<DisplayProperty PropertyKey='AddlActionToComplete' DestKey='txtAddlActionToComplete'/>
+			<DisplayProperty PropertyKey='LscFundingTerm.Description' DestKey='txtFundingTermRecommendation'/>
+			<DisplayProperty PropertyKey='FundingTermRecommendationReason' DestKey='txtFundingTermRecommendationReason'/>
+			<DisplayProperty PropertyKey='ImposeFiscalSGC' DestKey='txtImposeFiscalSGC' Format='YesNo'/>
+			<DisplayProperty PropertyKey='RecommendedFiscalSGC' DestKey='txtRecommendedFiscalSGC'/>
+		</DisplayProperties>
+	</DataObject>
+
+</Section>

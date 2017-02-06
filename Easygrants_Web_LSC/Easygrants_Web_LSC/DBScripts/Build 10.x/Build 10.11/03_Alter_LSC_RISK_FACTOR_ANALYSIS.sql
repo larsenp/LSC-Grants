@@ -1,0 +1,2 @@
+ALTER TABLE LSC_RISK_FACTOR_ANALYSIS 
+	DROP COLUMN wf_task_assignment_id

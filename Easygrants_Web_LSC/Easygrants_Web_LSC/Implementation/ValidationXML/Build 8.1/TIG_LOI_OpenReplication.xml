@@ -1,0 +1,83 @@
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='RequestedAmount' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Amount is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='ProjectDesc' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Description is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='Benefits' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Benefits field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='Costs' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Costs is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='Partners' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Partners Field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='Innovation' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Innovation field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

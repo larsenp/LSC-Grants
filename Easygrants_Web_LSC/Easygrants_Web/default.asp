@@ -1,0 +1,1 @@
+<% Response.Redirect("Implementation/Modules/Login/LoginModuleContent.aspx?Config=LoginModuleConfig&Page=Login") %>

@@ -1,0 +1,104 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='Description' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"1. A full description of the project, including the specific technology(ies) the project will develop or implement" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='Need' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"2. The need for the project" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='Goals' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"3. The project’s goals and objectives" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='JusticePartnerships' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"4. Justice community partnerships" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='ProjectReplication' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"5. Replication" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='CapacityStaffing' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"6. Program capacity and the project staffing" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='PastPerformance' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"7. Past Performance" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProjectNarrative'>
+		<Filters>
+			<Argument PropertyKey='Sustainability' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"8. Sustainability of the project" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

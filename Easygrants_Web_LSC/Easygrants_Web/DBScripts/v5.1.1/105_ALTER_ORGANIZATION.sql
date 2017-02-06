@@ -1,0 +1,1 @@
+ALTER TABLE ORGANIZATION ADD eligibility_expiration_date datetime;

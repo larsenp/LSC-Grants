@@ -1,0 +1,46 @@
+
+
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='' Operator='NotEqual'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a Decision.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewDD'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='193'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a Decision.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='GranteeProject.WfTaskAssignments'>
+		<Filters>
+			<Argument PropertyKey='WfTaskID' Value='85'/>
+			<Argument PropertyKey='WfTaskStatusID' Value='2'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='OPP Director review has not been submitted.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

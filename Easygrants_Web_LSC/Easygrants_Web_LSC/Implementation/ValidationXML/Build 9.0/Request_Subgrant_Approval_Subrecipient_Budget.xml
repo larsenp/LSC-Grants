@@ -1,0 +1,13 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscSubrecipientBudget.LscSubrecipientBudgetTotal'>
+		<Filters>
+			<Argument PropertyKey='MatchesSubgrantAmount' Value='1'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Budget total must match Subgrant Amount entered on Subrecipient Profile form.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

@@ -1,0 +1,78 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='WebsiteContact' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"1. Provide the name and contact information of the staff person responsible for the website." is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='TechnicalExpertise' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"2. Describe how the state provides personnel with the technical expertise to maintain the Website:" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='WebsiteMaintenance' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"3. Describe how the website will be maintained and updated after the term of LSC grant:" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='SustainWebsite' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"4. Describe how you plan to sustain both the website and the staff to manage content of the site after the end of the grant:" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='ClientCommunityImpact' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"5. Describe how the website impacts the client community and how you plan to make it accessible:" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='LimitedLanguageProficiency' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"6. Describe how the website helps clients with limited literacy or limited English proficiency:" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

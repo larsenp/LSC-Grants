@@ -1,0 +1,13 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp' >
+		<Filters>
+			<Argument PropertyKey='PriorTigAwards' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"How does the current grant request build on knowledge or expertise gained from these grants?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

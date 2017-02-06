@@ -1,0 +1,156 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigBudget.LscTigBudgetItems'>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a budget narrative.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigBudget.LscTigBudgetItems'>
+		<Filters>
+			<Argument PropertyKey='SortOrder' Value='9' Operator='NotEqual' >
+				<RelatedProperty PropertyKey="BudgetCategory"/>
+			</Argument>
+			<Argument PropertyKey='LscTigBudgetFundingTypeID' Value='1' Operator='NotEqual' Bool='Or'/>
+			<Argument PropertyKey='Amount' Value='0' Operator='GreaterThan'/>
+			<Argument PropertyKey='Comment' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide comments for all budget items.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGBudgetContracts'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' 
+			Message='Total TIG funding in Contracts form must match TIG funding amount for Contracts in budget.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='TigFundedTasks' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, "Describe the contractor&apos;s project role..." is required.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGAppContractActivities'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' 
+			Message=''
+			ContentInvalidMessage='For each contract, if you indicate that the contract involves legal content development activities, you must provide a description. If no such activities are involved, the description field must be left blank.'
+			DecisionInvalidMessage='For each contract, if you indicate that the contract involves project decision-making activities, you must provide a description. If no such activities are involved, the description field must be left blank.'
+			SCSpecifyInvalidMessage='For each contract, if you indicate that you are specifying a contractor, you must provide the name of the proposed contractor. If not, the proposed contractor name must be left blank.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='SpecificContractor' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, you must indicate whether you are proposing a specific third-party contractor.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='OversightMethods' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, you must identify your proposed methods of overseeing performance.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='LegalContentActivities' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, "Any legal content development activities?" is required.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='LegalDecisionActivities' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, "Any project decision-making activities?" is required.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigContracts'>
+		<Filters>
+			<Argument PropertyKey='IsSubgrant' Value=''/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='For each contract, "Will this be a subgrant?" is required.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='ReportingExpenses' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Reporting on expenditure of funds is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='StmtAdditionalFunds' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Statement of Additional Funds is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

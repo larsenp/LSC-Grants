@@ -1,0 +1,2 @@
+ALTER TABLE LSC_PBIF_PROG_REVIEW
+	ADD funding_amount int

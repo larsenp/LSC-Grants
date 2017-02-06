@@ -1,0 +1,40 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigBudget.LscTigBudgetTotal'>
+		<Filters>
+			<Argument PropertyKey='BudgetTotal' Value='0' Operator='GreaterThan'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a budget'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigBudget.LscTigBudgetItems'>
+		<Filters>
+			<Argument PropertyKey='Amount' Value='0' Operator='LessThan'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Budget amounts must not be negative.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateTIGBudgetTotals'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			BudgetTotalMessage='The total budget amount must match the Total Project Budget figure from the Application form.' 
+			RequestAmountMessage='The total for column A (LSC Grant Request) must match the Total Grant Request figure from the Application form.' 
+			Message=''
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

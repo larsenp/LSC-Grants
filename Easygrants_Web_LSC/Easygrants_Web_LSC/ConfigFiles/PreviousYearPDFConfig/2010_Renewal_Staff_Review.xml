@@ -1,0 +1,250 @@
+﻿<!--  2010 Staff Review PDF - Renewal App-->
+
+<Section Key="Renewal Staff Review" Type="WordTemplate" TemplateFileName="2010\PDF_Renewal_Staff_Review_2010.dot">
+	<DataObject Key='LscRenewalEval' DataObjectDefinitionKey='LscRenewalEval' >
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='CommentA'  DestKey='txtCommentA'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='FormD'  DestKey='txtFormD'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CommentD'  DestKey='txtCommentD'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='FormG'  DestKey='txtFormG'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CommentG'  DestKey='txtCommentG'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+
+			<DisplayProperty PropertyKey='FormI'  DestKey='txtFormI'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CommentI'  DestKey='txtCommentI'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='FormK'  DestKey='txtFormK'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CommentK'  DestKey='txtCommentK'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='FormL'  DestKey='txtFormL'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CommentL'  DestKey='txtCommentL'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMng'  >
+				<DisplayProperty PropertyKey='Management' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntake'  >
+				<DisplayProperty PropertyKey='Intake' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTech'  >
+				<DisplayProperty PropertyKey='Techno' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtprose'  >
+				<DisplayProperty PropertyKey='ProSe' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPai'  >
+				<DisplayProperty PropertyKey='Pai' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCo'  >
+				<DisplayProperty PropertyKey='Coordination' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtReso'  >
+				<DisplayProperty PropertyKey='ResourceDevelopment' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFore'  >
+				<DisplayProperty PropertyKey='Foreclosure' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='AppOverviewFormat'  DestKey='txtAppOverviewFormat'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='AppOverviewComprehensive'  DestKey='txtAppOverviewComp'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='AppOverviewComment'  DestKey='txtAppOverviewComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='PaiPlanSubmitted'  DestKey='txtPaiPlanSubmitted'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='PaiPlanResponsive'  DestKey='txtPaiPlanResponsive'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='PaiPlanComment'  DestKey='txtPaiPlanComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CorrectiveActionRequirements'  DestKey='txtCorrectiveActionRequirements'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='ApplicantComplaints'  DestKey='txtApplicantComplaints'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='OceReportComment'  DestKey='txtOCEReportComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='StaffingData'  DestKey='txtStaffingData'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='CsrData'  DestKey='txtCsrData'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='NonLscFundingData'  DestKey='txtNonLscFundingData'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='GranteeProfileComment'  DestKey='txtGranteeProfileComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='ComplianceMemo'  DestKey='txtComplianceMemo'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='ComplianceMemoComment'  DestKey='txtComplianceMemoComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='ProgramProfile'  DestKey='txtProgramProfile'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='ProgramProfileComment'  DestKey='txtProgramProfileComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='OtherDocs'  DestKey='txtOtherDocs'  >
+				<Substitute SrcValue='True' ReplaceValue='Yes' />
+				<Substitute SrcValue='False' ReplaceValue='No' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='OtherDocsComment'  DestKey='txtOtherDocsComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCertPriReader'>
+				<DisplayProperty PropertyKey='CertPrimaryReaderPerson.FirstNameLastName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCerPriDate'>
+				<DisplayProperty PropertyKey='CertPrimaryReaderDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCertSecReader'>
+				<DisplayProperty PropertyKey='CertSecondaryReaderPerson.FirstNameLastName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCertSecDate'>
+				<DisplayProperty PropertyKey='CertSecondaryReaderDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<DataObject Key='LscRenewalRec' DataObjectDefinitionKey='LscRenewalRec'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtLscRenewalRecommendation'  >
+				<DisplayProperty PropertyKey='LscRenewalRecommendation.Description' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='FurtherReviewComment'  DestKey='txtFurtherReviewComment'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='RationaleNonRenewal'  DestKey='txtRationalNonRenewal'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtNoGrantConditions'  >
+				<DisplayProperty PropertyKey='NoGrantConditions' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSpecialGrantConditions'  >
+				<DisplayProperty PropertyKey='SpecialGrantConditions' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtNoOtherIssues'  >
+				<DisplayProperty PropertyKey='NoOtherIssues' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='OtherIssues'  DestKey='txtOtherIssues'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPrimaryReader'  >
+				<DisplayProperty PropertyKey='PrimaryReaderPerson.FirstNameLastName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPrimaryReaderDate'  >
+				<DisplayProperty PropertyKey='PrimaryReaderDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecReaderPerson'  >
+				<DisplayProperty PropertyKey='RecReaderPerson.FirstNameLastName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecReaderDate'  >
+				<DisplayProperty PropertyKey='RecReaderDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOppMgmtPerson'  >
+				<DisplayProperty PropertyKey='OPPMgmtPerson.FirstNameLastName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOPPMgmtDate'  >
+				<DisplayProperty PropertyKey='OPPMgmtDate' Format='M/d/yyyy'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='GranteeProject' DataObjectDefinitionKey='GranteeProject'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtOrganization'  >
+				<DisplayProperty PropertyKey='PrimaryOrganization.OrganizationName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecipientID'>
+				<DisplayProperty PropertyKey='PrimaryOrganization.LegacyOrganizationID'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtServiceArea'>
+				<DisplayProperty PropertyKey='WfProject.WfCompetition.CompetitionDisplayName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtGrantamount'>
+				<DisplayProperty PropertyKey='WfProject.Fund.FundAmount' Format='$#,0'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='WfTaskAssignment' DataObjectDefinitionKey='WfTaskAssignment'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtreviewer'  >
+				<DisplayProperty PropertyKey='Person.FirstNameLastName' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='LscGrantCondition'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='ReviewedWfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblGrantConditions'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscGrantConditionType.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Comment'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+</Section>

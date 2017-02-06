@@ -1,0 +1,8 @@
+
+
+ALTER TABLE LSC_TECHNOLOGY
+    ADD virtual_desktop bit 
+
+
+ALTER TABLE LSC_TECHNOLOGY
+    ADD T3_DS3 bit 

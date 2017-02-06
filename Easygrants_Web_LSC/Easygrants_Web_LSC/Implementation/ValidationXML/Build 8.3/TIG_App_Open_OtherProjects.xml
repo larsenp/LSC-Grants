@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='OtherSimilarProjects' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"What other projects - either TIG or funded by another source - have sought to address this or similar issues?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='CurrProjDifference' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"How will the proposed project differ from and incorporate the lessons from those projects?" is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

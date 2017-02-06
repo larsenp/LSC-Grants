@@ -1,0 +1,2 @@
+ALTER TABLE LSC_STAFF_DETAIL
+	ADD annl_other_compensation INT

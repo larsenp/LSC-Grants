@@ -1,0 +1,92 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="CreateWebDir;CopyBaseline;CopyClientFiles;MergeClientIntoBaseline;BuildWebProject;PublishWebProject">
+	<PropertyGroup>
+		<WebAppName>EasyGrants_Web_LSC</WebAppName>
+		<Baseline>EasyGrants_Web</Baseline>
+		<ClientName>$(WebAppName)</ClientName>
+		<ClientProjectBasePath>C:\MyFiles\Visual Studio 2005\Projects\$(ClientName)</ClientProjectBasePath>
+		<WebDir>C:\Inetpub\wwwroot\$(WebAppName)</WebDir>
+		<PublishDir Condition=" '$(PublishDir)' == '' ">$(WebDir)\</PublishDir>
+		<ClientCoreDestDir>$(WebDir)\Core</ClientCoreDestDir>
+		<ClientEasygrantsDestDir>$(WebDir)\Easygrants</ClientEasygrantsDestDir>
+		<ClientHelpDestDir>$(WebDir)\Help</ClientHelpDestDir>
+		<ClientScriptDestDir>$(WebDir)\DBScripts</ClientScriptDestDir>
+		<ClientImplementationDestDir>$(WebDir)\Implementation</ClientImplementationDestDir>
+		<ClientConfigDestDir>$(WebDir)\ConfigFiles</ClientConfigDestDir>
+		<BaselineProj>$(ClientProjectBasePath)\$(Baseline)\$(Baseline).vbproj</BaselineProj>
+		<ClientProj>$(ClientProjectBasePath)\$(ClientName)\$(ClientName).vbproj</ClientProj>
+		<Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+	</PropertyGroup>
+	<ItemGroup>
+		<BaselineFilesToCopy Include="$(ClientProjectBasePath)\$(Baseline)\**\*.*" Exclude="$(ClientProjectBasePath)\$(Baseline)\**\.svn\**\*.*"/>
+		<ClientCoreFiles Include="$(ClientProjectBasePath)\$(ClientName)\Core\**\*.*" Exclude="$(ClientProjectBasePath)\$(ClientName)\Core\**\.svn\**\*.*"/>
+		<ClientEasygrantsFiles Include="$(ClientProjectBasePath)\$(ClientName)\Easygrants\**\*.*" Exclude="$(ClientProjectBasePath)\$(ClientName)\Easygrants\**\.svn\**\*.*"/>
+		<ClientHelpFiles Include="$(ClientProjectBasePath)\$(ClientName)\Help\**\*.*" Exclude="$(ClientProjectBasePath)\$(ClientName)\Help\**\.svn\**\*.*"/>
+		<ClientScriptFiles Include="$(ClientProjectBasePath)\$(ClientName)\DBScripts\**\*.*" Exclude="$(ClientProjectBasePath)\$(ClientName)\DBScripts\**\.svn\**\*.*"/>
+		<ClientImplementationFiles Include="$(ClientProjectBasePath)\$(ClientName)\Implementation\**\*.*" Exclude="$(ClientProjectBasePath)\$(ClientName)\Implementation\**\.svn\**\*.*"/>
+		<ClientConfigFiles Include="$(ClientProjectBasePath)\$(ClientName)\ConfigFiles\**\*.*"  Exclude="$(ClientProjectBasePath)\$(ClientName)\ConfigFiles\**\.svn\**\*.*"/>
+		<WebDirFiles Include="$(WebDir)\**\*" />
+		<WebDirFolders Include="@(WebDirFiles->'%(RootDir)%(Directory)')" />
+		<WebDlls Include="$(WebDir)\bin\*.dll"/>
+	</ItemGroup>
+	<Target Name="CleanWebDir">
+		<Delete Files="@(WebDirFiles)" />
+		<Message Text="Folders to delete: @(WebDirFolders)" />
+		<RemoveDir Directories="@(WebDirFolders)\*" >
+			<Output TaskParameter="RemovedDirectories" PropertyName="RemovedDirs" />
+		</RemoveDir>
+		<Message Text="Folders deleted: @(RemovedDirs)" />
+	</Target>
+	<Target Name="CreateWebDir">
+		<MakeDir Directories="$(WebDir)" Condition="!Exists('$(WebDir)')" />
+	</Target>
+	<Target Name="CopyBaseline">
+		<Copy SourceFiles="@(BaselineFilesToCopy)"
+			  DestinationFiles="@(BaselineFilesToCopy->'$(WebDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			  ContinueOnError="true"/>
+	</Target>
+	<Target Name="CopyClientFiles">
+		<Copy SourceFiles="@(ClientCoreFiles)"
+			DestinationFiles="@(ClientCoreFiles->'$(ClientCoreDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="@(ClientEasygrantsFiles)"
+			DestinationFiles="@(ClientEasygrantsFiles->'$(ClientEasygrantsDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="@(ClientHelpFiles)"
+			DestinationFiles="@(ClientHelpFiles->'$(ClientHelpDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="@(ClientScriptFiles)"
+			DestinationFiles="@(ClientScriptFiles->'$(ClientScriptDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="@(ClientImplementationFiles)"
+			DestinationFiles="@(ClientImplementationFiles->'$(ClientImplementationDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="@(ClientConfigFiles)"
+			DestinationFiles="@(ClientConfigFiles->'$(ClientConfigDestDir)\%(RecursiveDir)\%(Filename)%(Extension)')"
+			ContinueOnError="true"/>
+		<Copy SourceFiles="$(ClientProjectBasePath)\$(ClientName)\Web.config"
+			DestinationFolder="$(WebDir)"
+			ContinueOnError="false"
+			Condition="Exists('$(ClientProjectBasePath)\$(ClientName)\Web.config')"/>
+	</Target>
+	<UsingTask TaskName="MergeClientIntoEGBaseline.MergeTask"
+        AssemblyFile="$(ClientProjectBasePath)\$(Baseline)\BuildFiles\MergeClientIntoBaselineTask.dll"/>
+	<Target Name="MergeClientIntoBaseline">
+		<Message Text="Target MergeClientIntoBaseline:" />
+		<MergeTask BaselineProjFile="$(BaselineProj)" ClientProjFile="$(ClientProj)" MergedBaselineProjFile="$(WebDir)\$(Baseline).vbproj"/>
+	</Target>
+	<ItemGroup>
+		<Project Include="$(WebDir)\$(Baseline).vbproj"/>
+	</ItemGroup>
+	<Target Name="BuildWebProject">
+		<MSBuild Projects="@(Project)" Properties="Configuration=$(Configuration)"/>
+	</Target>
+	<Target Name="PublishWebProject">
+		<MSBuild Projects="@(Project)" Targets="_CopyWebApplication" Properties="OutDir=$(PublishDir);Configuration=$(Configuration)" Condition="'$(Configuration)'!='Debug'"/>
+		<Copy SourceFiles="@(WebDlls)"
+			DestinationFolder="$(PublishDir)_PublishedWebsites\$(Baseline)\bin"
+			ContinueOnError="false"/>
+	</Target>
+	<Target Name="PreCompileWebProject" Condition="" DependsOnTargets="">
+		<Exec Command="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_compiler.exe -v /$(WebAppName)" ContinueOnError="true"/>
+	</Target>
+</Project>

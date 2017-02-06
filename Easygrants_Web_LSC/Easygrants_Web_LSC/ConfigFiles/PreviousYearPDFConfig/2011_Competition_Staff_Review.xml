@@ -1,0 +1,112 @@
+﻿<!-- 2011 cycle Staff Review PDF - Competition App -->
+
+<Section Key="Competition Staff Review" Type="WordTemplate" TemplateFileName="2011\PDF_Comp_Staff_Review_2011.dot">
+	<DataObject Key='LscReviewApplication' DataObjectDefinitionKey='LscReviewApplication' >
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtClaimsListed'  >
+				<DisplayProperty PropertyKey='Claims' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDiscloseConflicts'  >
+				<DisplayProperty PropertyKey='Conflicts1' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFundingTerm'  >
+				<DisplayProperty PropertyKey='LscFundingTermDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='EvaluationComments'  DestKey='txtEvaluationComments'  >
+				<Substitute SrcValue='' ReplaceValue='N/A' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscOA1' DataObjectDefinitionKey='LscOA1'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtStaffReader'  >
+				<DisplayProperty PropertyKey='StaffReaderPerson.FirstNameLastName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDate'  >
+				<DisplayProperty PropertyKey='StaffReaderDate' Format='MM/dd/yyyy' />
+			</DisplayProperty>
+			<DisplayProperty  DestKey='txtChkIA'>
+				<DisplayProperty PropertyKey='ChkIA' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty  DestKey='txtChkIB'>
+				<DisplayProperty PropertyKey='ChkIB' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty  DestKey='txtChkIC'>
+				<DisplayProperty PropertyKey='ChkIC' Format='YesNo' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<DataObject  DataObjectDefinitionKey='PerformanceAreasReviewPDF'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.WfTAYear' PropertyKey='year' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblPA'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='score_checked'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Type' HtmlEncode='True'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='comment'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='GranteeProject' DataObjectDefinitionKey='GranteeProject'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtOrganization'  >
+				<DisplayProperty PropertyKey='PrimaryOrganization.OrganizationName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecipientID'>
+				<DisplayProperty PropertyKey='PrimaryOrganization.LegacyOrganizationID'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtServiceArea'>
+				<DisplayProperty PropertyKey='WfProject.WfCompetition.CompetitionDisplayName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtYear'>
+				<DisplayProperty PropertyKey='WfProject.TimePeriod.Description'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtGrantamount'>
+				<DisplayProperty PropertyKey='WfProject.Fund.FundAmount' Format='$#,0'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='ReviewWfTA' DataObjectDefinitionKey='WfTaskAssignment'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtReviewer'  >
+				<DisplayProperty PropertyKey='Person.FirstNameLastName' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='ReviewTotalScore' DataObjectDefinitionKey='ReviewTotalScore'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='ReviewWfTAID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtTotalScore'  >
+				<DisplayProperty PropertyKey='TotalScore'  Format='##.#'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+</Section>

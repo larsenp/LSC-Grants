@@ -1,0 +1,2 @@
+ALTER TABLE LSC_MILESTONE
+	ADD lsc_tig_proposed_payment_schedule_id INT NULL

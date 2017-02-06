@@ -1,0 +1,424 @@
+﻿
+
+<!-- GAR Form - M - Other Services Report - format of Older than 2012 cycle year end   -->
+<Section Key='GARFormM' Type='WordTemplate' TemplateFileName='GAR\PDF_GAR_Other_Services_FormM.dotx'>
+
+	<DataObject Key='LscOtherServices' DataObjectDefinitionKey='LscOtherServices'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtIA1a'  >
+				<DisplayProperty PropertyKey='IA1a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA1b'  >
+				<DisplayProperty PropertyKey='IA1b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA1Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA1Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA2a'  >
+				<DisplayProperty PropertyKey='IA2a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA2b'  >
+				<DisplayProperty PropertyKey='IA2b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA2Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA2Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA3a'  >
+				<DisplayProperty PropertyKey='IA3a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA3b'  >
+				<DisplayProperty PropertyKey='IA3b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA3Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA3Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA4a'  >
+				<DisplayProperty PropertyKey='IA4a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA4b'  >
+				<DisplayProperty PropertyKey='IA4b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA4Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA4Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA5a'  >
+				<DisplayProperty PropertyKey='IA5a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA5b'  >
+				<DisplayProperty PropertyKey='IA5b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA5Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA5Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA6a'  >
+				<DisplayProperty PropertyKey='IA6a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA6b'  >
+				<DisplayProperty PropertyKey='IA6b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIA6Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IA6Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIAaTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IAaTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIAbTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IAbTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIATotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IATotal' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIB1'  >
+				<DisplayProperty PropertyKey='IB1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB2'  >
+				<DisplayProperty PropertyKey='IB2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB3'  >
+				<DisplayProperty PropertyKey='IB3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB4'  >
+				<DisplayProperty PropertyKey='IB4' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB5'  >
+				<DisplayProperty PropertyKey='IB5' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB6'  >
+				<DisplayProperty PropertyKey='IB6' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB7'  >
+				<DisplayProperty PropertyKey='IB7' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB8'  >
+				<DisplayProperty PropertyKey='IB8' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB9'  >
+				<DisplayProperty PropertyKey='IB9' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIB10'  >
+				<DisplayProperty PropertyKey='IB10' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIBTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IBTotal' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIC1'  >
+				<DisplayProperty PropertyKey='IC1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIC2'  >
+				<DisplayProperty PropertyKey='IC2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIC3'  >
+				<DisplayProperty PropertyKey='IC3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtICTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.ICTotal' />
+			</DisplayProperty>
+
+
+			<DisplayProperty DestKey='txtIIA1a'  >
+				<DisplayProperty PropertyKey='IIA1a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA1b'  >
+				<DisplayProperty PropertyKey='IIA1b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA1Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA1Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA2a'  >
+				<DisplayProperty PropertyKey='IIA2a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA2b'  >
+				<DisplayProperty PropertyKey='IIA2b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA2Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA2Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA3a'  >
+				<DisplayProperty PropertyKey='IIA3a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA3b'  >
+				<DisplayProperty PropertyKey='IIA3b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA3Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA3Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA4a'  >
+				<DisplayProperty PropertyKey='IIA4a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA4b'  >
+				<DisplayProperty PropertyKey='IIA4b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA4Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA4Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA5a'  >
+				<DisplayProperty PropertyKey='IIA5a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA5b'  >
+				<DisplayProperty PropertyKey='IIA5b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA5Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA5Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA6a'  >
+				<DisplayProperty PropertyKey='IIA6a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA6b'  >
+				<DisplayProperty PropertyKey='IIA6b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIA6Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIA6Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIAaTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIAaTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIAbTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIAbTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIATotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIATotal' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIIB1'  >
+				<DisplayProperty PropertyKey='IIB1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB2'  >
+				<DisplayProperty PropertyKey='IIB2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB3'  >
+				<DisplayProperty PropertyKey='IIB3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB4'  >
+				<DisplayProperty PropertyKey='IIB4' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB5'  >
+				<DisplayProperty PropertyKey='IIB5' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB6'  >
+				<DisplayProperty PropertyKey='IIB6' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB7'  >
+				<DisplayProperty PropertyKey='IIB7' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB8'  >
+				<DisplayProperty PropertyKey='IIB8' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB9'  >
+				<DisplayProperty PropertyKey='IIB9' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIB10'  >
+				<DisplayProperty PropertyKey='IIB10' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIBTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIBTotal' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIIIA1a'  >
+				<DisplayProperty PropertyKey='IIIA1a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA1b'  >
+				<DisplayProperty PropertyKey='IIIA1b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA1Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIA1Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA2a'  >
+				<DisplayProperty PropertyKey='IIIA2a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA2b'  >
+				<DisplayProperty PropertyKey='IIIA2b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA2Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIA2Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA3a'  >
+				<DisplayProperty PropertyKey='IIIA3a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA3b'  >
+				<DisplayProperty PropertyKey='IIIA3b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA3Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIA3Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA4a'  >
+				<DisplayProperty PropertyKey='IIIA4a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA4b'  >
+				<DisplayProperty PropertyKey='IIIA4b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIA4Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIA4Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIAaTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIAaTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIAbTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIAbTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIATotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIATotal' />
+			</DisplayProperty>
+
+
+			<DisplayProperty DestKey='txtIIIB1'  >
+				<DisplayProperty PropertyKey='IIIB1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB2'  >
+				<DisplayProperty PropertyKey='IIIB2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB3'  >
+				<DisplayProperty PropertyKey='IIIB3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB4'  >
+				<DisplayProperty PropertyKey='IIIB4' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB5'  >
+				<DisplayProperty PropertyKey='IIIB5' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB6'  >
+				<DisplayProperty PropertyKey='IIIB6' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB7'  >
+				<DisplayProperty PropertyKey='IIIB7' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB8'  >
+				<DisplayProperty PropertyKey='IIIB8' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB9'  >
+				<DisplayProperty PropertyKey='IIIB9' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB10'  >
+				<DisplayProperty PropertyKey='IIIB10' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB11'  >
+				<DisplayProperty PropertyKey='IIIB11' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIB12'  >
+				<DisplayProperty PropertyKey='IIIB12' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIIIBTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.IIIBTotal' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtIV1Info'  >
+				<DisplayProperty PropertyKey='IV1_Info' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV2TV'  >
+				<DisplayProperty PropertyKey='IV2_TV' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV3Radio'  >
+				<DisplayProperty PropertyKey='IV3_Radio' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV4News'  >
+				<DisplayProperty PropertyKey='IV4_News' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV5Refer'  >
+				<DisplayProperty PropertyKey='IV5_Refer' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV6How'  >
+				<DisplayProperty PropertyKey='IV6_How' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIV7Other'  >
+				<DisplayProperty PropertyKey='IV7_Other' Format='YesNo' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtV1Legal'  >
+				<DisplayProperty PropertyKey='V1_Legal' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtV2Collab'  >
+				<DisplayProperty PropertyKey='V2_Collab' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtV3Other'  >
+				<DisplayProperty PropertyKey='V3_Other' Format='YesNo' />
+			</DisplayProperty>
+
+
+			<DisplayProperty DestKey='txtVIA1a'  >
+				<DisplayProperty PropertyKey='VIA1a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIA1b'  >
+				<DisplayProperty PropertyKey='VIA1b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIA1Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIA1Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIA2a'  >
+				<DisplayProperty PropertyKey='VIA2a' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIA2b'  >
+				<DisplayProperty PropertyKey='VIA2b' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIA2Total'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIA2Total' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIAaTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIAaTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIAbTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIAbTotal' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIATotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIATotal' />
+			</DisplayProperty>
+
+
+			<DisplayProperty DestKey='txtVIB1'  >
+				<DisplayProperty PropertyKey='VIB1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB2'  >
+				<DisplayProperty PropertyKey='VIB2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB3'  >
+				<DisplayProperty PropertyKey='VIB3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB4'  >
+				<DisplayProperty PropertyKey='VIB4' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB5'  >
+				<DisplayProperty PropertyKey='VIB5' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB6'  >
+				<DisplayProperty PropertyKey='VIB6' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB7'  >
+				<DisplayProperty PropertyKey='VIB7' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB8'  >
+				<DisplayProperty PropertyKey='VIB8' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB9'  >
+				<DisplayProperty PropertyKey='VIB9' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIB10'  >
+				<DisplayProperty PropertyKey='VIB10' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVIBTotal'  >
+				<DisplayProperty PropertyKey='LscOtherServicesTotals.VIBTotal' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='vLSCCompWftaOrgServareaYear' DataObjectDefinitionKey='vLSCCompWftaOrgServareaYear'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='RecipientID' DestKey='txtRecipientID'/>
+			<DisplayProperty PropertyKey='WFTAYear' DestKey='txtYear'/>
+			<DisplayProperty PropertyKey='ServiceArea' DestKey='txtServArea' />
+			<DisplayProperty PropertyKey='Organization.OrganizationName' DestKey='txtOrgName'/>
+		</DisplayProperties>
+	</DataObject>
+
+</Section>
+
+
+
+
+

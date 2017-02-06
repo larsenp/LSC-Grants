@@ -1,0 +1,292 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{814A0545-75D0-4F25-8EE0-D16676B2DD5D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Core</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>bin\Test\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TEST;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;STAGE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Appl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DataObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DataObjectFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DataObjectList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DBAccess\DataProviderSQL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DBAccess\DBConn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DBAccess\OLEDBConn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\DBAccess\SQLDBConn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\ImportedFile.cs" />
+    <Compile Include="Core\DataAccess\SubmittedFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\XMLAccess\DataProviderXML.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\DataAccess\XMLAccess\XMLDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Event\Event.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Event\EventData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Event\ProcessingEvent.cs" />
+    <Compile Include="Core\Exceptions\SQLInjectionException.cs" />
+    <Compile Include="Core\User\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Util\Lib.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Util\Reflection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\CoreCtl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\CorePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\dbgCtl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\EventController.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\GatewayPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Modules\ModuleCtl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Modules\ModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Modules\ModuleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\CrumbTrail\Crumb.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\CrumbTrail\CrumbTrail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\CrumbTrail\CrumbTrailDisplay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\DBNavElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\JSWriter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\Menu.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\NavElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\Navigation\XMLNavElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\staffCtl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\CoreSvrCtl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\PagingCtl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\PagingCtlEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\SortCtl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\SvrButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\SvrCtls\UserCtlLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\User\WebUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\WebAppl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\WebLib.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Web\WebSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

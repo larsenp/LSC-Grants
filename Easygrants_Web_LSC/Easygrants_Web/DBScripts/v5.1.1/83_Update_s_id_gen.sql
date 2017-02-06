@@ -1,0 +1,1 @@
+update s_id_gen set is_code_table = 1 where table_name = 'c_CONFLICT_TYPE'

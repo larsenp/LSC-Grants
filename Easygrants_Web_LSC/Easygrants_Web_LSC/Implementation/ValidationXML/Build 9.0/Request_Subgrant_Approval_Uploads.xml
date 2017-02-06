@@ -1,0 +1,27 @@
+<ValidationItem>
+	<Requirement PropertyKey='SubmittedUpload'>
+		<Filters>
+			<Argument PropertyKey='UploadId' Value='19'>
+				<RelatedProperty PropertyKey='TaskUploadType'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Your Subgrant Agreement file has not been uploaded.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateSubgrantUploadNotes'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You indicated "Yes" for at least one of the three Notes on the Subrecipient Budget page. You must upload a supporting schedule.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

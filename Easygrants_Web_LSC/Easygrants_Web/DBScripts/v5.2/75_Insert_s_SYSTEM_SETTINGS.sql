@@ -1,0 +1,1 @@
+insert into s_SYSTEM_SETTINGS values (4, 'Event Manager', 'EventManager', NULL)

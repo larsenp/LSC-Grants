@@ -1,0 +1,1 @@
+ALTER TABLE a_WF_PROJECT_TASK_PDF ADD file_name_prefix varchar(50);

@@ -1,0 +1,21 @@
+ALTER TABLE LSC_REVIEW_COMP_APPL_OCE_STAFF
+	ADD cert_good_standing_meet_req BIT
+		,cert_good_standing VARCHAR(MAX)
+		,acct_manual VARCHAR(MAX)
+		,fidelity_bond_meet_req BIT
+		,fidelity_bond VARCHAR(MAX)
+		,sgc_other_sources VARCHAR(MAX)
+		,committee_charters VARCHAR(MAX)
+		,cost_alloc VARCHAR(MAX)
+		,pai_method VARCHAR(MAX)
+		,seg_fin_duties VARCHAR(MAX)
+		,aud_fin_stmt VARCHAR(MAX)
+		,fin_stability VARCHAR(MAX)
+		,quality_mgmt_systems VARCHAR(MAX)
+		,timely_fin_stmts VARCHAR(MAX)
+		,subrecipient_compliance VARCHAR(MAX)
+		,property_agreement VARCHAR(MAX)
+		,fund_balance_history VARCHAR(MAX)
+		,pai_waiver_history VARCHAR(MAX)
+		,lsc_finance_report_review_interval_other_score decimal(2,1)
+		,lsc_acctg_ctrl_policy_review_interval_other_score decimal(2,1)

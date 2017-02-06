@@ -1,0 +1,1 @@
+ALTER TABLE a_WF_TASK_OUTCOME ALTER COLUMN description varchar(200) null

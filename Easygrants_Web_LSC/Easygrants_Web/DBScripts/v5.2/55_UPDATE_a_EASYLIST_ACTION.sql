@@ -1,0 +1,2 @@
+UPDATE [a_EASYLIST_ACTION] SET [action_xml] = '<Actions><Action Object=''EventController'' Method=''EventController_NavigateToModulePageKey''><Parameters><Argument Value=''PersonContact''/><Argument Type=''AttributeRelatedProperty'' AttributeName=''WfTaskAssignmentID'' DataObjectDefinitionKey=''WfTaskAssignment'' PropertyKey=''Person.PersonID'' BaseValue=''PersonID='' Value='''' DefaultValue=''0''  /></Parameters></Action></Actions>' WHERE [id] = 18;
+

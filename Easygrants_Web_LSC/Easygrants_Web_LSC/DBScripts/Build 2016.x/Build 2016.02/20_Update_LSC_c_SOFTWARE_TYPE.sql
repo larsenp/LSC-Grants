@@ -1,0 +1,3 @@
+UPDATE LSC_c_SOFTWARE_TYPE
+	SET sort_order = 22
+	WHERE id = 8

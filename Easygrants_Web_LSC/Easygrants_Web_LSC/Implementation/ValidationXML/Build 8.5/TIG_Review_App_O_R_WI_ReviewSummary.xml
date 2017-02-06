@@ -1,0 +1,39 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigReviewOpenRepWebImpr'>
+		<Filters>
+			<Argument PropertyKey='OverallComment' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide an overall comment.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigReviewOpenRepWebImpr'>
+		<Filters>
+			<Argument PropertyKey='RecommendedFundingAmount' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a recommended funding amount. If funding is not recommended, enter zero.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigReviewOpenRepWebImpr'>
+		<Filters>
+			<Argument PropertyKey='LscTigFundingRecommendationID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a funding recommendation.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

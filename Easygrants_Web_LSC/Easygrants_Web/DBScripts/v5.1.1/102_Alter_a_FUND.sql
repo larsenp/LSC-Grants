@@ -1,0 +1,1 @@
+ALTER TABLE a_FUND ADD fund_source_type_id int not null default 1;

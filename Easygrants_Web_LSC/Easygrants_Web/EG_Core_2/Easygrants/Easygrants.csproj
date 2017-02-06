@@ -1,0 +1,300 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D7BDF88-F840-468A-8D8D-435975958813}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Easygrants</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <OutputPath>bin\Test\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TEST;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;STAGE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Name>Core</Name>
+      <Project>{814A0545-75D0-4F25-8EE0-D16676B2DD5D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Correspondence\CorrespondenceJob.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Correspondence\CorrespondenceJobBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Correspondence\EmailArgsDataObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Correspondence\EmailArgsDataObjectBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Correspondence\IEmailArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Budget\Budget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Budget\BudgetItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Budget\BudgetPeriod.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\ContactCategary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Report\ReportOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\DataAccess\Report\SavedQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Event\EmailEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Event\RevAddInfoAppEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Event\RevAddInfoRevEvent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Event\StoredProcedureEvent.cs" />
+    <Compile Include="EasyGrants\Web\EGAppl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\EGCtl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\EGPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\EGSession.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\Modules\HomeModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\Modules\ProfileModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\Modules\PublicModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\Modules\SubmissionModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\Modules\WfTaskModulePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\SvrCtls\dbgScratch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\SvrCtls\EGSvrCtl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\SvrCtls\QueryResultsSvrCtl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\UploadBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\UploadValidator.cs" />
+    <Compile Include="EasyGrants\Web\User\EGGuestUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGHomeUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGPublicUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGStaffUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGWfTaskUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\User\EGWfTAUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Web\SpUploadValidator.cs" />
+    <Compile Include="EasyGrants\Workflow\GranteeProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\GranteeProjectOutcomes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\Reminder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\ReviewCommitteeMember.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\ReviewStage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\WfProject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\WfTask.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EasyGrants\Workflow\WfTaskAssignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

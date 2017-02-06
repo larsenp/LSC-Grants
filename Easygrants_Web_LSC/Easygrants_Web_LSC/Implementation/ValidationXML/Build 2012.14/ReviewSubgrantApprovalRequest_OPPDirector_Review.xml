@@ -1,0 +1,385 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='' Operator='NotEqual'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a Recommendation.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='188'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must select a Recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for full approval. You must indicate whether reporting requirements are recommended.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='FullApprReportInfo' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate which information is to be submitted.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='FullApprIntervalMonths' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the reporting interval.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='FullApprReportDueDate' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the due date of the first report.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='False'/>
+			<Argument PropertyKey='FullApprReportInfo' Value='' Operator='NotEqual'/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified information to be submitted. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='False' Bool=''/>
+			<Argument PropertyKey='FullApprIntervalMonths' Value='' Operator='NotEqual'/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified a reporting interval. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='FullApprRecommendReportingReqs' Value='False' />
+			<Argument PropertyKey='FullApprReportDueDate' Value='' Operator='NotEqual' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='189'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified a report due date. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+
+
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendConcerns' Value='' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for partial approval. You must specify the concerns that led to this recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='PartialApprRevisedStartDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised start date for the subgrant.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='PartialApprRevisedEndDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised end date for the subgrant.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='PartialApprRevisedSubgrantAmt' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended partial approval. You must indicate a revised subgrant amount.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='' />
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for partial approval. You must indicate whether reporting requirements are recommended.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='PartialApprReportInfo' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate which information is to be submitted.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='PartialApprIntervalMonths' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the reporting interval.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='True' />
+			<Argument PropertyKey='PartialApprReportDueDate' Value=''/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended reporting requirements. You must indicate the due date of the first report.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='False'/>
+			<Argument PropertyKey='PartialApprReportInfo' Value='' Operator='NotEqual'/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified information to be submitted. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='False'/>
+			<Argument PropertyKey='PartialApprIntervalMonths' Value='' Operator='NotEqual'/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified Interval Months. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='PartialApprRecommendReportingReqs' Value='False'/>
+			<Argument PropertyKey='PartialApprReportDueDate' Value='' Operator='NotEqual'/>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='190'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended no reporting requirements, but you have specified report due date. Please resolve.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+
+
+
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='191'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='ProvApprPendingItem' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended provisional approval. You must provide a rationale for provisional approval and a list of necessary documents.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='191'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='ProvApprDueDate' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended provisional approval. You must provide a due date for submission of required materials.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+
+
+<ValidationItem>
+	<Requirement PropertyKey='LscWftaSubgrantReviewOPP'>
+		<Filters>
+			<Argument PropertyKey='WfTaskOutcomeID' Value='192'>
+				<RelatedProperty PropertyKey='WfTaskAssignment'/>
+			</Argument>
+			<Argument PropertyKey='DenialReason' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You have recommended the request for denial. You must provide a reason for denial recommendation.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>

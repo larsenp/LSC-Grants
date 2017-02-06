@@ -1,0 +1,13 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigReviewOpenRepWebImpr'>
+		<Filters>
+			<Argument PropertyKey='ProposedPaymentScheduleComment' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a Proposed Payment Schedule comment.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

@@ -1,0 +1,145 @@
+
+<HTML>
+ <HEAD>
+  <TITLE>Program Directory System</TITLE>
+
+ <SCRIPT LANGUAGE="JavaScript">
+ 
+	function county(){
+		document.cpform.action ="/Scripts/LSC/PD/PDList7c.asp";
+		document.cpform.method = "post";
+		document.cpform.submit();
+      }
+
+	function add(){
+		document.cpform.action ="/Scripts/LSC/PD/PDList7a.asp";
+	    document.cpform.method = "post";
+		document.cpform.submit();
+      }
+	function list1(){
+		document.cpform.action ="/Scripts/LSC/PD/PDList7suma.asp";
+	    document.cpform.method = "post";
+		document.cpform.submit();
+      }
+	function exit(){
+        document.location.href ="http://rin/Complaint.html";
+       }
+var justValidating = true
+function validateForm(form)  // validate Survey data
+  {
+  if (!validateorgid(form.Orgid.value))  // Orgid name valid?
+    {
+    form.Orgid.focus()
+    return false
+    }
+  if (justValidating)  // only show alert box if validating, not submitting
+    //alert("Congratulations: Your data is valid!")  // all data valid
+    add()
+  return true
+  }
+ 
+function validateorgid(Orgid)
+  {
+  if (isBlank(Orgid))               // Orgid field blank?
+    {
+    alert("Enter Grantee Number, please!")
+    return false
+    }
+  if (Orgid.indexOf(" ", 0) != -1)  // two names?
+    {
+    alert("Enter one name only, please!")
+    return false
+    }
+  return true
+  }
+function isBlank(testStr)
+  {
+  if (testStr.length == 0)                     // nothing entered?
+    return true
+  for (var i = 0; i <= testStr.length-1; i++)  // all spaces?
+    if (testStr.charAt(i) != " ")
+      return false
+  return true
+  }
+
+
+   function setfocus()  {
+      document.cpform.Orgid.focus(); 
+         }
+
+ </SCRIPT>
+
+ </HEAD>
+
+<BODY BGCOLOR=#faf0e6><!--#e6e6fa>#fafacc#ffffc4
+<FORM NAME="form1" ACTION="../../eval/closerev.asp" METHOD="POST">
+<FORM NAME="form1" ACTION="/scripts/LSC/complaint/Addcomp1.asp" METHOD="post">
+-->
+
+<FORM NAME="cpform" METHOD="post">
+<CENTER>
+  <H2>LSC PROGRAM DIRECTORY 
+  <!--DATABASE SYSTEM&nbsp;&nbsp;&nbsp;--></H2>
+<Center>
+ <FONT SIZE="3">
+ <P><FONT size=-1>To view a list of programs in a particular state:<br> 
+  (1) select a state from the pulldown box, (2) press "Proceed". <br>
+  To locate a program which serves a particular county in a particular state: <br>
+  (1) select a state, (2) select a county, (3) press "Proceed".<BR>
+  To view the entire Program Directory: <BR>
+  (1) select All states from the pulldown box, (2) press "Proceed".
+   </FONT></P>
+
+ <!--<P><FONT size=-1>To view a list of programs in a particular state: (1) select a 
+state from the pulldown box, (2) leave <BR>the county name blank, (3) then press 
+"Proceed". To locate a program which serves a particular <BR>county: (1) select 
+a state, (2) enter the county name in the county box, (3) then press "Proceed". 
+<BR>To view the entire Program Directory: press "Proceed", leaving the state and 
+county boxes blank. </FONT></P>-->
+<p align="center"><img src="/Scripts/LSC/PD/brownline.gif" width="640" height="5"></p>
+    <!--Please select a state from the pulldown box, then click the PROCESS button.-->
+ </FONT></B>
+</Center>
+<font face="Times New Roman, Times"><b>State:</b></font>
+<!--ZP IRA-->
+<SELECT NAME=Selection class='dropdown' onchange="cpform.submit()">
+	
+		<Option selected value ="All States">All States</option>
+	<OPTION value = "AK">AK -- Alaska              </option><OPTION value = "AL">AL -- Alabama             </option><OPTION value = "AR">AR -- Arkansas            </option><OPTION value = "AS">AS -- American Samoa      </option><OPTION value = "AZ">AZ -- Arizona             </option><OPTION value = "CA">CA -- California          </option><OPTION value = "CO">CO -- Colorado            </option><OPTION value = "CT">CT -- Connecticut         </option><OPTION value = "DC">DC -- District of Columbia</option><OPTION value = "DE">DE -- Delaware            </option><OPTION value = "FL">FL -- Florida             </option><OPTION value = "GA">GA -- Georgia             </option><OPTION value = "GU">GU -- Guam                </option><OPTION value = "HI">HI -- Hawaii              </option><OPTION value = "IA">IA -- Iowa                </option><OPTION value = "ID">ID -- Idaho               </option><OPTION value = "IL">IL -- Illinois            </option><OPTION value = "IN">IN -- Indiana             </option><OPTION value = "KS">KS -- Kansas              </option><OPTION value = "KY">KY -- Kentucky            </option><OPTION value = "LA">LA -- Louisiana           </option><OPTION value = "MA">MA -- Massachusetts       </option><OPTION value = "MD">MD -- Maryland            </option><OPTION value = "ME">ME -- Maine               </option><OPTION value = "MI">MI -- Michigan            </option><OPTION value = "MN">MN -- Minnesota           </option><OPTION value = "MO">MO -- Missouri            </option><OPTION value = "MP">MP -- Micronesia          </option><OPTION value = "MS">MS -- Mississippi         </option><OPTION value = "MT">MT -- Montana             </option><OPTION value = "NC">NC -- North Carolina      </option><OPTION value = "ND">ND -- North Dakota        </option><OPTION value = "NE">NE -- Nebraska            </option><OPTION value = "NH">NH -- New Hampshire       </option><OPTION value = "NJ">NJ -- New Jersey          </option><OPTION value = "NM">NM -- New Mexico          </option><OPTION value = "NV">NV -- Nevada              </option><OPTION value = "NY">NY -- New York            </option><OPTION value = "OH">OH -- Ohio                </option><OPTION value = "OK">OK -- Oklahoma            </option><OPTION value = "OR">OR -- Oregon              </option><OPTION value = "PA">PA -- Pennsylvania        </option><OPTION value = "PR">PR -- Puerto Rico         </option><OPTION value = "RI">RI -- Rhode Island        </option><OPTION value = "SC">SC -- South Carolina      </option><OPTION value = "SD">SD -- South Dakota        </option><OPTION value = "TN">TN -- Tennessee           </option><OPTION value = "TX">TX -- Texas               </option><OPTION value = "UT">UT -- Utah                </option><OPTION value = "VA">VA -- Virginia            </option><OPTION value = "VI">VI -- Virgin Islands      </option><OPTION value = "VT">VT -- Vermont             </option><OPTION value = "WA">WA -- Washington          </option><OPTION value = "WI">WI -- Wisconsin           </option><OPTION value = "WV">WV -- West Virginia       </option><OPTION value = "WY">WY -- Wyoming             </option>
+</SELECT><BR><BR>
+
+<font face="Times New Roman, Times"><b>County:</b></font>
+<SELECT NAME=SelCounty class='dropdown' onchange="cpform.submit()">
+	 
+		<Option selected value ="All Counties">All Counties</option>
+	
+   
+</SELECT><BR><BR>
+
+	<!-- old 
+	<font face="Times New Roman, Times"><b>County:</b></font>
+	<INPUT TYPE=SUBMIT VALUE=" County names list " ONCLICK="county()">
+	-->
+<Center>
+ <!--<INPUT TYPE=SUBMIT VALUE="NEXT" onClick="justValidating=true; validateForm(this.form)">-->
+ <INPUT TYPE=SUBMIT VALUE="Proceed" ONCLICK="add()" >
+ <BR><BR>
+ <INPUT TYPE=SUBMIT VALUE="List of Current Recipients" ONCLICK="list1()">
+ <BR><BR><BR>
+ <A href="/../default.htm">BACK TO RIN HOME PAGE</A>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <A href="/rinboard/rinboard.htm"></A>
+ <!--<INPUT TYPE=BUTTON VALUE="EXIT" ONCLICK="back()">-->
+
+<BR><BR>
+
+          
+</CENTER>
+
+  <INPUT TYPE=HIDDEN NAME="UserID" VALUE="">
+  <INPUT TYPE=HIDDEN NAME="Password" VALUE="">
+  <INPUT TYPE=HIDDEN NAME="Selection" VALUE="">
+  
+  </FORM>
+ </BODY>
+</HTML>

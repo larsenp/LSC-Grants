@@ -1,0 +1,56 @@
+
+
+<HTML>
+<HEAD>
+<TITLE>Authentication</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ebeff5" TEXT="#000080" LINK="#0000a0" VLINK="#008000" ALINK="#008000">
+
+
+
+<FORM NAME="userform" >
+
+<center><BR><H3>Please Enter Recipient ID and Password</H3></center><BR>
+<pre>
+                    <B>RECIPIENT ID:</B>    <INPUT NAME="orgid" SIZE="6" MAXLENGTH="6" >
+                    <B>PASSWORD:</B>        <INPUT TYPE="password" NAME="password" SIZE="7" MAXLENGTH="7" > <BR>
+</pre>
+<center>
+<INPUT TYPE="submit" VALUE="OK" onClick="submitform()">  
+<INPUT TYPE="submit" VALUE="EXIT" onClick="exitform()"> 
+</center>
+
+   <INPUT TYPE="hidden" NAME="rptquarter" VALUE="3" > 
+   <INPUT TYPE="hidden" NAME="rptyear" VALUE="2007" > 
+
+<SCRIPT LANGUAGE="JavaScript">
+ document.userform.orgid.focus();
+ 
+ 	function exitform(){
+               document.userform.action ="/default.htm";
+			}
+
+
+	function submitform(){
+		if ((document.userform.orgid.value!='999999') && (document.userform.password.value!='9999999')) 
+			{
+			document.userform.action ="/scripts/LSC/compliance/casemenu.asp";
+            document.userform.method = "post";
+            document.userform.submit();
+            }
+         
+		else {
+
+		document.userform.action ="/scripts/LSC/compliance/1644form.asp";
+          	document.userform.method = "post";
+            document.userform.submit();
+            }
+         }    	
+		
+</SCRIPT>
+
+  </FORM>
+ </BODY>
+</HTML>
+

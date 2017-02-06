@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>Authentication</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+       function exitform(){
+               document.userform.action ="/default.htm";
+               document.userform.method = "get";
+           }
+
+       function submitform(){
+              document.userform.action ="/rinboard/archived_files2.htm";
+              document.userform.method = "get";   
+                       }
+
+</SCRIPT>
+<meta name="Microsoft Theme" content="copy-of-rice-paper2 011, default">
+</HEAD>
+
+<BODY background="../images/ricebk.jpg" bgcolor="#FFFFFF" text="#000000" link="#666633" vlink="#333366" alink="#990000"><!--mstheme--><font face="Times New Roman, Times">
+
+<center></center><BR>
+
+<FORM NAME="userform" >
+<!--mstheme--></font><pre>
+                 <font size="3" color="#800000"><b>RECIPIENT ID: </b></font> <INPUT TYPE="TEXT" NAME="orgid" SIZE="7" MAXLENGTH="6" VALUE="">
+                     <B><font size="3" color="#800000">PASSWORD:</font></B>   <INPUT TYPE="password" NAME="password" SIZE="7" MAXLENGTH="7" VALUE=""> 
+
+</pre><!--mstheme--><font face="Times New Roman, Times">
+<center>
+<!--mstheme--></font><pre>  <INPUT TYPE="SUBMIT" VALUE="OK" onClick="submitform()"><INPUT TYPE="SUBMIT" VALUE="EXIT" onClick="exitform()"> </pre><!--mstheme--><font face="Times New Roman, Times">
+
+<BR><FONT SIZE=+1>T</FONT>his information is accessible only with a valid recipient number and password. Please enter 
+your recipient number and password, then click OK to proceed.
+</center>
+
+<SCRIPT LANGUAGE="JavaScript">
+ document.userform.orgid.focus();
+</SCRIPT>
+
+</FORM>
+<!--mstheme--></font></BODY>
+</HTML>

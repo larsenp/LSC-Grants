@@ -1,0 +1,16 @@
+<ValidationItem>
+	<Requirement PropertyKey='SubmittedUpload'>
+		<Filters>
+			<Argument PropertyKey='UploadId' Value='62'>
+				<RelatedProperty PropertyKey='TaskUploadType'/>
+			</Argument>
+			<Argument PropertyKey='ConversionStatus' Value='-1'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Either your Resumes of Key Staff file has not been uploaded, or it has not been successfully converted to a PDF.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

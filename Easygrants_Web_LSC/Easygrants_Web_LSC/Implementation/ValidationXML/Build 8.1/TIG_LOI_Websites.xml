@@ -1,0 +1,56 @@
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='RequestedAmount' Value='' Operator='NotEqual' />
+			<Argument PropertyKey='RequestedAmount' Value='25000' Operator='LessThanEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Amount should not be blank and should not be greater than $25,000'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='PrevWeb' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Previous Websites Field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='NonWeb' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Non-Web Grants Field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+
+<ValidationItem>
+	<Requirement PropertyKey='LSCTIGLOI' >
+		<Filters>
+			<Argument PropertyKey='AddInfo' Value='' Operator='NotEqual' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Additional Info field is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

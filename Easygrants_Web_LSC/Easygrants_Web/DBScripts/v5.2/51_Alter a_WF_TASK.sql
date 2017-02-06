@@ -1,0 +1,3 @@
+ALTER TABLE a_WF_TASK ADD include_submission_communication bit 
+GO
+UPDATE a_WF_TASK SET include_submission_communication=0

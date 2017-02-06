@@ -1,0 +1,1 @@
+ALTER TABLE a_WF_PROJECT ADD  grantee_default_type_id int;

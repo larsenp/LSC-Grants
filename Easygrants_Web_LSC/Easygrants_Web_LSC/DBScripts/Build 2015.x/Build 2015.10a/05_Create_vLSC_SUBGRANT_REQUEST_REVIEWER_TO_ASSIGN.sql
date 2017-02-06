@@ -1,0 +1,6 @@
+CREATE VIEW vLSC_SUBGRANT_REQUEST_REVIEWER_TO_ASSIGN
+AS
+SELECT wf_task_assignment_id
+	,dbo.fnLSC_SUBGRANT_REQUEST_OPP_REVIEWER(wf_task_assignment_id) reviewer_to_assign_person_id
+	FROM LSC_WFTA_SUBGRANT
+		WHERE wf_task_assignment_id IS NOT NULL

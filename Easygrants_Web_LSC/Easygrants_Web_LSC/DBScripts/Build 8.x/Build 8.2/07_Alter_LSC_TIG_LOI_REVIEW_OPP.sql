@@ -1,0 +1,24 @@
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	DROP COLUMN project_description_score
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	DROP COLUMN benefits_score
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	DROP COLUMN costs_score
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	DROP COLUMN partners_score
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	DROP COLUMN innovation_score
+
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	ADD tig_reporting_current bit null
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	ADD statewide_grant_recipient bit null
+
+ALTER TABLE LSC_TIG_LOI_REVIEW_OPP
+	ADD next_milestone_expected bit null

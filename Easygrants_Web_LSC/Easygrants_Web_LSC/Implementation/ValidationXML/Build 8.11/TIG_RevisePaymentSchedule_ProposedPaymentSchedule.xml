@@ -1,0 +1,22 @@
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateTIGProposedPaymentSchedulePostReview'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The total of the proposed payment amounts must match the Approved Grant Amount shown on the Payment Schedule form.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method'>
+	<Action
+		Object='ModulePage'
+	Method='ValidateTIGProposedPaymentScheduleMilestonesPostReview'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Every payment except the first must have at least one milestone.'/>
+	</Results>
+</ValidationItem>

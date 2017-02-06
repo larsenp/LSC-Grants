@@ -1,0 +1,2 @@
+ALTER TABLE LSC_RFP_RETAIN_PVT_ATTY_VOL
+ ADD retain_method_9 int

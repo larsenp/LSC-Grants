@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+			<!-- Pro Bono Innovation Fund OPP Director Review -->
+			<Section Key='PBIFOPPDirReview' Type='WordTemplate' TemplateFileName='PDF_PBIF_OPP_Dir_Review.dotx'>
+			 	<DataObject DataObjectDefinitionKey='WfTaskAssignment'>
+              <Filters>
+                <Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtOrganizationName' PropertyKey='GranteeProject.PrimaryOrganization.OrganizationName' />
+                  <DisplayProperty DestKey='txtReviewer' PropertyKey='Person.FirstNameLastName' />
+                  <DisplayProperty DestKey='txtGrantTitle' PropertyKey='GranteeProject.GrantTitle' />
+                  <DisplayProperty DestKey='txtWfTaskOutcome' PropertyKey='WfTaskOutcome.WfTaskOutcome' />
+						<DisplayProperty DestKey='txtLegacyGrantID' PropertyKey='GranteeProject.LegacyGrantID' />
+              </DisplayProperties>
+				</DataObject>
+				
+            <SectionDataObjectList Key='PrimaryReviewWfTA' DataObjectDefinitionKey='WfTaskAssignment'>
+              <Filters>
+                <Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+					 <Argument Type='Data' TypeKey='' PropertyKey='WfTaskID' Value='106'/>
+              </Filters>
+            </SectionDataObjectList>
+
+            <SectionDataObjectList Key='SecondaryReviewWfTA1' DataObjectDefinitionKey='WfTaskAssignment'>
+              <Filters>
+                <Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+					 <Argument Type='Data' TypeKey='' PropertyKey='WfTaskID' Value='107'/>
+              </Filters>
+				  <Sort>
+				  	<Argument Type='Data' TypeKey='' PropertyKey='LastName' Direction='Ascending'>
+						<RelatedProperty PropertyKey='Person'/>
+					</Argument>
+				  	<Argument Type='Data' TypeKey='' PropertyKey='FirstName' Direction='Ascending'>
+						<RelatedProperty PropertyKey='Person'/>
+					</Argument>
+				  </Sort>
+            </SectionDataObjectList>
+
+            <SectionDataObjectList Key='SecondaryReviewWfTA2' DataObjectDefinitionKey='WfTaskAssignment'>
+              <Filters>
+                <Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+					 <Argument Type='Data' TypeKey='' PropertyKey='WfTaskID' Value='107'/>
+              </Filters>
+				  <Sort>
+				  	<Argument Type='Data' TypeKey='' PropertyKey='LastName' Direction='Descending'>
+						<RelatedProperty PropertyKey='Person'/>
+					</Argument>
+				  	<Argument Type='Data' TypeKey='' PropertyKey='FirstName' Direction='Descending'>
+						<RelatedProperty PropertyKey='Person'/>
+					</Argument>
+				  </Sort>
+            </SectionDataObjectList>
+
+			 	<DataObject DataObjectDefinitionKey='Person'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='PersonID' PropertyKey='PersonID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtPrimaryReviewer' PropertyKey='FirstNameLastName' />
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreByCategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='1' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtCategory1' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtCategory1_2' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtReviewScoreTotalCat1' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreBySubcategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='1' >
+					 	<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+              </Filters>
+				  <Sort>
+				  	<Argument PropertyKey='SortOrder'>
+						<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+				  </Sort>
+              <DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblCategory1' >
+                <DisplayProperty PropertyKey='LscProBonoSubcategory.Abbr'/>
+                <DisplayProperty PropertyKey='RawScore'/>
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreByCategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='2' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtCategory2' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtCategory2_2' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtReviewScoreTotalCat2' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreBySubcategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='2' >
+					 	<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+              </Filters>
+				  <Sort>
+				  	<Argument PropertyKey='SortOrder'>
+						<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+				  </Sort>
+              <DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblCategory2' >
+                <DisplayProperty PropertyKey='LscProBonoSubcategory.Abbr'/>
+                <DisplayProperty PropertyKey='RawScore'/>
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreByCategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='3' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtCategory3' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtCategory3_2' PropertyKey='LscProBonoCategory.Description' />
+                  <DisplayProperty DestKey='txtReviewScoreTotalCat3' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreBySubcategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+                <Argument Type='Data' TypeKey='' PropertyKey='LscProBonoCategoryID' Value='3' >
+					 	<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+              </Filters>
+				  <Sort>
+				  	<Argument PropertyKey='SortOrder'>
+						<RelatedProperty PropertyKey='LscProBonoSubcategory'/>
+					</Argument>
+				  </Sort>
+              <DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblCategory3' >
+                <DisplayProperty PropertyKey='LscProBonoSubcategory.Abbr'/>
+                <DisplayProperty PropertyKey='RawScore'/>
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoPrimaryScoreByReviewAssignment'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='PrimaryReviewWfTA' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtReviewScoreTotalPrimary' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject DataObjectDefinitionKey='Person'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA1' SectionDataObjectPropertyKey='PersonID' PropertyKey='PersonID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtSecondaryReviewer1' PropertyKey='FirstNameLastName' />
+                  <DisplayProperty DestKey='txtSecondaryReviewer1_2' PropertyKey='FirstNameLastName' />
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoSecondaryScoreByCategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA1' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblSecondary1' >
+				  	<DisplayProperty PropertyKey='LscProBonoCategory.Abbr'/>
+				  	<DisplayProperty PropertyKey='RawScore'/>
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject  DataObjectDefinitionKey='LscProBonoSecondaryScoreByReviewAssignment'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA1' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtReviewScoreSecondary1' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject DataObjectDefinitionKey='Person'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA2' SectionDataObjectPropertyKey='PersonID' PropertyKey='PersonID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtSecondaryReviewer2' PropertyKey='FirstNameLastName' />
+                  <DisplayProperty DestKey='txtSecondaryReviewer2_2' PropertyKey='FirstNameLastName' />
+              </DisplayProperties>
+				</DataObject>
+				
+			 	<DataObject DataObjectDefinitionKey='LscProBonoSecondaryScoreByCategory'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA2' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblSecondary2' >
+				  	<DisplayProperty PropertyKey='LscProBonoCategory.Abbr'/>
+				  	<DisplayProperty PropertyKey='RawScore'/>
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject DataObjectDefinitionKey='LscProBonoSecondaryScoreByReviewAssignment'>
+              <Filters>
+                <Argument Type='SectionDataObject' TypeKey='SecondaryReviewWfTA2' SectionDataObjectPropertyKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtReviewScoreSecondary2' PropertyKey='RawScore' />
+              </DisplayProperties>
+				</DataObject>
+
+			 	<DataObject DataObjectDefinitionKey='LscProBonoScoreByApplication'>
+              <Filters>
+					<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtReviewScoreApp' PropertyKey='RawScore' />
+                  <DisplayProperty DestKey='txtMaxScoreApp' PropertyKey='MaxScore' />
+                  <DisplayProperty DestKey='txtReviewScoreAppWeighted' PropertyKey='ApplicationScore' Format='0.0'/>
+              </DisplayProperties>
+				</DataObject>
+
+				<DataObject DataObjectDefinitionKey='LscPbifProgReview' >
+              <Filters>
+                <Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+              </Filters>
+              <DisplayProperties TemplateDest='Bookmarks'>
+                  <DisplayProperty DestKey='txtFundingAmount' PropertyKey='FundingAmount' Format='$0,0' />
+                  <DisplayProperty DestKey='txtOverallComment' PropertyKey='OverallComment' />
+              </DisplayProperties>
+				</DataObject>
+          
+			</Section>

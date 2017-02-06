@@ -1,0 +1,40 @@
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateTIGProposedPaymentSchedule'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='The total of the proposed payment amounts must match the Total Grant Request amount from the Application form.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProposedPaymentSchedule'>
+		<Filters>
+			<Argument PropertyKey='PaymentAmount' Value='' />
+			<Argument PropertyKey='PaymentAmount' Value='1' Operator='LessThan' Bool='Or'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a dollar amount greater than zero for each payment in the schedule.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigProposedPaymentSchedule'>
+		<Filters>
+			<Argument PropertyKey='ApplicantComment' Value='' />
+			<Argument PropertyKey='PaymentNumber' Value='1' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must specify a project stage for each payment in the schedule.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>

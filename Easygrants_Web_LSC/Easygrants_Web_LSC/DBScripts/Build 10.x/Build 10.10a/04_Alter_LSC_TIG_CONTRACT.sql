@@ -1,0 +1,2 @@
+ALTER TABLE LSC_TIG_CONTRACT
+	ADD grantee_project_id INT NULL

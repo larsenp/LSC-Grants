@@ -1,0 +1,2 @@
+ALTER TABLE LSC_WFTA_SUBGRANT
+	ADD subgrant_agreement_change BIT NULL

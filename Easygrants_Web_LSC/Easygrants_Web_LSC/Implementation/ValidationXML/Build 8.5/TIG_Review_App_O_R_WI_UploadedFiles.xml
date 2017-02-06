@@ -1,0 +1,13 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscTigReviewOpenRepWebImpr'>
+		<Filters>
+			<Argument PropertyKey='UploadedFilesComment' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='You must provide a comment on the uploaded files.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

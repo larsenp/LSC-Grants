@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ValidationItem>
+	<Requirement PropertyKey='GranteeProject.LscGranteeProjectTig'>
+		<Filters>
+			<Argument PropertyKey='TigGrantTypeID' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Category is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='GrantTermMonths' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Grant Term is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='GrantRequest' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Grant Request is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='ProjectBudget' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Total Project Budget is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscTigApp'>
+		<Filters>
+			<Argument PropertyKey='BriefDescription' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Brief Description is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGAppSecondaryContact'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' Message='Secondary Contact may be designated by selecting from the drop-down or by typing in information, but not both.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGAppSecondaryFirstName'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' Message='If typing in Secondary Contact information, First Name is required.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGAppSecondaryLastName'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' Message='If typing in Secondary Contact information, Last Name is required.'/>
+	</Results>
+</ValidationItem>
+<ValidationItem Type='Method' >
+	<Action
+        Object='ModulePage'
+        Method='ValidateTIGAppSecondaryEmail'>
+	</Action>
+	<Results>
+		<Result ResultCode='3' Message='If typing in Secondary Contact information, E-mail is required.'/>
+	</Results>
+</ValidationItem>

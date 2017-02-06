@@ -1,0 +1,3 @@
+ALTER TABLE LSC_RISK_FACTOR_ANALYSIS
+	ADD organization_id INT NULL,
+		time_period_id INT NULL

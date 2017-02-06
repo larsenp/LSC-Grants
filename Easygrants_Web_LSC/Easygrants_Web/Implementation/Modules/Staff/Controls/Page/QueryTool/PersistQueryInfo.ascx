@@ -1,0 +1,1 @@
+<%@ Control Language="vb" AutoEventWireup="true" Inherits="Implementation.Modules.Staff.Controls.Page.QueryTool.cPersistQueryInfo" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" EnableViewState="False" %>

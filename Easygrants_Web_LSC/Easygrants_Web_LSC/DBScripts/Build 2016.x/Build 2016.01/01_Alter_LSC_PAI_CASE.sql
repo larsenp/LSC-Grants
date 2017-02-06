@@ -1,0 +1,37 @@
+ALTER TABLE LSC_PAI_CASE
+ADD Pro_Bono_LSAR INT
+,Pro_Bono_S_LSAR INT
+,CoCounsel_PB_LSAR INT
+,Other_PB_LSAR INT
+,Judicare_LSAR INT
+,Contr_Vol_LSAR INT
+,Contr_Indv_LSAR INT
+,CoCounsel_Comp_LSAR INT
+,Other_Comp_LSAR INT
+,Pro_Bono_LSAP INT
+,Pro_Bono_S_LSAP INT
+,CoCounsel_PB_LSAP INT
+,Other_PB_LSAP INT
+,Judicare_LSAP INT
+,Contr_Vol_LSAP INT
+,Contr_Indv_LSAP INT
+,CoCounsel_Comp_LSAP INT
+,Other_Comp_LSAP INT
+,Pro_Bono_PLAR INT
+,Pro_Bono_S_PLAR INT
+,CoCounsel_PB_PLAR INT
+,Other_PB_PLAR INT
+,Judicare_PLAR INT
+,Contr_Vol_PLAR INT
+,Contr_Indv_PLAR INT
+,CoCounsel_Comp_PLAR INT
+,Other_Comp_PLAR INT
+,Pro_Bono_PLAP INT
+,Pro_Bono_S_PLAP INT
+,CoCounsel_PB_PLAP INT
+,Other_PB_PLAP INT
+,Judicare_PLAP INT
+,Contr_Vol_PLAP INT
+,Contr_Indv_PLAP INT
+,CoCounsel_Comp_PLAP INT
+,Other_Comp_PLAP INT

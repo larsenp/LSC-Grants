@@ -1,0 +1,2364 @@
+﻿<!-- 2012 cycle - APPLICATION PDF -->
+<!-- Note: Section configuration is followed by ReportDefinition. Replace Both-->
+
+
+<!-- APPLICATION PDF Below -->
+
+<Section Key='Application' Type='WordTemplate' TemplateFileName='2012\PDF_Submit_App_LSC_2012.dot'>
+
+	<DataObject Key='GranteeProject' DataObjectDefinitionKey='GranteeProject'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtFundingOpportunity'>
+				<DisplayProperty PropertyKey='WfProject.WfProjectName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtServiceArea'>
+				<DisplayProperty PropertyKey='WfProject.WfProjectName'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOrganization'  >
+				<DisplayProperty PropertyKey='PrimaryOrganization.OrganizationName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOrganizationH'  >
+				<DisplayProperty PropertyKey='PrimaryOrganization.OrganizationName' />
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtEstimatedGrantAmount'  >
+									<DisplayProperty PropertyKey='WfProject.Fund.FundAmount' Format='$#,##0' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtApplicantCategory'  >
+				<DisplayProperty PropertyKey='LscGranteeProjectInfo.ApplicantCategory.Description' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='LscWFTAaFUND' DataObjectDefinitionKey='LscWFTAaFUND'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtEstimatedGrantAmount'  >
+				<DisplayProperty PropertyKey='FundAmount' Format='$#,##0' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<DataObject Key='WfTaskAssignment' DataObjectDefinitionKey='WfTaskAssignment'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtTaskName'>
+				<DisplayProperty PropertyKey='WfTask.WfTask'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSubmitted'>
+				<DisplayProperty PropertyKey='SubmittedDate' Format='MM/dd/yyyy' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='Person'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='PersonID' PropertyKey='PersonID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtEmail'  >
+				<DisplayProperty PropertyKey='PersonPrimaryEMail.ContactValue1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFullName'>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='Prefix.Prefix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='FirstName' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='MiddleName' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='LastName' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<Argument Type='Data' TypeKey='' Value=', ' />
+					<DisplayProperty PropertyKey='Suffix.Suffix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFullNameH'>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='Prefix.Prefix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='FirstName' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='MiddleName' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<DisplayProperty PropertyKey='LastName' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<Argument Type='Data' TypeKey='' Value=', ' />
+					<DisplayProperty PropertyKey='Suffix.Suffix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTitle'  >
+				<DisplayProperty PropertyKey='PersonPrimaryAffiliation.Title' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFullAddress'>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='PrimaryAddress.Address1' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<DisplayProperty PropertyKey='PrimaryAddress.Address2' Required='True' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<DisplayProperty PropertyKey='PrimaryAddress.Address3' Required='True' />
+				</DisplayProperty>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCity'  >
+				<DisplayProperty PropertyKey='PrimaryAddress.City' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtState'  >
+				<DisplayProperty PropertyKey='PrimaryAddress.State.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtZipCode'  >
+				<DisplayProperty PropertyKey='PrimaryAddress.Zip' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCountry'  >
+				<DisplayProperty PropertyKey='PrimaryAddress.Country.CountryDesc' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPrimaryPhone'  >
+				<DisplayProperty PropertyKey='PersonPrimaryPhone.vFormattedPhone.PhoneNumber' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='Phone'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='PersonID' PropertyKey='EntityID' />
+			<Argument Type='Data' TypeKey='' PropertyKey='EntityTypeID' Value='1'/>
+		</Filters>
+		<Sort>
+			<Argument Type='Data' TypeKey='' PropertyKey='IsPrimary' Direction='Descending'/>
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtPhoneFax' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='IsPrimary' Format='YesNo'/>
+			</DisplayProperty>
+			<DisplayProperty >
+				<DisplayProperty PropertyKey='PhoneType.TypeName'/>
+			</DisplayProperty>
+			<DisplayProperty >
+				<DisplayProperty PropertyKey='vFormattedPhone.PhoneNumber'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='Email'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='PersonID' PropertyKey='EntityID' />
+			<Argument Type='Data' TypeKey='' PropertyKey='EntityTypeID' Value='1'/>
+		</Filters>
+		<Sort>
+			<Argument Type='Data' TypeKey='' PropertyKey='IsPrimary' Direction='Descending'/>
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtEmails' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='IsPrimary' Format='YesNo'/>
+			</DisplayProperty>
+			<DisplayProperty >
+				<DisplayProperty PropertyKey='EmailType.TypeName'/>
+			</DisplayProperty>
+			<DisplayProperty >
+				<DisplayProperty PropertyKey='ContactValue1'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscGranteeProjectInfo'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProjectID' PropertyKey='GranteeProjectID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks' >
+			<DisplayProperty PropertyKey='AllocatedBySubgrants' DestKey='txtAllocatedBySubgrants' Format='YesNo' />
+			<DisplayProperty PropertyKey='NumberOfSubgrants' DestKey='txtNumberOfSubgrants' />
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='Address'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='PersonID' PropertyKey='EntityID' />
+			<Argument Type='Data' TypeKey='' PropertyKey='EntityTypeID' Value='1' Bool='And'/>
+			<Argument Type='Data' TypeKey='' PropertyKey='IsPrimary' Value='False' Bool='And'/>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtAdditionalAddresses'>
+			<DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='Address1'/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<DisplayProperty PropertyKey='Address2' Required='True'/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<DisplayProperty PropertyKey='Address3' Required='True'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty PropertyKey='City' />
+				<Argument Type='Data' TypeKey='' Value=', '/>
+				<DisplayProperty PropertyKey='State.Description' />
+				<Argument Type='Data' TypeKey='' Value='  '/>
+				<DisplayProperty PropertyKey='Zip' />
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty PropertyKey='Country.CountryDesc' />
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTAActualStaffing'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblActualStaffing'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='StaffCategory'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='SupervisingAttys'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='OtherAttys'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Paralegals'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='OtherStaff'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+
+	<DataObject  DataObjectDefinitionKey='WfTAClientServices'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblClientServices'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LegalProblemType'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='CasesClosedLimitedSvc'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='CasesClosedExtendedSvc'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='CasesClosedTotal'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='CasesOpen'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='LscClientServicesWfTATotals'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtClosedLimited'>
+				<DisplayProperty PropertyKey='CasesClosedLimitedSvc'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClosedExt'>
+				<DisplayProperty PropertyKey='CasesClosedExtendedSvc'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClosedTotal'>
+				<DisplayProperty PropertyKey='CasesClosedTotal'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOpen'>
+				<DisplayProperty PropertyKey='CasesOpen'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='LscBoardStructure'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtMcCollumAttyBylaw'  >
+				<DisplayProperty PropertyKey='McCollumAttyBylaw' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAttyBylaw'  >
+				<DisplayProperty PropertyKey='OtherAttyBylaw' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClientMemberBylaw'  >
+				<DisplayProperty PropertyKey='ClientMemberBylaw' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherMemberBylaw'  >
+				<DisplayProperty PropertyKey='OtherMemberBylaw' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMcCollumAttyLess90'  >
+				<DisplayProperty PropertyKey='McCollumAttyLess90' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAttyLess90'  >
+				<DisplayProperty PropertyKey='OtherAttyLess90' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClientMemberLess90'  >
+				<DisplayProperty PropertyKey='ClientMemberLess90' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherMemberLess90'  >
+				<DisplayProperty PropertyKey='OtherMemberLess90' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMcCollumAtty90Day1Yr'  >
+				<DisplayProperty PropertyKey='McCollumAtty90Day1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAtty90Day1Yr'  >
+				<DisplayProperty PropertyKey='OtherAtty90Day1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClientMember90Day1Yr'  >
+				<DisplayProperty PropertyKey='ClientMember90Day1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherMember90Day1Yr'  >
+				<DisplayProperty PropertyKey='OtherMember90Day1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMcCollumAttyGreater1Yr'  >
+				<DisplayProperty PropertyKey='McCollumAttyGreater1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherAttyGreater1Yr'  >
+				<DisplayProperty PropertyKey='OtherAttyGreater1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtClientMemberGreater1Yr'  >
+				<DisplayProperty PropertyKey='ClientMemberGreater1Yr' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherMemberGreater1Yr'  >
+				<DisplayProperty PropertyKey='OtherMemberGreater1Yr' />
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='NewApplicantNoBoard' DestKey='txtNoBoard'>
+				<Substitute SrcValue='True' ReplaceValue='I am a new applicant and do not have a board.'/>
+				<Substitute SrcValue='False' ReplaceValue='False'/>
+			</DisplayProperty>
+			<DisplayProperty PropertyKey='BoardChairContact.FirstNameLastName' DestKey='txtBoardChairName'/>
+			<DisplayProperty PropertyKey='BoardChairContact.Phone' DestKey='txtBoardChairPhone'/>
+			<DisplayProperty PropertyKey='BoardChairContact.Email' DestKey='txtBoardChairEmail'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='LscWfTaskAssignmentAffiliations'>
+		<Filters>
+			<Argument Type='Data' TypeKey="" PropertyKey="AffiliationTypeID" Value='3'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='LastName' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtBoardFullContact'>
+			<DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Data' TypeKey='' Value='Name' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='Prefix.Prefix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='FirstName' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='MiddleName' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='LastName' />
+				</DisplayProperty>
+				<DisplayProperty >
+					<Argument Type='Data' TypeKey='' Value=', ' />
+					<DisplayProperty PropertyKey='Suffix.Suffix' Required='True' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Status' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='BoardMemberStatus.Description' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Appointing Organization' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='AppointingOrganization' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Relevant Experience' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='RelevantExperience' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Gender' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='Gender.Gender' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Ethnicity' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='Ethnicity.EthnicityDesc' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Address' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='Address' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='City' />
+					<Argument Type='Data' TypeKey='' Value=', ' />
+					<DisplayProperty PropertyKey='StateProvince.StateAbbr' />
+					<Argument Type='Data' TypeKey='' Value=' ' />
+					<DisplayProperty PropertyKey='Zip' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Phone' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='Phone' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Address/Phone' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='AddressPhoneType.Description' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Type of Member' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='BoardMemberType.Description' />
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+					<Argument Type='Data' TypeKey='' Value='Email Address' />
+					<Argument Type='Escape' TypeKey='t' Value=''/>
+					<DisplayProperty PropertyKey='Email' />
+					<Argument Type='Escape' TypeKey='r' Value=''/>
+				</DisplayProperty>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!--  BUDGET  -->
+	<!-- PROJECTED EXPENSES -->
+	<DataObject  DataObjectDefinitionKey='WfTATopLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='1'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtProjExpLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtProjExpNonLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtProjExpTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='1'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='6'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtPersonnelLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtPersonnelNonLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtPersonnelTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='1'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='6'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblPersonnel'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!--Non-Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='1'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='7'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtNonPersonnelLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtNonPersonnelNonLSC' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtNonPersonnelTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='1'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='7'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblNonPersonnel'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+	<!-- END PROJECTED EXPENSES -->
+
+	<!-- PROJECTED REVENUES -->
+	<DataObject  DataObjectDefinitionKey='WfTATopLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtProjRevTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- (A) LSC Funding Sources -->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='18'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtLSCFundingTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='18'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblLSCFunding'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.LscFundCode'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>-->
+
+	<!-- (B) Non-LSC Funding Sources -->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='19'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtNonLSCTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='19'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblNonLSCFunding'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.LscFundCode'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- (C) Client Service Income -->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='20'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtClientServiceTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='2'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='20'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblClientServiceIncome'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.LscFundCode'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>-->
+	<!-- END PROJECTED REVENUES -->
+
+	<!-- CURRENT EXPENSES -->
+	<DataObject  DataObjectDefinitionKey='WfTATopLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='3'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtCurExpTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='3'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='1'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtPersonnelTotalCur' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='3'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='1'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblPersonnelCur'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Non-Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='3'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='2'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtNonPersonnelTotalCur' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='3'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='2'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblNonPersonnelCur'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+	<!-- END CURRENT EXPENSES -->
+
+	<!-- CURRENT REVENUE -->
+	<DataObject  DataObjectDefinitionKey='WfTATopLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='4'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtCurRevTotal' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- (A) Non-LSC Funding Sources -->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='4'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='1'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtNonLSCTotalCur' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='4'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='1'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblNonLSCFundingCur'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.LscFundCode'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- (B) Client Service Income -->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='4'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='2'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtClientServiceCur' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='4'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='2'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblClientServiceIncomeCur'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.LscFundCode'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+	<!-- END CURRENT REVENUES -->
+
+	<!--Projected Expenditures by Type of Activity (Form G-12)-->
+	<DataObject DataObjectDefinitionKey='LscExpenditureByTypeSecAPercent'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'>
+				<RelatedProperty PropertyKey='LscExpenditureByType'/>
+			</Argument>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='SortOrder'>
+				<RelatedProperty PropertyKey='LscExpenditureByType.LscExpenditureType'/>
+			</Argument>
+		</Sort>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtSectionAAbbr'>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.LscExpenditureSection.Abbr'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSectionADesc'>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.LscExpenditureSection.Description'/>
+			</DisplayProperty>
+		</DisplayProperties>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblProjExpSecA'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.SortOrder'/>
+				<Argument Type='Data' TypeKey='' Value='. ' />
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='AmountByType' Format='$,0'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentByType' Format='#'/>
+				<Argument Type='Data' TypeKey='' Value='%' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscExpenditureByTypeSecATotal'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtExpSecA'>
+				<DisplayProperty PropertyKey='ExpenditureTypeTotal'  Format='$,0'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPCSecA'>
+				<DisplayProperty PropertyKey='PercentOfItem' Format='#'/>
+				<Argument Type='Data' TypeKey='' Value='%' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscExpenditureByTypeSecBPercent'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'>
+				<RelatedProperty PropertyKey='LscExpenditureByType'/>
+			</Argument>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='SortOrder'>
+				<RelatedProperty PropertyKey='LscExpenditureByType.LscExpenditureType'/>
+			</Argument>
+		</Sort>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtSectionBAbbr'>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.LscExpenditureSection.Abbr'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSectionBDesc'>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.LscExpenditureSection.Description'/>
+			</DisplayProperty>
+		</DisplayProperties>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblProjExpSecB'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.SortOrder'/>
+				<Argument Type='Data' TypeKey='' Value='. ' />
+				<DisplayProperty PropertyKey='LscExpenditureByType.LscExpenditureType.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='AmountByType' Format='$,0'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentOfCases' Format='#'/>
+				<Argument Type='Data' TypeKey='' Value='%' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscExpenditureByTypeSecBTotal'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtExpSecB'>
+				<DisplayProperty PropertyKey='AmountByType'  Format='$,0'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPCSecB'>
+				<DisplayProperty PropertyKey='PercentOfCases' Format='#'/>
+				<Argument Type='Data' TypeKey='' Value='%' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- PAI Projected Expenses (Form D-13) -->
+	<DataObject  DataObjectDefinitionKey='WfTATopLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='5'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtProjExpLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtProjExpNonLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtProjExpTotalPAI' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='5'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='6'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtPersonnelLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtPersonnelNonLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtPersonnelTotalPAI' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='5'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='6'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblPersonnelPAI'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!--Non-Personnel Expenses-->
+	<DataObject  DataObjectDefinitionKey='WfTAMidLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='5'/>
+			<Argument Type='Data' PropertyKey='SortOrder' Value='7'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' DestKey='txtNonPersonnelLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' DestKey='txtNonPersonnelNonLSCPAI' Format='$#,0.00'/>
+			<DisplayProperty PropertyKey='Amount' DestKey='txtNonPersTotalPAI' Format='$#,0.00'/>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='WfTADetailLevelBudgetItems'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+			<Argument Type='Data' PropertyKey='CategoryTypeID' Value='5'/>
+			<Argument Type='Data' PropertyKey='ParentSortOrder' Value='7'/>
+		</Filters>
+		<Sort>
+			<Argument PropertyKey='BudgetItemID' />
+		</Sort>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblNonPersonnelPAI'>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.BudgetCategory.Description'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.LscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='BudgetItem.LscBudgetItem.NonLscExpenditures' Format='$#,0.00'/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Amount' Format='$#,0.00'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<DataObject  DataObjectDefinitionKey='LscTechnology'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<!--<DisplayProperty DestKey='txtComputerCapacityDesk'  >
+									<DisplayProperty PropertyKey='ComputerCapacityDesk' Format='YesNoNull'/>
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtComputerCapacityTraining'  >
+									<DisplayProperty PropertyKey='ComputerCapacityTraining' Format='YesNoNull'/>
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtAccessResearchDesktop'  >
+									<DisplayProperty PropertyKey='AccessResearchDesktop' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtAccessResearchOther'  >
+									<DisplayProperty PropertyKey='AccessResearchOther' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtAccessResearchNone'  >
+									<DisplayProperty PropertyKey='AccessResearchNone' />
+								</DisplayProperty>-->
+			<!--<DisplayProperty DestKey='txtConnectivityWiOne'  >
+									<DisplayProperty PropertyKey='ConnectivityWiOne' Format='YesNoNull' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtConnectivityWiAll'  >
+				<DisplayProperty PropertyKey='ConnectivityWiAll' Format='YesNoNull' />
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtConnectivityBtTwo'  >
+									<DisplayProperty PropertyKey='ConnectivityBtTwo' Format='YesNoNull' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtConnectivityBtAll'  >
+				<DisplayProperty PropertyKey='ConnectivityBtAll' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDialUp'  >
+				<DisplayProperty PropertyKey='DialUp' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIsdn'  >
+				<DisplayProperty PropertyKey='Isdn' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtT1'  >
+				<DisplayProperty PropertyKey='T1' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSatellite'  >
+				<DisplayProperty PropertyKey='Satellite' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDsl'  >
+				<DisplayProperty PropertyKey='Dsl' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFrame'  >
+				<DisplayProperty PropertyKey='Frame' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCable'  >
+				<DisplayProperty PropertyKey='Cable' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtFiberOptics'  >
+				<DisplayProperty PropertyKey='FiberOptics' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherInternetAccess'  >
+				<DisplayProperty PropertyKey='Other' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDescOtherInternet'  >
+				<DisplayProperty PropertyKey='Describe' />
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtVoiceOverIp'  >
+									<DisplayProperty PropertyKey='VoiceOverIp' Format='YesNoNull' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtVoiceOverIpNetwork'  >
+									<DisplayProperty PropertyKey='VoiceOverIpNetwork' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtVoiceOverIpBandwidth'  >
+									<DisplayProperty PropertyKey='VoiceOverIpBandwidth' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtVoiceOverIpRouter'  >
+									<DisplayProperty PropertyKey='VoiceOverIpRouter' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtPhoneSystemName'  >
+									<DisplayProperty PropertyKey='PhoneSystemName' />
+								</DisplayProperty>-->
+
+		</DisplayProperties>
+	</DataObject> -->
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='1'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareOS' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='2'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareEmail' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='3'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareBrowser' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='4'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareWord' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='7'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareCaseMgt' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='8'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareAcct' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='Version' />
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='PercentStaff' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='Data' PropertyKey='InUse' Value='True' />
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='13'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareResearch' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject DataObjectDefinitionKey='LscSoftware'>
+		<Filters>
+			<Argument Type='Data' PropertyKey='InUse' Value='True' />
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+			<Argument Type='Data' PropertyKey='LscSoftwareTypeID' Value='15'>
+				<RelatedProperty PropertyKey='LscSoftwareProduct'/>
+			</Argument>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='txtSoftwareRemoteAccess' >
+			<DisplayProperty>
+				<DisplayProperty PropertyKey='LscSoftwareProduct.Description' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<DataObject DataObjectDefinitionKey='LscSoftwareQuestion'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<!--<DisplayProperty DestKey='txtSoftwareCaseMgtSingleDB' >
+									<DisplayProperty PropertyKey='CaseManagementSingleDB' Format='YesNoNull'/>
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtSoftwareDedicatedTimekeepingSW'  >
+				<DisplayProperty PropertyKey='DedicatedTimekeepingSW' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSoftwareTimekeepingSWName' >
+				<DisplayProperty PropertyKey='TimekeepingSWName' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLegalResearchDesc' >
+				<DisplayProperty PropertyKey='LegalResearchDesc' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSoftwareRemoteAccessSW' >
+				<DisplayProperty PropertyKey='RemoteAccessSW' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSoftwareVPN'  >
+				<DisplayProperty PropertyKey='VPN' Format='YesNoNull' />
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtBackupProtocolNetwork' >
+									<DisplayProperty PropertyKey='BackupProtocolNetwork' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtBackupProtocolPC' >
+									<DisplayProperty PropertyKey='BackupProtocolPC' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSecurityPolicies' >
+									<DisplayProperty PropertyKey='SecurityPolicies' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtBackupStorageLocation' >
+									<DisplayProperty PropertyKey='BackupStorageLocation' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtBackupLastRestore' >
+									<DisplayProperty PropertyKey='BackupLastRestore' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtBackupAccess' >
+									<DisplayProperty PropertyKey='BackupAccess' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtSWWSURL' >
+				<DisplayProperty PropertyKey='SWWSURL' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSCoordNameFirst' >
+				<DisplayProperty PropertyKey='SWWSCoordNameFirst' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSCoordNameLast' >
+				<DisplayProperty PropertyKey='SWWSCoordNameLast' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSCoordPhone' >
+				<DisplayProperty PropertyKey='SWWSCoordPhone' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSCoordEmail' >
+				<DisplayProperty PropertyKey='SWWSCoordEmail' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtHotDocsUse' >
+				<DisplayProperty PropertyKey='HotDocsUse' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLawHelpUsage' >
+				<DisplayProperty PropertyKey='LawHelpUsage' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtA2JAuthorUsage' >
+				<DisplayProperty PropertyKey='A2JAuthorUsage' Format='YesNoNull'/>
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtHotDocsUseDescription' >
+									<DisplayProperty PropertyKey='HotDocsUseDescription' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtSWWSFinancialContribution' >
+				<DisplayProperty PropertyKey='SWWSFinancialContribution' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSFinancialContributionAmount' >
+				<DisplayProperty PropertyKey='SWWSFinancialContributionAmount' Format='$#,##0' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSContentContribution' >
+				<DisplayProperty PropertyKey='SWWSContentContribution' Format='YesNoNull'/>
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtSWWSContentDescription' >
+									<DisplayProperty PropertyKey='SWWSContentDescription' />
+								</DisplayProperty>-->
+			<!--<DisplayProperty DestKey='txtSWWSProgramPriorities' >
+									<DisplayProperty PropertyKey='SWWSProgramPriorities' />
+								</DisplayProperty>-->
+			<!--<DisplayProperty DestKey='txtSWWSContentUpdateProtocols' >
+									<DisplayProperty PropertyKey='SWWSContentUpdateProtocols' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSWWSContentLanguages' >
+									<DisplayProperty PropertyKey='SWWSContentLanguages' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtSWWSStakeholderMtgs' >
+				<DisplayProperty PropertyKey='SWWSStakeholderMtgs' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWWSOutreach' >
+				<DisplayProperty PropertyKey='SWWSOutreach' Format='YesNoNull'/>
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtSWWSOutreachDescription' >
+									<DisplayProperty PropertyKey='SWWSOutreachDescription' />
+								</DisplayProperty>-->
+			<!--<DisplayProperty DestKey='txtSWWSStaffFamiliar' >
+									<DisplayProperty PropertyKey='SWWSStaffFamiliar' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSWWSUsageMonitoring' >
+									<DisplayProperty PropertyKey='SWWSUsageMonitoring' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSWWSUsageInfoEvaluation' >
+									<DisplayProperty PropertyKey='SWWSUsageInfoEvaluation' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSWWSAccessibility' >
+									<DisplayProperty PropertyKey='SWWSAccessibility' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtSWWSDeliveryRole' >
+									<DisplayProperty PropertyKey='SWWSDeliveryRole' />
+								</DisplayProperty>-->
+			<DisplayProperty DestKey='txtSWWSProBono' >
+				<DisplayProperty PropertyKey='SWWSProBono' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramWebSite' >
+				<DisplayProperty PropertyKey='ProgramWebSite' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPWSURL' >
+				<DisplayProperty PropertyKey='PWSURL' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPWSLSCFunded' >
+				<DisplayProperty PropertyKey='PWSLSCFunded' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramTechContactNameFirst' >
+				<DisplayProperty PropertyKey='ProgramTechContactNameFirst' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramTechContactNameLast' >
+				<DisplayProperty PropertyKey='ProgramTechContactNameLast' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramTechContactPhone' >
+				<DisplayProperty PropertyKey='ProgramTechContactPhone' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramTechContactEmail' >
+				<DisplayProperty PropertyKey='ProgramTechContactEmail' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWTechContactNameFirst' >
+				<DisplayProperty PropertyKey='SWTechContactNameFirst' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWTechContactNameLast' >
+				<DisplayProperty PropertyKey='SWTechContactNameLast' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWTechContactPhone' >
+				<DisplayProperty PropertyKey='SWTechContactPhone' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSWTechContactEmail' >
+				<DisplayProperty PropertyKey='SWTechContactEmail' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProgramLegalMeetingsHost' >
+				<DisplayProperty PropertyKey='ProgramLegalMeetingsHost' Format='YesNoNull'/>
+			</DisplayProperty>
+			<!--<DisplayProperty DestKey='txtProgramLegalMeetingsUsage' >
+									<DisplayProperty PropertyKey='ProgramLegalMeetingsUsage' />
+								</DisplayProperty>
+								<DisplayProperty DestKey='txtApplicantInternetUsage' >
+									<DisplayProperty PropertyKey='ApplicantInternetUsage' />
+								</DisplayProperty>-->
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- RFP Charts -->
+
+	<!-- Intake Form  -->
+	<DataObject  DataObjectDefinitionKey='LscTechnology'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtIntakePhone'  >
+				<DisplayProperty PropertyKey='IntakePhone' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntakeDirect'  >
+				<DisplayProperty PropertyKey='IntakeDirect' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntakeMay'  >
+				<DisplayProperty PropertyKey='IntakeMay' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntakeMaximum'  >
+				<DisplayProperty PropertyKey='IntakeMaximum' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtVoiceMail'  >
+				<DisplayProperty PropertyKey='VoiceMail' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntakeAutomated'  >
+				<DisplayProperty PropertyKey='IntakeAutomated' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCallDistribution'  >
+				<DisplayProperty PropertyKey='CallDistribution' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSelfDirect'  >
+				<DisplayProperty PropertyKey='SelfDirect' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSelfSelect'  >
+				<DisplayProperty PropertyKey='SelfSelect' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCallback'  >
+				<DisplayProperty PropertyKey='Callback' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtReturnCall'  >
+				<DisplayProperty PropertyKey='ReturnCall' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTelephony'  >
+				<DisplayProperty PropertyKey='Telephony' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInteractiveVoice'  >
+				<DisplayProperty PropertyKey='InteractiveVoice' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCallRouting'  >
+				<DisplayProperty PropertyKey='CallRouting' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDisabledAccess'  >
+				<DisplayProperty PropertyKey='DisabledAccess' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtReviewWaitTime'  >
+				<DisplayProperty PropertyKey='ReviewWaitTime' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtProvideRecordedInfo'  >
+				<DisplayProperty PropertyKey='ProvideRecordedInfo' Format='YesNoNull' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRealTimeDataEntry'  >
+				<DisplayProperty PropertyKey='RealTimeDataEntry' Format='YesNoNull' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- LEP Plan Components Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPLEP'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtWrittenLEP'  >
+				<DisplayProperty PropertyKey='WrittenLEPPlan' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP1'  >
+				<DisplayProperty PropertyKey='LEP1' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP2'  >
+				<DisplayProperty PropertyKey='LEP2' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP3'  >
+				<DisplayProperty PropertyKey='LEP3' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP4'  >
+				<DisplayProperty PropertyKey='LEP4' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP5'  >
+				<DisplayProperty PropertyKey='LEP5' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP6'  >
+				<DisplayProperty PropertyKey='LEP6' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLEP7'  >
+				<DisplayProperty PropertyKey='LEP7' Format='YesNoNull'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Legal Work Management Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPWORKMGT'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtMethod1'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc1.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod2'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc2.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod3'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc3.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod4'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc4.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod5'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc5.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod6'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc6.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod7'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc7.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod8'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc8.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethod9'  >
+				<DisplayProperty PropertyKey='WorkMgtDesc9.Description' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtMethodTime1'  >
+				<DisplayProperty PropertyKey='Method1TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime2'  >
+				<DisplayProperty PropertyKey='Method2TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime3'  >
+				<DisplayProperty PropertyKey='Method3TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime4'  >
+				<DisplayProperty PropertyKey='Method4TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime5'  >
+				<DisplayProperty PropertyKey='Method5TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime6'  >
+				<DisplayProperty PropertyKey='Method6TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime7'  >
+				<DisplayProperty PropertyKey='Method7TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime8'  >
+				<DisplayProperty PropertyKey='Method8TP' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMethodTime9'  >
+				<DisplayProperty PropertyKey='Method9TP' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Case Handling Protocols Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPCASEHANDLING'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtCaseHand1'  >
+				<DisplayProperty PropertyKey='CaseHandling1' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseHand2'  >
+				<DisplayProperty PropertyKey='CaseHandling2' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseHand3'  >
+				<DisplayProperty PropertyKey='CaseHandling3' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseHand4'  >
+				<DisplayProperty PropertyKey='CaseHandling4' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseHand5'  >
+				<DisplayProperty PropertyKey='CaseHandling5' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseHand6'  >
+				<DisplayProperty PropertyKey='CaseHandling6' Format='YesNoNull'/>
+			</DisplayProperty>
+
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Case Development Activities Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPCASEDEVELOP'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtCaseDevelop1'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc1.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop2'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc2.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop3'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc3.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop4'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc4.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop5'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc5.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop6'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc6.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop7'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc7.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCaseDevelop8'  >
+				<DisplayProperty PropertyKey='CaseDevelopActDesc8.Description' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Training Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPTRAINING'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtOther8Name'  >
+				<DisplayProperty PropertyKey='Type8Name' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt1'  >
+				<DisplayProperty PropertyKey='Type1AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt2'  >
+				<DisplayProperty PropertyKey='Type2AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt3'  >
+				<DisplayProperty PropertyKey='Type3AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt4'  >
+				<DisplayProperty PropertyKey='Type4AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt5'  >
+				<DisplayProperty PropertyKey='Type5AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt6'  >
+				<DisplayProperty PropertyKey='Type6AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt7'  >
+				<DisplayProperty PropertyKey='Type7AttDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAtt8'  >
+				<DisplayProperty PropertyKey='Type8AttDesc.Description' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtPara1'  >
+				<DisplayProperty PropertyKey='Type1ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara2'  >
+				<DisplayProperty PropertyKey='Type2ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara3'  >
+				<DisplayProperty PropertyKey='Type3ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara4'  >
+				<DisplayProperty PropertyKey='Type4ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara5'  >
+				<DisplayProperty PropertyKey='Type5ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara6'  >
+				<DisplayProperty PropertyKey='Type6ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara7'  >
+				<DisplayProperty PropertyKey='Type7ParaDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPara8'  >
+				<DisplayProperty PropertyKey='Type8ParaDesc.Description' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtManage1'  >
+				<DisplayProperty PropertyKey='Type1ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage2'  >
+				<DisplayProperty PropertyKey='Type2ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage3'  >
+				<DisplayProperty PropertyKey='Type3ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage4'  >
+				<DisplayProperty PropertyKey='Type4ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage5'  >
+				<DisplayProperty PropertyKey='Type5ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage6'  >
+				<DisplayProperty PropertyKey='Type6ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage7'  >
+				<DisplayProperty PropertyKey='Type7ManagersDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtManage8'  >
+				<DisplayProperty PropertyKey='Type8ManagersDesc.Description' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtAdmins1'  >
+				<DisplayProperty PropertyKey='Type1AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins2'  >
+				<DisplayProperty PropertyKey='Type2AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins3'  >
+				<DisplayProperty PropertyKey='Type3AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins4'  >
+				<DisplayProperty PropertyKey='Type4AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins5'  >
+				<DisplayProperty PropertyKey='Type5AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins6'  >
+				<DisplayProperty PropertyKey='Type6AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins7'  >
+				<DisplayProperty PropertyKey='Type7AdminsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAdmins8'  >
+				<DisplayProperty PropertyKey='Type8AdminsDesc.Description' />
+			</DisplayProperty>
+
+			<DisplayProperty DestKey='txtStaff1'  >
+				<DisplayProperty PropertyKey='Type1StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff2'  >
+				<DisplayProperty PropertyKey='Type2StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff3'  >
+				<DisplayProperty PropertyKey='Type3StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff4'  >
+				<DisplayProperty PropertyKey='Type4StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff5'  >
+				<DisplayProperty PropertyKey='Type5StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff6'  >
+				<DisplayProperty PropertyKey='Type6StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff7'  >
+				<DisplayProperty PropertyKey='Type7StaffDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtStaff8'  >
+				<DisplayProperty PropertyKey='Type8StaffDesc.Description' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Training Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPATTYINVOLVEMENT'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtAttInvol1'  >
+				<DisplayProperty PropertyKey='AttyInvolvement1' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol2'  >
+				<DisplayProperty PropertyKey='AttyInvolvement2' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol3'  >
+				<DisplayProperty PropertyKey='AttyInvolvement3' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol4'  >
+				<DisplayProperty PropertyKey='AttyInvolvement4' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol5'  >
+				<DisplayProperty PropertyKey='AttyInvolvement5' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol6'  >
+				<DisplayProperty PropertyKey='AttyInvolvement6' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAttInvol7'  >
+				<DisplayProperty PropertyKey='AttyInvolvement7' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Methods Used To Recruit Private Attorneys Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPRECRUITPVTATTY'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtRecruit1'  >
+				<DisplayProperty PropertyKey='RecruitDesc1.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit2'  >
+				<DisplayProperty PropertyKey='RecruitDesc2.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit3'  >
+				<DisplayProperty PropertyKey='RecruitDesc3.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit4'  >
+				<DisplayProperty PropertyKey='RecruitDesc4.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit5'  >
+				<DisplayProperty PropertyKey='RecruitDesc5.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit6'  >
+				<DisplayProperty PropertyKey='RecruitDesc6.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit7'  >
+				<DisplayProperty PropertyKey='RecruitDesc7.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit8'  >
+				<DisplayProperty PropertyKey='RecruitDesc8.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit9'  >
+				<DisplayProperty PropertyKey='RecruitDesc9.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit10'  >
+				<DisplayProperty PropertyKey='RecruitDesc10.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit11'  >
+				<DisplayProperty PropertyKey='RecruitDesc11.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit12'  >
+				<DisplayProperty PropertyKey='RecruitDesc12.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit13'  >
+				<DisplayProperty PropertyKey='RecruitDesc13.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit14'  >
+				<DisplayProperty PropertyKey='RecruitDesc14.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit15'  >
+				<DisplayProperty PropertyKey='RecruitDesc15.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit16'  >
+				<DisplayProperty PropertyKey='RecruitDesc16.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRecruit16Name'  >
+				<DisplayProperty PropertyKey='RecruitMethod16Name' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Methods Used To Retain Private Attorneys Volunteers Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPRETAINPVTATTY'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtRetain1'  >
+				<DisplayProperty PropertyKey='RetainDesc1.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain2'  >
+				<DisplayProperty PropertyKey='RetainDesc2.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain3'  >
+				<DisplayProperty PropertyKey='RetainDesc3.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain4'  >
+				<DisplayProperty PropertyKey='RetainDesc4.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain5'  >
+				<DisplayProperty PropertyKey='RetainDesc5.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain6'  >
+				<DisplayProperty PropertyKey='RetainDesc6.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain7'  >
+				<DisplayProperty PropertyKey='RetainDesc7.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain8'  >
+				<DisplayProperty PropertyKey='RetainDesc8.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRetain8Name'  >
+				<DisplayProperty PropertyKey='RetainMethod8Name' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Board Policies and Practices Chart-->
+	<DataObject  DataObjectDefinitionKey='LSCRFPBOARDPOLICIES'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtBoardPolicy1'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy1' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy2'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy2' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy3'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy3' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy4'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy4' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy5'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy5' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy6'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy6' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy7'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy7' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy8'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy8' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtBoardPolicy9'  >
+				<DisplayProperty PropertyKey='RFPBoardPolicy9' Format='YesNoNull'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Technology Budget Form  -->
+	<DataObject  DataObjectDefinitionKey='LSCTECHNOLOGYBUDGET'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtProgramStaffCosts'  >
+				<DisplayProperty PropertyKey='ProgramStaffCosts' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtExternalStaffCosts'  >
+				<DisplayProperty PropertyKey='ExternalStaffCosts' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSpaceCost'  >
+				<DisplayProperty PropertyKey='SpaceCost' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTravel'  >
+				<DisplayProperty PropertyKey='Travel' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtEquipmentPurchase'  >
+				<DisplayProperty PropertyKey='EquipmentPurchase' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtEquipmentRental'  >
+				<DisplayProperty PropertyKey='EquipmentRental' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTelecomBandwidthCharges'  >
+				<DisplayProperty PropertyKey='TelecomBandwidthCharges' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherCommunications'  >
+				<DisplayProperty PropertyKey='OtherCommunications' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSoftwareBudget'  >
+				<DisplayProperty PropertyKey='SoftwareBudget' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSuppliesBudget'  >
+				<DisplayProperty PropertyKey='SuppliesBudget' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtContracts'  >
+				<DisplayProperty PropertyKey='Contracts' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTrainingStaff'  >
+				<DisplayProperty PropertyKey='TrainingStaff' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtTrainingOtherStaff'  >
+				<DisplayProperty PropertyKey='TrainingOtherStaff' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherBudget'  >
+				<DisplayProperty PropertyKey='OtherBudget' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject  DataObjectDefinitionKey='LscTechnologyBudgetTotal'>
+		<Filters>
+			<!--<Argument Type='EntityDataObject' TypeKey='WfTaskAssignmentID' PropertyKey='WfTaskAssignmentID'/>-->
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtBudgetTotal'  >
+				<DisplayProperty PropertyKey='BudgetTotal' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Legal Needs Assessment Data Collection Methods -->
+	<DataObject  DataObjectDefinitionKey='LscDataCollectionMethods'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtInter1'  >
+				<DisplayProperty PropertyKey='LowIncomePersonInterDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey1'  >
+				<DisplayProperty PropertyKey='LowIncomePersonSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus1'  >
+				<DisplayProperty PropertyKey='LowIncomePersonFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet1'  >
+				<DisplayProperty PropertyKey='LowIncomePersonMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther1'  >
+				<DisplayProperty PropertyKey='LowIncomePersonOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter2'  >
+				<DisplayProperty PropertyKey='CommunityOrgInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey2'  >
+				<DisplayProperty PropertyKey='CommunityOrgSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus2'  >
+				<DisplayProperty PropertyKey='CommunityOrgFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet2'  >
+				<DisplayProperty PropertyKey='CommunityOrgMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther2'  >
+				<DisplayProperty PropertyKey='CommunityOrgOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter3'  >
+				<DisplayProperty PropertyKey='SocialServiceOrgInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey3'  >
+				<DisplayProperty PropertyKey='SocialServiceOrgSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus3'  >
+				<DisplayProperty PropertyKey='SocialServiceOrgFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet3'  >
+				<DisplayProperty PropertyKey='SocialServiceOrgMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther3'  >
+				<DisplayProperty PropertyKey='SocialServiceOrgOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter4'  >
+				<DisplayProperty PropertyKey='CourtsInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey4'  >
+				<DisplayProperty PropertyKey='CourtsSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus4'  >
+				<DisplayProperty PropertyKey='CourtsFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet4'  >
+				<DisplayProperty PropertyKey='CourtsMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther4'  >
+				<DisplayProperty PropertyKey='CourtsOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter5'  >
+				<DisplayProperty PropertyKey='OtherProvidersInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey5'  >
+				<DisplayProperty PropertyKey='OtherProvidersSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus5'  >
+				<DisplayProperty PropertyKey='OtherProvidersFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet5'  >
+				<DisplayProperty PropertyKey='OtherProvidersMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther5'  >
+				<DisplayProperty PropertyKey='OtherProvidersOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter6'  >
+				<DisplayProperty PropertyKey='PrivateBarInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey6'  >
+				<DisplayProperty PropertyKey='PrivateBarSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus6'  >
+				<DisplayProperty PropertyKey='PrivateBarFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet6'  >
+				<DisplayProperty PropertyKey='PrivateBarMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther6'  >
+				<DisplayProperty PropertyKey='PrivateBarOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter7'  >
+				<DisplayProperty PropertyKey='ProgramStaffInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey7'  >
+				<DisplayProperty PropertyKey='ProgramStaffSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus7'  >
+				<DisplayProperty PropertyKey='ProgramStaffFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet7'  >
+				<DisplayProperty PropertyKey='ProgramStaffMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther7'  >
+				<DisplayProperty PropertyKey='ProgramStaffOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter8'  >
+				<DisplayProperty PropertyKey='ProgramBoardInterviewsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey8'  >
+				<DisplayProperty PropertyKey='ProgramBoardSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus8'  >
+				<DisplayProperty PropertyKey='ProgramBoardFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet8'  >
+				<DisplayProperty PropertyKey='ProgramBoardMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther8'  >
+				<DisplayProperty PropertyKey='ProgramBoardOtherDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtInter9'  >
+				<DisplayProperty PropertyKey='OtherAssessmentInterviewDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSurvey9'  >
+				<DisplayProperty PropertyKey='OtherAssessmentSurveysDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtfocus9'  >
+				<DisplayProperty PropertyKey='OtherAssessmentFocusDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtMeet9'  >
+				<DisplayProperty PropertyKey='OtherAssessmentMeetingsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOther9'  >
+				<DisplayProperty PropertyKey='OtherAssessmentMethodsDesc.Description' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtothermethod'  >
+				<DisplayProperty PropertyKey='OtherDataCollectionMethodDesc' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtotherAssessment'  >
+				<DisplayProperty PropertyKey='OtherAssessmentDesc' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Legal Needs Assessment Data Sources and Tools -->
+	<DataObject  DataObjectDefinitionKey='LscAssessmentDataSources'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtCensusData'  >
+				<DisplayProperty PropertyKey='CensusData' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtLegalNeeds'  >
+				<DisplayProperty PropertyKey='OtherLegalNeedsStudies' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtGIS'  >
+				<DisplayProperty PropertyKey='GISMapping' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherInfo'  >
+				<DisplayProperty PropertyKey='OtherInformation' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtIntakedata'  >
+				<DisplayProperty PropertyKey='IntakeDataNotAccepted' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCMSClosed'  >
+				<DisplayProperty PropertyKey='CMSDataClosed' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtDataShowing'  >
+				<DisplayProperty PropertyKey='CMSDataShowing' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherSelection'  >
+				<DisplayProperty PropertyKey='OtherSelection' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtOtherText'  >
+				<DisplayProperty PropertyKey='OtherText' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<!-- Conflicts and Complaints -->
+	<DataObject  DataObjectDefinitionKey='LscConflictsComplaints'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtConflicts'  >
+				<DisplayProperty PropertyKey='Conflicts' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtNoConflicts'  >
+				<DisplayProperty PropertyKey='NoConflicts' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCapacityToFight'  >
+				<DisplayProperty PropertyKey='CapacityToFight' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtComplaints'  >
+				<DisplayProperty PropertyKey='Complaints' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtNoComplaints'  >
+				<DisplayProperty PropertyKey='NoComplaints' Format='YesNo' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPEMReports'  >
+				<DisplayProperty PropertyKey='PEMReports' />
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtNoPEMReports'  >
+				<DisplayProperty PropertyKey='NoPEMReports' Format='YesNo' />
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+
+	<!-- Continuity of Operations Planning -->
+	<DataObject  DataObjectDefinitionKey='LscContinuityOperationsPlanning'>
+		<Filters>
+			<Argument Type='EntityDataObject' TypeKey='GranteeProject.PrimaryOrganizationID' PropertyKey='OrganizationID' />
+			<Argument Type='EntityDataObject' TypeKey='WfTACompetitionYear.TimePeriodID' PropertyKey='TimePeriodID' />
+		</Filters>
+		<DisplayProperties TemplateDest='Bookmarks'>
+			<DisplayProperty DestKey='txtPlan'  >
+				<DisplayProperty PropertyKey='HasWrittenPlan' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtSafety'  >
+				<DisplayProperty PropertyKey='IsSafety' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtContinue'  >
+				<DisplayProperty PropertyKey='IsContinuing' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtPreserve'  >
+				<DisplayProperty PropertyKey='IsPreservingData' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtConComm'  >
+				<DisplayProperty PropertyKey='IsContinuingCommunication' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtRelocate'  >
+				<DisplayProperty PropertyKey='IsRelocation' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtCoordinate'  >
+				<DisplayProperty PropertyKey='IsCoordinating' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAnnualRe'  >
+				<DisplayProperty PropertyKey='IsAnnuallyReviewed' Format='YesNoNull'/>
+			</DisplayProperty>
+			<DisplayProperty DestKey='txtAssignedSt'  >
+				<DisplayProperty PropertyKey='AssignedStaffReview' Format='YesNoNull'/>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+
+	<DataObject Key='ProfessionalReferences' DataObjectDefinitionKey='LscWfTaskAssignmentAffiliations'>
+		<Filters>
+			<Argument Type='Data' TypeKey="" PropertyKey="AffiliationTypeID" Value='4'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.OrganizationID' PropertyKey='OrganizationID'/>
+			<Argument Type='EntityDataObject' TypeKey='vLSCCompWftaOrgServareaYear.TimePeriodID' PropertyKey='TimePeriodID'/>
+		</Filters>
+		<DisplayProperties TemplateDest='TableVariable' TemplateDestBkMk='tblProfessionalReferences'>
+			<DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='Prefix.Prefix' Required='True'/>
+					<Argument Type='Data' TypeKey='' Value=' '/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='FirstName'/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Data' TypeKey='' Value=' '/>
+					<DisplayProperty PropertyKey='MiddleName' Required='True'/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Data' TypeKey='' Value=' '/>
+					<DisplayProperty PropertyKey='LastName' Required='True'/>
+				</DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Data' TypeKey='' Value=', '/>
+					<DisplayProperty PropertyKey='Suffix.Suffix' Required='True'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='Title'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='AppointingOrganization'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty>
+					<DisplayProperty PropertyKey='Address'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty PropertyKey='City' />
+				<Argument Type='Data' TypeKey='' Value=', '/>
+				<DisplayProperty PropertyKey='StateProvince.StateAbbr' />
+				<Argument Type='Data' TypeKey='' Value='  '/>
+				<DisplayProperty PropertyKey='Zip' />
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+			</DisplayProperty>
+			<DisplayProperty>
+				<DisplayProperty>
+					<Argument Type='Data' Value='Phone: '/>
+					<DisplayProperty PropertyKey='Phone' Required='True'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty>
+					<Argument Type='Data' Value='Fax: '/>
+					<DisplayProperty PropertyKey='Fax' Required='True'/>
+				</DisplayProperty>
+				<Argument Type='Escape' TypeKey='r' Value=''/>
+				<DisplayProperty>
+					<Argument Type='Data' Value='Email: ' />
+					<DisplayProperty PropertyKey='Email' Required='True'/>
+				</DisplayProperty>
+			</DisplayProperty>
+		</DisplayProperties>
+	</DataObject>
+</Section>
+
+
+
+
+
+
+
+<ReportDefinition Definition='3'>
+	<Section Key='Application' Visible='True' />
+	<Section Key='ApplicantOrganizationOverview' Visible="True"/>
+	<Section Key="Proposal Narrative (Form L)" Visible='True' />
+	<Section Key="Program Evaluation and Monitoring Report (PEM)" Visible='True' />
+	<Section Key="Applicant PAI Plan (PAI Plan)" Visible='True' />
+	<Section Key="Subgrant Certification (RFP Attachment 2)" Visible='True' />
+	<Section Key="Financial Audits (Audits) (new applicants only)" Visible='True' />
+	<Section Key="Grant Assurances (Form C)" Visible='True' />
+	<Section Key="Technology Plan" Visible='True' />
+	<Section Key="Technology Budget (Form D-15)" Visible='True' />
+	<Section Key="Organizational Chart" Visible='True'/>
+	<Section Key="Resumes" Visible='True'/>
+	<Section Key="Applicant Staff Contact Information" Visible='True'/>
+	<Section Key="Governing/Policy Body Plan" Visible='True'/>
+	<Section Key="LRI Submission" Visible='True'/>
+</ReportDefinition>
+

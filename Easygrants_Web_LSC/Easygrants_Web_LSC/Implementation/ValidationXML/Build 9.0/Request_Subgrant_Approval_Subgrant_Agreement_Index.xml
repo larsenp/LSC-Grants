@@ -1,0 +1,208 @@
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='TermsConPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Terms and Conditions" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='FundXferPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Amount of funds to be transferred" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='TermAgreePg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Term of Agreement (maximum 1 year)" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='BondCoverPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Fidelity Bond Coverage" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='AuditPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Financial Statement and Audit requirements" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='MalpracticePg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Malpractice Insurance Coverage" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='GovLscPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Agreements is governed by LSC statutes, regulations, instructions, guidelines and assurances" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='LscOversightPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"LSCs oversight right over subrecipient" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='AuditCompliancePg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Funds transferred are subject to audit and compliance with Audit and Accounting Guide" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='TerminationPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Orderly termination of subgrant agreement" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='PriorityConflictPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Agreement priorities consistent with recipient priorities" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='RecipResponsPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Recipient responsiblities (proper expenditure, timely submission of Audit, etc.)" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='FundTrainingPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"If agreement provides funds for formal training events LSC-required assurances must be included" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='FundEducPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"If agreement provides funds for client or community education LSC-required assurances must be included" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='MigrantServPg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Services to migrant/immigration cases will comply with 45 CFR part 1626 and other applicable law" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>
+<ValidationItem>
+	<Requirement PropertyKey='LscSubgrantAgreementIndex'>
+		<Filters>
+			<Argument PropertyKey='FundBalancePg' Value='' Operator='NotEqual'/>
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='"Treatment of unexpended fund balance" Page number is required.'
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

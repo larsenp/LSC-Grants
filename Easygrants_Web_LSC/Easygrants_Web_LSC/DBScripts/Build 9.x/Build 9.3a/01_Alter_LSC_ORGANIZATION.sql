@@ -1,0 +1,2 @@
+ALTER TABLE LSC_ORGANIZATION
+	ADD subrecipient_id varchar(6) NULL

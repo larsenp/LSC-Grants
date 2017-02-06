@@ -1,0 +1,12 @@
+<ValidationItem Type='Method'>
+	<Action
+			Object='ModulePage'
+			Method='ValidateMilestoneReport'>
+	</Action>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message=''
+			MaxCount='0'/>
+	</Results>
+</ValidationItem>

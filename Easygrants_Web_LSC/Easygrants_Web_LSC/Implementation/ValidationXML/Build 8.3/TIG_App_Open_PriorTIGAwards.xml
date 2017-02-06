@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ValidationItem>
+	<Requirement PropertyKey='LscWfTATigPriorAwards' >
+		<Filters>
+			<Argument PropertyKey='Comment' Value='' />
+		</Filters>
+	</Requirement>
+	<Results>
+		<Result
+			ResultCode='3'
+			Message='Comment is required for all prior grants.'
+			MinCount='1'/>
+	</Results>
+</ValidationItem>

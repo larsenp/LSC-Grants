@@ -1,0 +1,1 @@
+ALTER TABLE s_SYSTEM_SETTINGS ADD sys_settings_value varchar(500)

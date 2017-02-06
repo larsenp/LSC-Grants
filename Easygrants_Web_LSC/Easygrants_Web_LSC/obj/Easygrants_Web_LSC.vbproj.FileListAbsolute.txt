@@ -1,0 +1,5 @@
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\Easygrants_Web_LSC\obj\Debug\ResolveAssemblyReference.cache
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\Easygrants_Web_LSC\obj\Debug\Easygrants_Web_LSC.Implementation.Modules.Home.Controls.Page.cApplyGrantContent_lsc.resources
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\Easygrants_Web_LSC\obj\Debug\Easygrants_Web_LSC.Easygrants_Web.Modules.Home.Controls.Page.cHomeContent.resources
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\Easygrants_Web_LSC\obj\Debug\Easygrants_Web_LSC.Resources.resources
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\Easygrants_Web_LSC\obj\Debug\Easygrants_Web_LSC.vbproj.GenerateResource.Cache

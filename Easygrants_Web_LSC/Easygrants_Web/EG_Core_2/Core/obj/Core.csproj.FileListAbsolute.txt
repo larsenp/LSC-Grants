@@ -1,0 +1,5 @@
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Core\bin\Debug\Core.dll
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Core\bin\Debug\Core.pdb
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Core\obj\Debug\ResolveAssemblyReference.cache
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Core\obj\Debug\Core.dll
+C:\MyFiles\Visual Studio 2005\Projects\Easygrants_Web_LSC\EasyGrants_Web\EG_Core_2\Core\obj\Debug\Core.pdb

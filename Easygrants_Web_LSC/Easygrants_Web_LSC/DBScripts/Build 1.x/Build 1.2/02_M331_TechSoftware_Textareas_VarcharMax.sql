@@ -1,0 +1,19 @@
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN backup_protocol_network varchar(MAX)
+
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN backup_protocol_pc varchar(MAX)
+
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN backup_storage_location varchar(MAX)
+
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN backup_last_restore varchar(MAX)
+
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN backup_access varchar(MAX)
+
+ALTER TABLE LSC_SOFTWARE_QUESTION
+	ALTER COLUMN program_legalmeetings_usage varchar(MAX)
+
+

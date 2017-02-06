@@ -1,0 +1,9 @@
+
+ALTER TABLE dbo.LSC_TECHNOLOGY
+  ADD fiber_optics [bit] NULL
+
+ALTER TABLE dbo.LSC_TECHNOLOGY
+  ADD other [bit] NULL
+
+ALTER TABLE dbo.LSC_TECHNOLOGY
+  ADD describe [varchar](MAX) NULL
